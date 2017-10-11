@@ -1,0 +1,6 @@
+@charset "utf-8";
+.location-map{border:0px;padding:0 5px;width:100%;}
+.icon-contact-us{position:relative;display:inline-block;text-shadow: 5px 5px 10px #999;}
+.icon-contact-us .glyphicon-envelope{font-size:130px;color:#c8c8c8;}
+.icon-contact-us .glyphicon-earphone{font-size:100px;position:absolute;top:15px;left:2px;color:#709E9B;}
+.icon-contact-us .glyphicon-pencil{font-size:50px;position:absolute;top:auto;bottom:12px;right:-15px; color:#666;}

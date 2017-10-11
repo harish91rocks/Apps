@@ -1,0 +1,38 @@
+/* 
+    Created on : 6 Feb, 2015, 3:13:27 PM
+    Author     : Harish
+*/
+
+.checkbox, .radio{position:relative;padding-left:22px;min-height:19px;}
+.checkbox input, .radio input{
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0;opacity: 0;
+    position:absolute;
+    left:0;
+    margin:0 !important;
+}
+.checkbox >span:before, .radio >span:before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height:1;
+    position: absolute;
+    left: 0;
+    font-weight:900;
+    text-align: center;
+    border:2px solid;
+    border-radius: 4px;
+    transition:all 0.5s;
+}
+.radio >span:before{
+    border-radius:50%;
+}
+.checkbox input:checked+span:before{
+    content: "\2713";
+}
+.radio input:checked+span:before{
+    content: "\2022";
+}
+.checkbox input:checked+span:before, .radio input:checked+span:before{box-shadow: inset 0 0 5px;}
+.checkbox input:focus+span:before, .radio input:focus+span:before{box-shadow: 0 0 10px;}
+.checkbox input:disabled>span, .radio input:disabled>span{cursor:not-allowed;opacity:0.8;filter: alpha(opacity=80);}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+.footer{background-color:#f8f8f8;border-top:1px solid #e7e7e7;padding:10px 0;margin-top:25px;}
+.footer .copyright{margin-top:5px;}
+.social-references{height:30px;}
+.social-references .icon ,.social-references a{width:30px;height:30px;display:inline-block;opacity:0.7;text-align:center;transition:all 1s ease;transform-style: preserve-3d;font-size:24px;border:1px solid; border-radius:50%;}
+.social-references .icon:hover ,.social-references a:hover{opacity:1;border-radius:8px;background-color:#428bca;border-color:#3071a9;color:#fff;}
+.icon.facebook{background-image:url(../image/social/facebook-icon.png);}
+.icon.linkedin{background-image:url(../image/social/linkedin-icon.png);}
+.icon.twitter{background-image:url(../image/social/twitter-icon.png);}
+

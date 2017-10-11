@@ -1,0 +1,14 @@
+@charset "utf-8";
+.axAcademy-Image{position:relative;margin-bottom:15px;}
+.axAcademy-Image .img img{margin:0;border:1px solid #ddd;}
+.axAcademy-Image table{position:absolute;top:0;width:100%;margin:0;}
+.axAcademy-Image table tr:first-child{height:28%;}
+.axAcademy-Image table tr:last-child{height:31%;}
+.axAcademy-Image td{position:relative;background-image:url(../image/academy/td.PNG);}
+.axAcademy-Image td img{position:absolute;top:0;width:100%;height:100%;background-color:#ccc;}
+.td-1, .td-5{width:19%;}
+.td-2, .td-4{width:10%;}
+.td-3{width:38%;}
+.popover{width:180px;font-size:12px;}
+.collapse-blocks .more{cursor:pointer;font-size:12px;}
+
