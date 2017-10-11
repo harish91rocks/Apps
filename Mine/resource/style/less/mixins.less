@@ -1,0 +1,52 @@
+.writeTextColor(@class;@color){
+    .@{class},.btn.@{class},.form-control.@{class}{
+        color:@color;
+    };
+    .btn.@{class},.form-control.@{class}{
+        &:hover,&:focus{
+
+        }
+    }
+}
+.writeBgColor(@class;@color){
+    @dark-color:darken(@color,10%);
+    .@{class},.btn.@{class},.form-control.@{class}{
+        background-color:@color;
+    };
+    .btn.@{class},.form-control.@{class}{
+        &:hover,&:focus,&:active,&.focus,&.active{
+            background-color:@dark-color;
+        }
+        &[disabled],&.disabled{
+            &:hover,&:focus,&.active{
+                background-color:@color;
+            }
+        }
+    };
+}
+.writeBorderColor(@class;@color){
+    @dark-color:darken(@color,10%);
+    .@{class},.btn.@{class},.form-control.@{class}{
+        border-color:@color;
+    };
+    .btn.@{class},.form-control.@{class}{
+        &:hover,&:focus,&:active,&.focus,&.active{
+            border-color:@dark-color;
+        }
+        &[disabled],&.disabled{
+            &:hover,&:focus,&.active{
+                border-color:@color;
+            }
+        }
+    };
+    .form-control.@{class}:focus{
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px @color;
+    };
+}
+.gradient (@startColor: #eee, @endColor: white) {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor);
+    background-image: -ms-linear-gradient(top, @startColor, @endColor);
+    background-image: -o-linear-gradient(top, @startColor, @endColor);
+}

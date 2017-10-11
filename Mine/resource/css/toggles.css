@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2016, 6:37:36 PM
+    Author     : Axelta3
+*/
+.input-group label {
+  margin: 0;
+}
+.tgl-box {
+  margin-right: 12px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.tgl-box > input {
+  position: absolute;
+  opacity: 0;
+}
+.tgl-box *,
+.tgl-box *:after {
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 2, 1, 0.51);
+  -moz-transition: all 0.3s cubic-bezier(0.2, 2, 1, 0.51);
+  -o-transition: all 0.3s cubic-bezier(0.2, 2, 1, 0.51);
+  transition: all 0.3s cubic-bezier(0.2, 2, 1, 0.51);
+}
+.tgl-btn {
+  display: inline-block;
+  position: relative;
+  min-width: 14px;
+  top: 1px;
+}
+.tgl-lbl {
+  font-weight: normal;
+}
+input:focus + .tgl-btn {
+  outline: 1px dotted #66afe9;
+}
+input:disabled + .tgl-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+input:disabled + .tgl-btn + .tgl-lbl {
+  cursor: not-allowed;
+}
+input:empty + .tgl-btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 2px solid #666;
+}
+input:empty + .tgl-btn:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+}
+input:empty + .tgl-btn.sldr {
+  width: 28px;
+  border-radius: 14px;
+  background-color: #666;
+  border: none;
+}
+input:empty + .tgl-btn.sldr:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+input:checked + .tgl-btn {
+  border-color: #337ab7;
+  color: #fff;
+}
+input:checked + .tgl-btn:after {
+  background-color: #337ab7;
+}
+input:checked + .tgl-btn.sldr {
+  background-color: #337ab7;
+}
+input:checked + .tgl-btn.sldr:after {
+  left: 16px;
+  background-color: #fff;
+}
+input:checked + .tgl-btn.sldr:before {
+  content: '\2713';
+  position: absolute;
+  left: 4px;
+  font-size: 11px;
+  line-height: 14px;
+}
+input[type="radio"] + .tgl-btn {
+  border-radius: 14px;
+}
+input[type="radio"] + .tgl-btn:after {
+  border-radius: 6px;
+}
+.tgl-box:active input:checked + .tgl-btn:after,
+input:checked:focus + .tgl-btn:after {
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+/**/

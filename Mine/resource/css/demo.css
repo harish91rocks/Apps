@@ -1,0 +1,28 @@
+.img{
+    height:150px;
+    background-color: #ccc;
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out;
+}
+.img:hover{
+    transform: scale(1.1);
+}
+#select-theme .dropdown-menu{
+    min-width:146px;
+    padding:2px;
+    text-align:center;
+}
+#select-theme li{
+    font-size: 0;
+    height: 20px;
+    width: 13.8%;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+#select-theme li.active{
+    border:2px solid rgba(0,0,0,0.5);
+    cursor:default;
+    transform: scale(0.7);
+}

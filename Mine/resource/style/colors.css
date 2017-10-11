@@ -1,0 +1,4272 @@
+.btn,
+.form-control {
+  border-radius: 0;
+}
+.btn {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+  border-color: transparent !important;
+  /*box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);*/
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4);
+}
+/*---Text colors---*/
+.text-transparent {
+  color: transparent;
+}
+.text-white,
+.btn.text-white,
+.form-control.text-white {
+  color: #ffffff;
+}
+.text-white-l,
+.btn.text-white-l,
+.form-control.text-white-l {
+  color: #ffffff;
+}
+.text-white-d,
+.btn.text-white-d,
+.form-control.text-white-d {
+  color: #e6e6e6;
+}
+.text-silver,
+.btn.text-silver,
+.form-control.text-silver {
+  color: #c0c0c0;
+}
+.text-silver-l,
+.btn.text-silver-l,
+.form-control.text-silver-l {
+  color: #dadada;
+}
+.text-silver-d,
+.btn.text-silver-d,
+.form-control.text-silver-d {
+  color: #a7a7a7;
+}
+.text-black,
+.btn.text-black,
+.form-control.text-black {
+  color: #333333;
+}
+.text-black-l,
+.btn.text-black-l,
+.form-control.text-black-l {
+  color: #4d4d4d;
+}
+.text-black-d,
+.btn.text-black-d,
+.form-control.text-black-d {
+  color: #1a1a1a;
+}
+.text-red,
+.btn.text-red,
+.form-control.text-red {
+  color: #f44336;
+}
+.text-red-l,
+.btn.text-red-l,
+.form-control.text-red-l {
+  color: #f77066;
+}
+.text-red-d,
+.btn.text-red-d,
+.form-control.text-red-d {
+  color: #ea1c0d;
+}
+.text-pink,
+.btn.text-pink,
+.form-control.text-pink {
+  color: #e91e63;
+}
+.text-pink-l,
+.btn.text-pink-l,
+.form-control.text-pink-l {
+  color: #ee4c83;
+}
+.text-pink-d,
+.btn.text-pink-d,
+.form-control.text-pink-d {
+  color: #c1134e;
+}
+.text-purple,
+.btn.text-purple,
+.form-control.text-purple {
+  color: #9c27b0;
+}
+.text-purple-l,
+.btn.text-purple-l,
+.form-control.text-purple-l {
+  color: #bc37d3;
+}
+.text-purple-d,
+.btn.text-purple-d,
+.form-control.text-purple-d {
+  color: #771e86;
+}
+.text-deep-purple,
+.btn.text-deep-purple,
+.form-control.text-deep-purple {
+  color: #673ab7;
+}
+.text-deep-purple-l,
+.btn.text-deep-purple-l,
+.form-control.text-deep-purple-l {
+  color: #8259cb;
+}
+.text-deep-purple-d,
+.btn.text-deep-purple-d,
+.form-control.text-deep-purple-d {
+  color: #512e90;
+}
+.text-indigo,
+.btn.text-indigo,
+.form-control.text-indigo {
+  color: #3f51b5;
+}
+.text-indigo-l,
+.btn.text-indigo-l,
+.form-control.text-indigo-l {
+  color: #606fc7;
+}
+.text-indigo-d,
+.btn.text-indigo-d,
+.form-control.text-indigo-d {
+  color: #32408f;
+}
+.text-blue,
+.btn.text-blue,
+.form-control.text-blue {
+  color: #2196f3;
+}
+.text-blue-l,
+.btn.text-blue-l,
+.form-control.text-blue-l {
+  color: #51adf6;
+}
+.text-blue-d,
+.btn.text-blue-d,
+.form-control.text-blue-d {
+  color: #0c7cd5;
+}
+.text-cyan,
+.btn.text-cyan,
+.form-control.text-cyan {
+  color: #00bcd4;
+}
+.text-cyan-l,
+.btn.text-cyan-l,
+.form-control.text-cyan-l {
+  color: #08e3ff;
+}
+.text-cyan-d,
+.btn.text-cyan-d,
+.form-control.text-cyan-d {
+  color: #008fa1;
+}
+.text-teal,
+.btn.text-teal,
+.form-control.text-teal {
+  color: #009688;
+}
+.text-teal-l,
+.btn.text-teal-l,
+.form-control.text-teal-l {
+  color: #00c9b6;
+}
+.text-teal-d,
+.btn.text-teal-d,
+.form-control.text-teal-d {
+  color: #00635a;
+}
+.text-green,
+.btn.text-green,
+.form-control.text-green {
+  color: #4caf50;
+}
+.text-green-l,
+.btn.text-green-l,
+.form-control.text-green-l {
+  color: #6ec071;
+}
+.text-green-d,
+.btn.text-green-d,
+.form-control.text-green-d {
+  color: #3d8b40;
+}
+.text-lime,
+.btn.text-lime,
+.form-control.text-lime {
+  color: #cddc39;
+}
+.text-lime-l,
+.btn.text-lime-l,
+.form-control.text-lime-l {
+  color: #d8e464;
+}
+.text-lime-d,
+.btn.text-lime-d,
+.form-control.text-lime-d {
+  color: #b2c022;
+}
+.text-yellow,
+.btn.text-yellow,
+.form-control.text-yellow {
+  color: #ffeb3b;
+}
+.text-yellow-l,
+.btn.text-yellow-l,
+.form-control.text-yellow-l {
+  color: #fff06e;
+}
+.text-yellow-d,
+.btn.text-yellow-d,
+.form-control.text-yellow-d {
+  color: #ffe608;
+}
+.text-amber,
+.btn.text-amber,
+.form-control.text-amber {
+  color: #ffc107;
+}
+.text-amber-l,
+.btn.text-amber-l,
+.form-control.text-amber-l {
+  color: #ffce3a;
+}
+.text-amber-d,
+.btn.text-amber-d,
+.form-control.text-amber-d {
+  color: #d39e00;
+}
+.text-orange,
+.btn.text-orange,
+.form-control.text-orange {
+  color: #ff9800;
+}
+.text-orange-l,
+.btn.text-orange-l,
+.form-control.text-orange-l {
+  color: #ffad33;
+}
+.text-orange-d,
+.btn.text-orange-d,
+.form-control.text-orange-d {
+  color: #cc7a00;
+}
+.text-deep-orange,
+.btn.text-deep-orange,
+.form-control.text-deep-orange {
+  color: #ff5722;
+}
+.text-deep-orange-l,
+.btn.text-deep-orange-l,
+.form-control.text-deep-orange-l {
+  color: #ff7e55;
+}
+.text-deep-orange-d,
+.btn.text-deep-orange-d,
+.form-control.text-deep-orange-d {
+  color: #ee3900;
+}
+.text-brown,
+.btn.text-brown,
+.form-control.text-brown {
+  color: #795548;
+}
+.text-brown-l,
+.btn.text-brown-l,
+.form-control.text-brown-l {
+  color: #996b5b;
+}
+.text-brown-d,
+.btn.text-brown-d,
+.form-control.text-brown-d {
+  color: #593f35;
+}
+.text-grey,
+.btn.text-grey,
+.form-control.text-grey {
+  color: #9e9e9e;
+}
+.text-grey-l,
+.btn.text-grey-l,
+.form-control.text-grey-l {
+  color: #b8b8b8;
+}
+.text-grey-d,
+.btn.text-grey-d,
+.form-control.text-grey-d {
+  color: #858585;
+}
+.text-blue-grey,
+.btn.text-blue-grey,
+.form-control.text-blue-grey {
+  color: #607d8b;
+}
+.text-blue-grey-l,
+.btn.text-blue-grey-l,
+.form-control.text-blue-grey-l {
+  color: #7b96a3;
+}
+.text-blue-grey-d,
+.btn.text-blue-grey-d,
+.form-control.text-blue-grey-d {
+  color: #4b626d;
+}
+/*---Background colors---*/
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-white,
+.btn.bg-white,
+.form-control.bg-white {
+  background-color: #ffffff;
+}
+.btn.bg-white:hover,
+.form-control.bg-white:hover,
+.btn.bg-white:focus,
+.form-control.bg-white:focus,
+.btn.bg-white:active,
+.form-control.bg-white:active,
+.btn.bg-white.focus,
+.form-control.bg-white.focus,
+.btn.bg-white.active,
+.form-control.bg-white.active {
+  background-color: #e6e6e6;
+}
+.btn.bg-white[disabled]:hover,
+.form-control.bg-white[disabled]:hover,
+.btn.bg-white.disabled:hover,
+.form-control.bg-white.disabled:hover,
+.btn.bg-white[disabled]:focus,
+.form-control.bg-white[disabled]:focus,
+.btn.bg-white.disabled:focus,
+.form-control.bg-white.disabled:focus,
+.btn.bg-white[disabled].active,
+.form-control.bg-white[disabled].active,
+.btn.bg-white.disabled.active,
+.form-control.bg-white.disabled.active {
+  background-color: #ffffff;
+}
+.bg-white-l,
+.btn.bg-white-l,
+.form-control.bg-white-l {
+  background-color: #ffffff;
+}
+.btn.bg-white-l:hover,
+.form-control.bg-white-l:hover,
+.btn.bg-white-l:focus,
+.form-control.bg-white-l:focus,
+.btn.bg-white-l:active,
+.form-control.bg-white-l:active,
+.btn.bg-white-l.focus,
+.form-control.bg-white-l.focus,
+.btn.bg-white-l.active,
+.form-control.bg-white-l.active {
+  background-color: #e6e6e6;
+}
+.btn.bg-white-l[disabled]:hover,
+.form-control.bg-white-l[disabled]:hover,
+.btn.bg-white-l.disabled:hover,
+.form-control.bg-white-l.disabled:hover,
+.btn.bg-white-l[disabled]:focus,
+.form-control.bg-white-l[disabled]:focus,
+.btn.bg-white-l.disabled:focus,
+.form-control.bg-white-l.disabled:focus,
+.btn.bg-white-l[disabled].active,
+.form-control.bg-white-l[disabled].active,
+.btn.bg-white-l.disabled.active,
+.form-control.bg-white-l.disabled.active {
+  background-color: #ffffff;
+}
+.bg-white-d,
+.btn.bg-white-d,
+.form-control.bg-white-d {
+  background-color: #e6e6e6;
+}
+.btn.bg-white-d:hover,
+.form-control.bg-white-d:hover,
+.btn.bg-white-d:focus,
+.form-control.bg-white-d:focus,
+.btn.bg-white-d:active,
+.form-control.bg-white-d:active,
+.btn.bg-white-d.focus,
+.form-control.bg-white-d.focus,
+.btn.bg-white-d.active,
+.form-control.bg-white-d.active {
+  background-color: #cccccc;
+}
+.btn.bg-white-d[disabled]:hover,
+.form-control.bg-white-d[disabled]:hover,
+.btn.bg-white-d.disabled:hover,
+.form-control.bg-white-d.disabled:hover,
+.btn.bg-white-d[disabled]:focus,
+.form-control.bg-white-d[disabled]:focus,
+.btn.bg-white-d.disabled:focus,
+.form-control.bg-white-d.disabled:focus,
+.btn.bg-white-d[disabled].active,
+.form-control.bg-white-d[disabled].active,
+.btn.bg-white-d.disabled.active,
+.form-control.bg-white-d.disabled.active {
+  background-color: #e6e6e6;
+}
+.bg-silver,
+.btn.bg-silver,
+.form-control.bg-silver {
+  background-color: #c0c0c0;
+}
+.btn.bg-silver:hover,
+.form-control.bg-silver:hover,
+.btn.bg-silver:focus,
+.form-control.bg-silver:focus,
+.btn.bg-silver:active,
+.form-control.bg-silver:active,
+.btn.bg-silver.focus,
+.form-control.bg-silver.focus,
+.btn.bg-silver.active,
+.form-control.bg-silver.active {
+  background-color: #a7a7a7;
+}
+.btn.bg-silver[disabled]:hover,
+.form-control.bg-silver[disabled]:hover,
+.btn.bg-silver.disabled:hover,
+.form-control.bg-silver.disabled:hover,
+.btn.bg-silver[disabled]:focus,
+.form-control.bg-silver[disabled]:focus,
+.btn.bg-silver.disabled:focus,
+.form-control.bg-silver.disabled:focus,
+.btn.bg-silver[disabled].active,
+.form-control.bg-silver[disabled].active,
+.btn.bg-silver.disabled.active,
+.form-control.bg-silver.disabled.active {
+  background-color: #c0c0c0;
+}
+.bg-silver-l,
+.btn.bg-silver-l,
+.form-control.bg-silver-l {
+  background-color: #dadada;
+}
+.btn.bg-silver-l:hover,
+.form-control.bg-silver-l:hover,
+.btn.bg-silver-l:focus,
+.form-control.bg-silver-l:focus,
+.btn.bg-silver-l:active,
+.form-control.bg-silver-l:active,
+.btn.bg-silver-l.focus,
+.form-control.bg-silver-l.focus,
+.btn.bg-silver-l.active,
+.form-control.bg-silver-l.active {
+  background-color: #c0c0c0;
+}
+.btn.bg-silver-l[disabled]:hover,
+.form-control.bg-silver-l[disabled]:hover,
+.btn.bg-silver-l.disabled:hover,
+.form-control.bg-silver-l.disabled:hover,
+.btn.bg-silver-l[disabled]:focus,
+.form-control.bg-silver-l[disabled]:focus,
+.btn.bg-silver-l.disabled:focus,
+.form-control.bg-silver-l.disabled:focus,
+.btn.bg-silver-l[disabled].active,
+.form-control.bg-silver-l[disabled].active,
+.btn.bg-silver-l.disabled.active,
+.form-control.bg-silver-l.disabled.active {
+  background-color: #dadada;
+}
+.bg-silver-d,
+.btn.bg-silver-d,
+.form-control.bg-silver-d {
+  background-color: #a7a7a7;
+}
+.btn.bg-silver-d:hover,
+.form-control.bg-silver-d:hover,
+.btn.bg-silver-d:focus,
+.form-control.bg-silver-d:focus,
+.btn.bg-silver-d:active,
+.form-control.bg-silver-d:active,
+.btn.bg-silver-d.focus,
+.form-control.bg-silver-d.focus,
+.btn.bg-silver-d.active,
+.form-control.bg-silver-d.active {
+  background-color: #8d8d8d;
+}
+.btn.bg-silver-d[disabled]:hover,
+.form-control.bg-silver-d[disabled]:hover,
+.btn.bg-silver-d.disabled:hover,
+.form-control.bg-silver-d.disabled:hover,
+.btn.bg-silver-d[disabled]:focus,
+.form-control.bg-silver-d[disabled]:focus,
+.btn.bg-silver-d.disabled:focus,
+.form-control.bg-silver-d.disabled:focus,
+.btn.bg-silver-d[disabled].active,
+.form-control.bg-silver-d[disabled].active,
+.btn.bg-silver-d.disabled.active,
+.form-control.bg-silver-d.disabled.active {
+  background-color: #a7a7a7;
+}
+.bg-black,
+.btn.bg-black,
+.form-control.bg-black {
+  background-color: #333333;
+}
+.btn.bg-black:hover,
+.form-control.bg-black:hover,
+.btn.bg-black:focus,
+.form-control.bg-black:focus,
+.btn.bg-black:active,
+.form-control.bg-black:active,
+.btn.bg-black.focus,
+.form-control.bg-black.focus,
+.btn.bg-black.active,
+.form-control.bg-black.active {
+  background-color: #1a1a1a;
+}
+.btn.bg-black[disabled]:hover,
+.form-control.bg-black[disabled]:hover,
+.btn.bg-black.disabled:hover,
+.form-control.bg-black.disabled:hover,
+.btn.bg-black[disabled]:focus,
+.form-control.bg-black[disabled]:focus,
+.btn.bg-black.disabled:focus,
+.form-control.bg-black.disabled:focus,
+.btn.bg-black[disabled].active,
+.form-control.bg-black[disabled].active,
+.btn.bg-black.disabled.active,
+.form-control.bg-black.disabled.active {
+  background-color: #333333;
+}
+.bg-black-l,
+.btn.bg-black-l,
+.form-control.bg-black-l {
+  background-color: #4d4d4d;
+}
+.btn.bg-black-l:hover,
+.form-control.bg-black-l:hover,
+.btn.bg-black-l:focus,
+.form-control.bg-black-l:focus,
+.btn.bg-black-l:active,
+.form-control.bg-black-l:active,
+.btn.bg-black-l.focus,
+.form-control.bg-black-l.focus,
+.btn.bg-black-l.active,
+.form-control.bg-black-l.active {
+  background-color: #333333;
+}
+.btn.bg-black-l[disabled]:hover,
+.form-control.bg-black-l[disabled]:hover,
+.btn.bg-black-l.disabled:hover,
+.form-control.bg-black-l.disabled:hover,
+.btn.bg-black-l[disabled]:focus,
+.form-control.bg-black-l[disabled]:focus,
+.btn.bg-black-l.disabled:focus,
+.form-control.bg-black-l.disabled:focus,
+.btn.bg-black-l[disabled].active,
+.form-control.bg-black-l[disabled].active,
+.btn.bg-black-l.disabled.active,
+.form-control.bg-black-l.disabled.active {
+  background-color: #4d4d4d;
+}
+.bg-black-d,
+.btn.bg-black-d,
+.form-control.bg-black-d {
+  background-color: #1a1a1a;
+}
+.btn.bg-black-d:hover,
+.form-control.bg-black-d:hover,
+.btn.bg-black-d:focus,
+.form-control.bg-black-d:focus,
+.btn.bg-black-d:active,
+.form-control.bg-black-d:active,
+.btn.bg-black-d.focus,
+.form-control.bg-black-d.focus,
+.btn.bg-black-d.active,
+.form-control.bg-black-d.active {
+  background-color: #000000;
+}
+.btn.bg-black-d[disabled]:hover,
+.form-control.bg-black-d[disabled]:hover,
+.btn.bg-black-d.disabled:hover,
+.form-control.bg-black-d.disabled:hover,
+.btn.bg-black-d[disabled]:focus,
+.form-control.bg-black-d[disabled]:focus,
+.btn.bg-black-d.disabled:focus,
+.form-control.bg-black-d.disabled:focus,
+.btn.bg-black-d[disabled].active,
+.form-control.bg-black-d[disabled].active,
+.btn.bg-black-d.disabled.active,
+.form-control.bg-black-d.disabled.active {
+  background-color: #1a1a1a;
+}
+.bg-red,
+.btn.bg-red,
+.form-control.bg-red {
+  background-color: #f44336;
+}
+.btn.bg-red:hover,
+.form-control.bg-red:hover,
+.btn.bg-red:focus,
+.form-control.bg-red:focus,
+.btn.bg-red:active,
+.form-control.bg-red:active,
+.btn.bg-red.focus,
+.form-control.bg-red.focus,
+.btn.bg-red.active,
+.form-control.bg-red.active {
+  background-color: #ea1c0d;
+}
+.btn.bg-red[disabled]:hover,
+.form-control.bg-red[disabled]:hover,
+.btn.bg-red.disabled:hover,
+.form-control.bg-red.disabled:hover,
+.btn.bg-red[disabled]:focus,
+.form-control.bg-red[disabled]:focus,
+.btn.bg-red.disabled:focus,
+.form-control.bg-red.disabled:focus,
+.btn.bg-red[disabled].active,
+.form-control.bg-red[disabled].active,
+.btn.bg-red.disabled.active,
+.form-control.bg-red.disabled.active {
+  background-color: #f44336;
+}
+.bg-red-l,
+.btn.bg-red-l,
+.form-control.bg-red-l {
+  background-color: #f77066;
+}
+.btn.bg-red-l:hover,
+.form-control.bg-red-l:hover,
+.btn.bg-red-l:focus,
+.form-control.bg-red-l:focus,
+.btn.bg-red-l:active,
+.form-control.bg-red-l:active,
+.btn.bg-red-l.focus,
+.form-control.bg-red-l.focus,
+.btn.bg-red-l.active,
+.form-control.bg-red-l.active {
+  background-color: #f44336;
+}
+.btn.bg-red-l[disabled]:hover,
+.form-control.bg-red-l[disabled]:hover,
+.btn.bg-red-l.disabled:hover,
+.form-control.bg-red-l.disabled:hover,
+.btn.bg-red-l[disabled]:focus,
+.form-control.bg-red-l[disabled]:focus,
+.btn.bg-red-l.disabled:focus,
+.form-control.bg-red-l.disabled:focus,
+.btn.bg-red-l[disabled].active,
+.form-control.bg-red-l[disabled].active,
+.btn.bg-red-l.disabled.active,
+.form-control.bg-red-l.disabled.active {
+  background-color: #f77066;
+}
+.bg-red-d,
+.btn.bg-red-d,
+.form-control.bg-red-d {
+  background-color: #ea1c0d;
+}
+.btn.bg-red-d:hover,
+.form-control.bg-red-d:hover,
+.btn.bg-red-d:focus,
+.form-control.bg-red-d:focus,
+.btn.bg-red-d:active,
+.form-control.bg-red-d:active,
+.btn.bg-red-d.focus,
+.form-control.bg-red-d.focus,
+.btn.bg-red-d.active,
+.form-control.bg-red-d.active {
+  background-color: #ba160a;
+}
+.btn.bg-red-d[disabled]:hover,
+.form-control.bg-red-d[disabled]:hover,
+.btn.bg-red-d.disabled:hover,
+.form-control.bg-red-d.disabled:hover,
+.btn.bg-red-d[disabled]:focus,
+.form-control.bg-red-d[disabled]:focus,
+.btn.bg-red-d.disabled:focus,
+.form-control.bg-red-d.disabled:focus,
+.btn.bg-red-d[disabled].active,
+.form-control.bg-red-d[disabled].active,
+.btn.bg-red-d.disabled.active,
+.form-control.bg-red-d.disabled.active {
+  background-color: #ea1c0d;
+}
+.bg-pink,
+.btn.bg-pink,
+.form-control.bg-pink {
+  background-color: #e91e63;
+}
+.btn.bg-pink:hover,
+.form-control.bg-pink:hover,
+.btn.bg-pink:focus,
+.form-control.bg-pink:focus,
+.btn.bg-pink:active,
+.form-control.bg-pink:active,
+.btn.bg-pink.focus,
+.form-control.bg-pink.focus,
+.btn.bg-pink.active,
+.form-control.bg-pink.active {
+  background-color: #c1134e;
+}
+.btn.bg-pink[disabled]:hover,
+.form-control.bg-pink[disabled]:hover,
+.btn.bg-pink.disabled:hover,
+.form-control.bg-pink.disabled:hover,
+.btn.bg-pink[disabled]:focus,
+.form-control.bg-pink[disabled]:focus,
+.btn.bg-pink.disabled:focus,
+.form-control.bg-pink.disabled:focus,
+.btn.bg-pink[disabled].active,
+.form-control.bg-pink[disabled].active,
+.btn.bg-pink.disabled.active,
+.form-control.bg-pink.disabled.active {
+  background-color: #e91e63;
+}
+.bg-pink-l,
+.btn.bg-pink-l,
+.form-control.bg-pink-l {
+  background-color: #ee4c83;
+}
+.btn.bg-pink-l:hover,
+.form-control.bg-pink-l:hover,
+.btn.bg-pink-l:focus,
+.form-control.bg-pink-l:focus,
+.btn.bg-pink-l:active,
+.form-control.bg-pink-l:active,
+.btn.bg-pink-l.focus,
+.form-control.bg-pink-l.focus,
+.btn.bg-pink-l.active,
+.form-control.bg-pink-l.active {
+  background-color: #e91e63;
+}
+.btn.bg-pink-l[disabled]:hover,
+.form-control.bg-pink-l[disabled]:hover,
+.btn.bg-pink-l.disabled:hover,
+.form-control.bg-pink-l.disabled:hover,
+.btn.bg-pink-l[disabled]:focus,
+.form-control.bg-pink-l[disabled]:focus,
+.btn.bg-pink-l.disabled:focus,
+.form-control.bg-pink-l.disabled:focus,
+.btn.bg-pink-l[disabled].active,
+.form-control.bg-pink-l[disabled].active,
+.btn.bg-pink-l.disabled.active,
+.form-control.bg-pink-l.disabled.active {
+  background-color: #ee4c83;
+}
+.bg-pink-d,
+.btn.bg-pink-d,
+.form-control.bg-pink-d {
+  background-color: #c1134e;
+}
+.btn.bg-pink-d:hover,
+.form-control.bg-pink-d:hover,
+.btn.bg-pink-d:focus,
+.form-control.bg-pink-d:focus,
+.btn.bg-pink-d:active,
+.form-control.bg-pink-d:active,
+.btn.bg-pink-d.focus,
+.form-control.bg-pink-d.focus,
+.btn.bg-pink-d.active,
+.form-control.bg-pink-d.active {
+  background-color: #930e3b;
+}
+.btn.bg-pink-d[disabled]:hover,
+.form-control.bg-pink-d[disabled]:hover,
+.btn.bg-pink-d.disabled:hover,
+.form-control.bg-pink-d.disabled:hover,
+.btn.bg-pink-d[disabled]:focus,
+.form-control.bg-pink-d[disabled]:focus,
+.btn.bg-pink-d.disabled:focus,
+.form-control.bg-pink-d.disabled:focus,
+.btn.bg-pink-d[disabled].active,
+.form-control.bg-pink-d[disabled].active,
+.btn.bg-pink-d.disabled.active,
+.form-control.bg-pink-d.disabled.active {
+  background-color: #c1134e;
+}
+.bg-purple,
+.btn.bg-purple,
+.form-control.bg-purple {
+  background-color: #9c27b0;
+}
+.btn.bg-purple:hover,
+.form-control.bg-purple:hover,
+.btn.bg-purple:focus,
+.form-control.bg-purple:focus,
+.btn.bg-purple:active,
+.form-control.bg-purple:active,
+.btn.bg-purple.focus,
+.form-control.bg-purple.focus,
+.btn.bg-purple.active,
+.form-control.bg-purple.active {
+  background-color: #771e86;
+}
+.btn.bg-purple[disabled]:hover,
+.form-control.bg-purple[disabled]:hover,
+.btn.bg-purple.disabled:hover,
+.form-control.bg-purple.disabled:hover,
+.btn.bg-purple[disabled]:focus,
+.form-control.bg-purple[disabled]:focus,
+.btn.bg-purple.disabled:focus,
+.form-control.bg-purple.disabled:focus,
+.btn.bg-purple[disabled].active,
+.form-control.bg-purple[disabled].active,
+.btn.bg-purple.disabled.active,
+.form-control.bg-purple.disabled.active {
+  background-color: #9c27b0;
+}
+.bg-purple-l,
+.btn.bg-purple-l,
+.form-control.bg-purple-l {
+  background-color: #bc37d3;
+}
+.btn.bg-purple-l:hover,
+.form-control.bg-purple-l:hover,
+.btn.bg-purple-l:focus,
+.form-control.bg-purple-l:focus,
+.btn.bg-purple-l:active,
+.form-control.bg-purple-l:active,
+.btn.bg-purple-l.focus,
+.form-control.bg-purple-l.focus,
+.btn.bg-purple-l.active,
+.form-control.bg-purple-l.active {
+  background-color: #9c27b0;
+}
+.btn.bg-purple-l[disabled]:hover,
+.form-control.bg-purple-l[disabled]:hover,
+.btn.bg-purple-l.disabled:hover,
+.form-control.bg-purple-l.disabled:hover,
+.btn.bg-purple-l[disabled]:focus,
+.form-control.bg-purple-l[disabled]:focus,
+.btn.bg-purple-l.disabled:focus,
+.form-control.bg-purple-l.disabled:focus,
+.btn.bg-purple-l[disabled].active,
+.form-control.bg-purple-l[disabled].active,
+.btn.bg-purple-l.disabled.active,
+.form-control.bg-purple-l.disabled.active {
+  background-color: #bc37d3;
+}
+.bg-purple-d,
+.btn.bg-purple-d,
+.form-control.bg-purple-d {
+  background-color: #771e86;
+}
+.btn.bg-purple-d:hover,
+.form-control.bg-purple-d:hover,
+.btn.bg-purple-d:focus,
+.form-control.bg-purple-d:focus,
+.btn.bg-purple-d:active,
+.form-control.bg-purple-d:active,
+.btn.bg-purple-d.focus,
+.form-control.bg-purple-d.focus,
+.btn.bg-purple-d.active,
+.form-control.bg-purple-d.active {
+  background-color: #52145d;
+}
+.btn.bg-purple-d[disabled]:hover,
+.form-control.bg-purple-d[disabled]:hover,
+.btn.bg-purple-d.disabled:hover,
+.form-control.bg-purple-d.disabled:hover,
+.btn.bg-purple-d[disabled]:focus,
+.form-control.bg-purple-d[disabled]:focus,
+.btn.bg-purple-d.disabled:focus,
+.form-control.bg-purple-d.disabled:focus,
+.btn.bg-purple-d[disabled].active,
+.form-control.bg-purple-d[disabled].active,
+.btn.bg-purple-d.disabled.active,
+.form-control.bg-purple-d.disabled.active {
+  background-color: #771e86;
+}
+.bg-deep-purple,
+.btn.bg-deep-purple,
+.form-control.bg-deep-purple {
+  background-color: #673ab7;
+}
+.btn.bg-deep-purple:hover,
+.form-control.bg-deep-purple:hover,
+.btn.bg-deep-purple:focus,
+.form-control.bg-deep-purple:focus,
+.btn.bg-deep-purple:active,
+.form-control.bg-deep-purple:active,
+.btn.bg-deep-purple.focus,
+.form-control.bg-deep-purple.focus,
+.btn.bg-deep-purple.active,
+.form-control.bg-deep-purple.active {
+  background-color: #512e90;
+}
+.btn.bg-deep-purple[disabled]:hover,
+.form-control.bg-deep-purple[disabled]:hover,
+.btn.bg-deep-purple.disabled:hover,
+.form-control.bg-deep-purple.disabled:hover,
+.btn.bg-deep-purple[disabled]:focus,
+.form-control.bg-deep-purple[disabled]:focus,
+.btn.bg-deep-purple.disabled:focus,
+.form-control.bg-deep-purple.disabled:focus,
+.btn.bg-deep-purple[disabled].active,
+.form-control.bg-deep-purple[disabled].active,
+.btn.bg-deep-purple.disabled.active,
+.form-control.bg-deep-purple.disabled.active {
+  background-color: #673ab7;
+}
+.bg-deep-purple-l,
+.btn.bg-deep-purple-l,
+.form-control.bg-deep-purple-l {
+  background-color: #8259cb;
+}
+.btn.bg-deep-purple-l:hover,
+.form-control.bg-deep-purple-l:hover,
+.btn.bg-deep-purple-l:focus,
+.form-control.bg-deep-purple-l:focus,
+.btn.bg-deep-purple-l:active,
+.form-control.bg-deep-purple-l:active,
+.btn.bg-deep-purple-l.focus,
+.form-control.bg-deep-purple-l.focus,
+.btn.bg-deep-purple-l.active,
+.form-control.bg-deep-purple-l.active {
+  background-color: #673ab7;
+}
+.btn.bg-deep-purple-l[disabled]:hover,
+.form-control.bg-deep-purple-l[disabled]:hover,
+.btn.bg-deep-purple-l.disabled:hover,
+.form-control.bg-deep-purple-l.disabled:hover,
+.btn.bg-deep-purple-l[disabled]:focus,
+.form-control.bg-deep-purple-l[disabled]:focus,
+.btn.bg-deep-purple-l.disabled:focus,
+.form-control.bg-deep-purple-l.disabled:focus,
+.btn.bg-deep-purple-l[disabled].active,
+.form-control.bg-deep-purple-l[disabled].active,
+.btn.bg-deep-purple-l.disabled.active,
+.form-control.bg-deep-purple-l.disabled.active {
+  background-color: #8259cb;
+}
+.bg-deep-purple-d,
+.btn.bg-deep-purple-d,
+.form-control.bg-deep-purple-d {
+  background-color: #512e90;
+}
+.btn.bg-deep-purple-d:hover,
+.form-control.bg-deep-purple-d:hover,
+.btn.bg-deep-purple-d:focus,
+.form-control.bg-deep-purple-d:focus,
+.btn.bg-deep-purple-d:active,
+.form-control.bg-deep-purple-d:active,
+.btn.bg-deep-purple-d.focus,
+.form-control.bg-deep-purple-d.focus,
+.btn.bg-deep-purple-d.active,
+.form-control.bg-deep-purple-d.active {
+  background-color: #3b216a;
+}
+.btn.bg-deep-purple-d[disabled]:hover,
+.form-control.bg-deep-purple-d[disabled]:hover,
+.btn.bg-deep-purple-d.disabled:hover,
+.form-control.bg-deep-purple-d.disabled:hover,
+.btn.bg-deep-purple-d[disabled]:focus,
+.form-control.bg-deep-purple-d[disabled]:focus,
+.btn.bg-deep-purple-d.disabled:focus,
+.form-control.bg-deep-purple-d.disabled:focus,
+.btn.bg-deep-purple-d[disabled].active,
+.form-control.bg-deep-purple-d[disabled].active,
+.btn.bg-deep-purple-d.disabled.active,
+.form-control.bg-deep-purple-d.disabled.active {
+  background-color: #512e90;
+}
+.bg-indigo,
+.btn.bg-indigo,
+.form-control.bg-indigo {
+  background-color: #3f51b5;
+}
+.btn.bg-indigo:hover,
+.form-control.bg-indigo:hover,
+.btn.bg-indigo:focus,
+.form-control.bg-indigo:focus,
+.btn.bg-indigo:active,
+.form-control.bg-indigo:active,
+.btn.bg-indigo.focus,
+.form-control.bg-indigo.focus,
+.btn.bg-indigo.active,
+.form-control.bg-indigo.active {
+  background-color: #32408f;
+}
+.btn.bg-indigo[disabled]:hover,
+.form-control.bg-indigo[disabled]:hover,
+.btn.bg-indigo.disabled:hover,
+.form-control.bg-indigo.disabled:hover,
+.btn.bg-indigo[disabled]:focus,
+.form-control.bg-indigo[disabled]:focus,
+.btn.bg-indigo.disabled:focus,
+.form-control.bg-indigo.disabled:focus,
+.btn.bg-indigo[disabled].active,
+.form-control.bg-indigo[disabled].active,
+.btn.bg-indigo.disabled.active,
+.form-control.bg-indigo.disabled.active {
+  background-color: #3f51b5;
+}
+.bg-indigo-l,
+.btn.bg-indigo-l,
+.form-control.bg-indigo-l {
+  background-color: #606fc7;
+}
+.btn.bg-indigo-l:hover,
+.form-control.bg-indigo-l:hover,
+.btn.bg-indigo-l:focus,
+.form-control.bg-indigo-l:focus,
+.btn.bg-indigo-l:active,
+.form-control.bg-indigo-l:active,
+.btn.bg-indigo-l.focus,
+.form-control.bg-indigo-l.focus,
+.btn.bg-indigo-l.active,
+.form-control.bg-indigo-l.active {
+  background-color: #3f51b5;
+}
+.btn.bg-indigo-l[disabled]:hover,
+.form-control.bg-indigo-l[disabled]:hover,
+.btn.bg-indigo-l.disabled:hover,
+.form-control.bg-indigo-l.disabled:hover,
+.btn.bg-indigo-l[disabled]:focus,
+.form-control.bg-indigo-l[disabled]:focus,
+.btn.bg-indigo-l.disabled:focus,
+.form-control.bg-indigo-l.disabled:focus,
+.btn.bg-indigo-l[disabled].active,
+.form-control.bg-indigo-l[disabled].active,
+.btn.bg-indigo-l.disabled.active,
+.form-control.bg-indigo-l.disabled.active {
+  background-color: #606fc7;
+}
+.bg-indigo-d,
+.btn.bg-indigo-d,
+.form-control.bg-indigo-d {
+  background-color: #32408f;
+}
+.btn.bg-indigo-d:hover,
+.form-control.bg-indigo-d:hover,
+.btn.bg-indigo-d:focus,
+.form-control.bg-indigo-d:focus,
+.btn.bg-indigo-d:active,
+.form-control.bg-indigo-d:active,
+.btn.bg-indigo-d.focus,
+.form-control.bg-indigo-d.focus,
+.btn.bg-indigo-d.active,
+.form-control.bg-indigo-d.active {
+  background-color: #252f69;
+}
+.btn.bg-indigo-d[disabled]:hover,
+.form-control.bg-indigo-d[disabled]:hover,
+.btn.bg-indigo-d.disabled:hover,
+.form-control.bg-indigo-d.disabled:hover,
+.btn.bg-indigo-d[disabled]:focus,
+.form-control.bg-indigo-d[disabled]:focus,
+.btn.bg-indigo-d.disabled:focus,
+.form-control.bg-indigo-d.disabled:focus,
+.btn.bg-indigo-d[disabled].active,
+.form-control.bg-indigo-d[disabled].active,
+.btn.bg-indigo-d.disabled.active,
+.form-control.bg-indigo-d.disabled.active {
+  background-color: #32408f;
+}
+.bg-blue,
+.btn.bg-blue,
+.form-control.bg-blue {
+  background-color: #2196f3;
+}
+.btn.bg-blue:hover,
+.form-control.bg-blue:hover,
+.btn.bg-blue:focus,
+.form-control.bg-blue:focus,
+.btn.bg-blue:active,
+.form-control.bg-blue:active,
+.btn.bg-blue.focus,
+.form-control.bg-blue.focus,
+.btn.bg-blue.active,
+.form-control.bg-blue.active {
+  background-color: #0c7cd5;
+}
+.btn.bg-blue[disabled]:hover,
+.form-control.bg-blue[disabled]:hover,
+.btn.bg-blue.disabled:hover,
+.form-control.bg-blue.disabled:hover,
+.btn.bg-blue[disabled]:focus,
+.form-control.bg-blue[disabled]:focus,
+.btn.bg-blue.disabled:focus,
+.form-control.bg-blue.disabled:focus,
+.btn.bg-blue[disabled].active,
+.form-control.bg-blue[disabled].active,
+.btn.bg-blue.disabled.active,
+.form-control.bg-blue.disabled.active {
+  background-color: #2196f3;
+}
+.bg-blue-l,
+.btn.bg-blue-l,
+.form-control.bg-blue-l {
+  background-color: #51adf6;
+}
+.btn.bg-blue-l:hover,
+.form-control.bg-blue-l:hover,
+.btn.bg-blue-l:focus,
+.form-control.bg-blue-l:focus,
+.btn.bg-blue-l:active,
+.form-control.bg-blue-l:active,
+.btn.bg-blue-l.focus,
+.form-control.bg-blue-l.focus,
+.btn.bg-blue-l.active,
+.form-control.bg-blue-l.active {
+  background-color: #2196f3;
+}
+.btn.bg-blue-l[disabled]:hover,
+.form-control.bg-blue-l[disabled]:hover,
+.btn.bg-blue-l.disabled:hover,
+.form-control.bg-blue-l.disabled:hover,
+.btn.bg-blue-l[disabled]:focus,
+.form-control.bg-blue-l[disabled]:focus,
+.btn.bg-blue-l.disabled:focus,
+.form-control.bg-blue-l.disabled:focus,
+.btn.bg-blue-l[disabled].active,
+.form-control.bg-blue-l[disabled].active,
+.btn.bg-blue-l.disabled.active,
+.form-control.bg-blue-l.disabled.active {
+  background-color: #51adf6;
+}
+.bg-blue-d,
+.btn.bg-blue-d,
+.form-control.bg-blue-d {
+  background-color: #0c7cd5;
+}
+.btn.bg-blue-d:hover,
+.form-control.bg-blue-d:hover,
+.btn.bg-blue-d:focus,
+.form-control.bg-blue-d:focus,
+.btn.bg-blue-d:active,
+.form-control.bg-blue-d:active,
+.btn.bg-blue-d.focus,
+.form-control.bg-blue-d.focus,
+.btn.bg-blue-d.active,
+.form-control.bg-blue-d.active {
+  background-color: #0960a5;
+}
+.btn.bg-blue-d[disabled]:hover,
+.form-control.bg-blue-d[disabled]:hover,
+.btn.bg-blue-d.disabled:hover,
+.form-control.bg-blue-d.disabled:hover,
+.btn.bg-blue-d[disabled]:focus,
+.form-control.bg-blue-d[disabled]:focus,
+.btn.bg-blue-d.disabled:focus,
+.form-control.bg-blue-d.disabled:focus,
+.btn.bg-blue-d[disabled].active,
+.form-control.bg-blue-d[disabled].active,
+.btn.bg-blue-d.disabled.active,
+.form-control.bg-blue-d.disabled.active {
+  background-color: #0c7cd5;
+}
+.bg-cyan,
+.btn.bg-cyan,
+.form-control.bg-cyan {
+  background-color: #00bcd4;
+}
+.btn.bg-cyan:hover,
+.form-control.bg-cyan:hover,
+.btn.bg-cyan:focus,
+.form-control.bg-cyan:focus,
+.btn.bg-cyan:active,
+.form-control.bg-cyan:active,
+.btn.bg-cyan.focus,
+.form-control.bg-cyan.focus,
+.btn.bg-cyan.active,
+.form-control.bg-cyan.active {
+  background-color: #008fa1;
+}
+.btn.bg-cyan[disabled]:hover,
+.form-control.bg-cyan[disabled]:hover,
+.btn.bg-cyan.disabled:hover,
+.form-control.bg-cyan.disabled:hover,
+.btn.bg-cyan[disabled]:focus,
+.form-control.bg-cyan[disabled]:focus,
+.btn.bg-cyan.disabled:focus,
+.form-control.bg-cyan.disabled:focus,
+.btn.bg-cyan[disabled].active,
+.form-control.bg-cyan[disabled].active,
+.btn.bg-cyan.disabled.active,
+.form-control.bg-cyan.disabled.active {
+  background-color: #00bcd4;
+}
+.bg-cyan-l,
+.btn.bg-cyan-l,
+.form-control.bg-cyan-l {
+  background-color: #08e3ff;
+}
+.btn.bg-cyan-l:hover,
+.form-control.bg-cyan-l:hover,
+.btn.bg-cyan-l:focus,
+.form-control.bg-cyan-l:focus,
+.btn.bg-cyan-l:active,
+.form-control.bg-cyan-l:active,
+.btn.bg-cyan-l.focus,
+.form-control.bg-cyan-l.focus,
+.btn.bg-cyan-l.active,
+.form-control.bg-cyan-l.active {
+  background-color: #00bcd4;
+}
+.btn.bg-cyan-l[disabled]:hover,
+.form-control.bg-cyan-l[disabled]:hover,
+.btn.bg-cyan-l.disabled:hover,
+.form-control.bg-cyan-l.disabled:hover,
+.btn.bg-cyan-l[disabled]:focus,
+.form-control.bg-cyan-l[disabled]:focus,
+.btn.bg-cyan-l.disabled:focus,
+.form-control.bg-cyan-l.disabled:focus,
+.btn.bg-cyan-l[disabled].active,
+.form-control.bg-cyan-l[disabled].active,
+.btn.bg-cyan-l.disabled.active,
+.form-control.bg-cyan-l.disabled.active {
+  background-color: #08e3ff;
+}
+.bg-cyan-d,
+.btn.bg-cyan-d,
+.form-control.bg-cyan-d {
+  background-color: #008fa1;
+}
+.btn.bg-cyan-d:hover,
+.form-control.bg-cyan-d:hover,
+.btn.bg-cyan-d:focus,
+.form-control.bg-cyan-d:focus,
+.btn.bg-cyan-d:active,
+.form-control.bg-cyan-d:active,
+.btn.bg-cyan-d.focus,
+.form-control.bg-cyan-d.focus,
+.btn.bg-cyan-d.active,
+.form-control.bg-cyan-d.active {
+  background-color: #00626e;
+}
+.btn.bg-cyan-d[disabled]:hover,
+.form-control.bg-cyan-d[disabled]:hover,
+.btn.bg-cyan-d.disabled:hover,
+.form-control.bg-cyan-d.disabled:hover,
+.btn.bg-cyan-d[disabled]:focus,
+.form-control.bg-cyan-d[disabled]:focus,
+.btn.bg-cyan-d.disabled:focus,
+.form-control.bg-cyan-d.disabled:focus,
+.btn.bg-cyan-d[disabled].active,
+.form-control.bg-cyan-d[disabled].active,
+.btn.bg-cyan-d.disabled.active,
+.form-control.bg-cyan-d.disabled.active {
+  background-color: #008fa1;
+}
+.bg-teal,
+.btn.bg-teal,
+.form-control.bg-teal {
+  background-color: #009688;
+}
+.btn.bg-teal:hover,
+.form-control.bg-teal:hover,
+.btn.bg-teal:focus,
+.form-control.bg-teal:focus,
+.btn.bg-teal:active,
+.form-control.bg-teal:active,
+.btn.bg-teal.focus,
+.form-control.bg-teal.focus,
+.btn.bg-teal.active,
+.form-control.bg-teal.active {
+  background-color: #00635a;
+}
+.btn.bg-teal[disabled]:hover,
+.form-control.bg-teal[disabled]:hover,
+.btn.bg-teal.disabled:hover,
+.form-control.bg-teal.disabled:hover,
+.btn.bg-teal[disabled]:focus,
+.form-control.bg-teal[disabled]:focus,
+.btn.bg-teal.disabled:focus,
+.form-control.bg-teal.disabled:focus,
+.btn.bg-teal[disabled].active,
+.form-control.bg-teal[disabled].active,
+.btn.bg-teal.disabled.active,
+.form-control.bg-teal.disabled.active {
+  background-color: #009688;
+}
+.bg-teal-l,
+.btn.bg-teal-l,
+.form-control.bg-teal-l {
+  background-color: #00c9b6;
+}
+.btn.bg-teal-l:hover,
+.form-control.bg-teal-l:hover,
+.btn.bg-teal-l:focus,
+.form-control.bg-teal-l:focus,
+.btn.bg-teal-l:active,
+.form-control.bg-teal-l:active,
+.btn.bg-teal-l.focus,
+.form-control.bg-teal-l.focus,
+.btn.bg-teal-l.active,
+.form-control.bg-teal-l.active {
+  background-color: #009688;
+}
+.btn.bg-teal-l[disabled]:hover,
+.form-control.bg-teal-l[disabled]:hover,
+.btn.bg-teal-l.disabled:hover,
+.form-control.bg-teal-l.disabled:hover,
+.btn.bg-teal-l[disabled]:focus,
+.form-control.bg-teal-l[disabled]:focus,
+.btn.bg-teal-l.disabled:focus,
+.form-control.bg-teal-l.disabled:focus,
+.btn.bg-teal-l[disabled].active,
+.form-control.bg-teal-l[disabled].active,
+.btn.bg-teal-l.disabled.active,
+.form-control.bg-teal-l.disabled.active {
+  background-color: #00c9b6;
+}
+.bg-teal-d,
+.btn.bg-teal-d,
+.form-control.bg-teal-d {
+  background-color: #00635a;
+}
+.btn.bg-teal-d:hover,
+.form-control.bg-teal-d:hover,
+.btn.bg-teal-d:focus,
+.form-control.bg-teal-d:focus,
+.btn.bg-teal-d:active,
+.form-control.bg-teal-d:active,
+.btn.bg-teal-d.focus,
+.form-control.bg-teal-d.focus,
+.btn.bg-teal-d.active,
+.form-control.bg-teal-d.active {
+  background-color: #00302c;
+}
+.btn.bg-teal-d[disabled]:hover,
+.form-control.bg-teal-d[disabled]:hover,
+.btn.bg-teal-d.disabled:hover,
+.form-control.bg-teal-d.disabled:hover,
+.btn.bg-teal-d[disabled]:focus,
+.form-control.bg-teal-d[disabled]:focus,
+.btn.bg-teal-d.disabled:focus,
+.form-control.bg-teal-d.disabled:focus,
+.btn.bg-teal-d[disabled].active,
+.form-control.bg-teal-d[disabled].active,
+.btn.bg-teal-d.disabled.active,
+.form-control.bg-teal-d.disabled.active {
+  background-color: #00635a;
+}
+.bg-green,
+.btn.bg-green,
+.form-control.bg-green {
+  background-color: #4caf50;
+}
+.btn.bg-green:hover,
+.form-control.bg-green:hover,
+.btn.bg-green:focus,
+.form-control.bg-green:focus,
+.btn.bg-green:active,
+.form-control.bg-green:active,
+.btn.bg-green.focus,
+.form-control.bg-green.focus,
+.btn.bg-green.active,
+.form-control.bg-green.active {
+  background-color: #3d8b40;
+}
+.btn.bg-green[disabled]:hover,
+.form-control.bg-green[disabled]:hover,
+.btn.bg-green.disabled:hover,
+.form-control.bg-green.disabled:hover,
+.btn.bg-green[disabled]:focus,
+.form-control.bg-green[disabled]:focus,
+.btn.bg-green.disabled:focus,
+.form-control.bg-green.disabled:focus,
+.btn.bg-green[disabled].active,
+.form-control.bg-green[disabled].active,
+.btn.bg-green.disabled.active,
+.form-control.bg-green.disabled.active {
+  background-color: #4caf50;
+}
+.bg-green-l,
+.btn.bg-green-l,
+.form-control.bg-green-l {
+  background-color: #6ec071;
+}
+.btn.bg-green-l:hover,
+.form-control.bg-green-l:hover,
+.btn.bg-green-l:focus,
+.form-control.bg-green-l:focus,
+.btn.bg-green-l:active,
+.form-control.bg-green-l:active,
+.btn.bg-green-l.focus,
+.form-control.bg-green-l.focus,
+.btn.bg-green-l.active,
+.form-control.bg-green-l.active {
+  background-color: #4caf50;
+}
+.btn.bg-green-l[disabled]:hover,
+.form-control.bg-green-l[disabled]:hover,
+.btn.bg-green-l.disabled:hover,
+.form-control.bg-green-l.disabled:hover,
+.btn.bg-green-l[disabled]:focus,
+.form-control.bg-green-l[disabled]:focus,
+.btn.bg-green-l.disabled:focus,
+.form-control.bg-green-l.disabled:focus,
+.btn.bg-green-l[disabled].active,
+.form-control.bg-green-l[disabled].active,
+.btn.bg-green-l.disabled.active,
+.form-control.bg-green-l.disabled.active {
+  background-color: #6ec071;
+}
+.bg-green-d,
+.btn.bg-green-d,
+.form-control.bg-green-d {
+  background-color: #3d8b40;
+}
+.btn.bg-green-d:hover,
+.form-control.bg-green-d:hover,
+.btn.bg-green-d:focus,
+.form-control.bg-green-d:focus,
+.btn.bg-green-d:active,
+.form-control.bg-green-d:active,
+.btn.bg-green-d.focus,
+.form-control.bg-green-d.focus,
+.btn.bg-green-d.active,
+.form-control.bg-green-d.active {
+  background-color: #2d682f;
+}
+.btn.bg-green-d[disabled]:hover,
+.form-control.bg-green-d[disabled]:hover,
+.btn.bg-green-d.disabled:hover,
+.form-control.bg-green-d.disabled:hover,
+.btn.bg-green-d[disabled]:focus,
+.form-control.bg-green-d[disabled]:focus,
+.btn.bg-green-d.disabled:focus,
+.form-control.bg-green-d.disabled:focus,
+.btn.bg-green-d[disabled].active,
+.form-control.bg-green-d[disabled].active,
+.btn.bg-green-d.disabled.active,
+.form-control.bg-green-d.disabled.active {
+  background-color: #3d8b40;
+}
+.bg-lime,
+.btn.bg-lime,
+.form-control.bg-lime {
+  background-color: #cddc39;
+}
+.btn.bg-lime:hover,
+.form-control.bg-lime:hover,
+.btn.bg-lime:focus,
+.form-control.bg-lime:focus,
+.btn.bg-lime:active,
+.form-control.bg-lime:active,
+.btn.bg-lime.focus,
+.form-control.bg-lime.focus,
+.btn.bg-lime.active,
+.form-control.bg-lime.active {
+  background-color: #b2c022;
+}
+.btn.bg-lime[disabled]:hover,
+.form-control.bg-lime[disabled]:hover,
+.btn.bg-lime.disabled:hover,
+.form-control.bg-lime.disabled:hover,
+.btn.bg-lime[disabled]:focus,
+.form-control.bg-lime[disabled]:focus,
+.btn.bg-lime.disabled:focus,
+.form-control.bg-lime.disabled:focus,
+.btn.bg-lime[disabled].active,
+.form-control.bg-lime[disabled].active,
+.btn.bg-lime.disabled.active,
+.form-control.bg-lime.disabled.active {
+  background-color: #cddc39;
+}
+.bg-lime-l,
+.btn.bg-lime-l,
+.form-control.bg-lime-l {
+  background-color: #d8e464;
+}
+.btn.bg-lime-l:hover,
+.form-control.bg-lime-l:hover,
+.btn.bg-lime-l:focus,
+.form-control.bg-lime-l:focus,
+.btn.bg-lime-l:active,
+.form-control.bg-lime-l:active,
+.btn.bg-lime-l.focus,
+.form-control.bg-lime-l.focus,
+.btn.bg-lime-l.active,
+.form-control.bg-lime-l.active {
+  background-color: #cddc39;
+}
+.btn.bg-lime-l[disabled]:hover,
+.form-control.bg-lime-l[disabled]:hover,
+.btn.bg-lime-l.disabled:hover,
+.form-control.bg-lime-l.disabled:hover,
+.btn.bg-lime-l[disabled]:focus,
+.form-control.bg-lime-l[disabled]:focus,
+.btn.bg-lime-l.disabled:focus,
+.form-control.bg-lime-l.disabled:focus,
+.btn.bg-lime-l[disabled].active,
+.form-control.bg-lime-l[disabled].active,
+.btn.bg-lime-l.disabled.active,
+.form-control.bg-lime-l.disabled.active {
+  background-color: #d8e464;
+}
+.bg-lime-d,
+.btn.bg-lime-d,
+.form-control.bg-lime-d {
+  background-color: #b2c022;
+}
+.btn.bg-lime-d:hover,
+.form-control.bg-lime-d:hover,
+.btn.bg-lime-d:focus,
+.form-control.bg-lime-d:focus,
+.btn.bg-lime-d:active,
+.form-control.bg-lime-d:active,
+.btn.bg-lime-d.focus,
+.form-control.bg-lime-d.focus,
+.btn.bg-lime-d.active,
+.form-control.bg-lime-d.active {
+  background-color: #89951a;
+}
+.btn.bg-lime-d[disabled]:hover,
+.form-control.bg-lime-d[disabled]:hover,
+.btn.bg-lime-d.disabled:hover,
+.form-control.bg-lime-d.disabled:hover,
+.btn.bg-lime-d[disabled]:focus,
+.form-control.bg-lime-d[disabled]:focus,
+.btn.bg-lime-d.disabled:focus,
+.form-control.bg-lime-d.disabled:focus,
+.btn.bg-lime-d[disabled].active,
+.form-control.bg-lime-d[disabled].active,
+.btn.bg-lime-d.disabled.active,
+.form-control.bg-lime-d.disabled.active {
+  background-color: #b2c022;
+}
+.bg-yellow,
+.btn.bg-yellow,
+.form-control.bg-yellow {
+  background-color: #ffeb3b;
+}
+.btn.bg-yellow:hover,
+.form-control.bg-yellow:hover,
+.btn.bg-yellow:focus,
+.form-control.bg-yellow:focus,
+.btn.bg-yellow:active,
+.form-control.bg-yellow:active,
+.btn.bg-yellow.focus,
+.form-control.bg-yellow.focus,
+.btn.bg-yellow.active,
+.form-control.bg-yellow.active {
+  background-color: #ffe608;
+}
+.btn.bg-yellow[disabled]:hover,
+.form-control.bg-yellow[disabled]:hover,
+.btn.bg-yellow.disabled:hover,
+.form-control.bg-yellow.disabled:hover,
+.btn.bg-yellow[disabled]:focus,
+.form-control.bg-yellow[disabled]:focus,
+.btn.bg-yellow.disabled:focus,
+.form-control.bg-yellow.disabled:focus,
+.btn.bg-yellow[disabled].active,
+.form-control.bg-yellow[disabled].active,
+.btn.bg-yellow.disabled.active,
+.form-control.bg-yellow.disabled.active {
+  background-color: #ffeb3b;
+}
+.bg-yellow-l,
+.btn.bg-yellow-l,
+.form-control.bg-yellow-l {
+  background-color: #fff06e;
+}
+.btn.bg-yellow-l:hover,
+.form-control.bg-yellow-l:hover,
+.btn.bg-yellow-l:focus,
+.form-control.bg-yellow-l:focus,
+.btn.bg-yellow-l:active,
+.form-control.bg-yellow-l:active,
+.btn.bg-yellow-l.focus,
+.form-control.bg-yellow-l.focus,
+.btn.bg-yellow-l.active,
+.form-control.bg-yellow-l.active {
+  background-color: #ffeb3b;
+}
+.btn.bg-yellow-l[disabled]:hover,
+.form-control.bg-yellow-l[disabled]:hover,
+.btn.bg-yellow-l.disabled:hover,
+.form-control.bg-yellow-l.disabled:hover,
+.btn.bg-yellow-l[disabled]:focus,
+.form-control.bg-yellow-l[disabled]:focus,
+.btn.bg-yellow-l.disabled:focus,
+.form-control.bg-yellow-l.disabled:focus,
+.btn.bg-yellow-l[disabled].active,
+.form-control.bg-yellow-l[disabled].active,
+.btn.bg-yellow-l.disabled.active,
+.form-control.bg-yellow-l.disabled.active {
+  background-color: #fff06e;
+}
+.bg-yellow-d,
+.btn.bg-yellow-d,
+.form-control.bg-yellow-d {
+  background-color: #ffe608;
+}
+.btn.bg-yellow-d:hover,
+.form-control.bg-yellow-d:hover,
+.btn.bg-yellow-d:focus,
+.form-control.bg-yellow-d:focus,
+.btn.bg-yellow-d:active,
+.form-control.bg-yellow-d:active,
+.btn.bg-yellow-d.focus,
+.form-control.bg-yellow-d.focus,
+.btn.bg-yellow-d.active,
+.form-control.bg-yellow-d.active {
+  background-color: #d4be00;
+}
+.btn.bg-yellow-d[disabled]:hover,
+.form-control.bg-yellow-d[disabled]:hover,
+.btn.bg-yellow-d.disabled:hover,
+.form-control.bg-yellow-d.disabled:hover,
+.btn.bg-yellow-d[disabled]:focus,
+.form-control.bg-yellow-d[disabled]:focus,
+.btn.bg-yellow-d.disabled:focus,
+.form-control.bg-yellow-d.disabled:focus,
+.btn.bg-yellow-d[disabled].active,
+.form-control.bg-yellow-d[disabled].active,
+.btn.bg-yellow-d.disabled.active,
+.form-control.bg-yellow-d.disabled.active {
+  background-color: #ffe608;
+}
+.bg-amber,
+.btn.bg-amber,
+.form-control.bg-amber {
+  background-color: #ffc107;
+}
+.btn.bg-amber:hover,
+.form-control.bg-amber:hover,
+.btn.bg-amber:focus,
+.form-control.bg-amber:focus,
+.btn.bg-amber:active,
+.form-control.bg-amber:active,
+.btn.bg-amber.focus,
+.form-control.bg-amber.focus,
+.btn.bg-amber.active,
+.form-control.bg-amber.active {
+  background-color: #d39e00;
+}
+.btn.bg-amber[disabled]:hover,
+.form-control.bg-amber[disabled]:hover,
+.btn.bg-amber.disabled:hover,
+.form-control.bg-amber.disabled:hover,
+.btn.bg-amber[disabled]:focus,
+.form-control.bg-amber[disabled]:focus,
+.btn.bg-amber.disabled:focus,
+.form-control.bg-amber.disabled:focus,
+.btn.bg-amber[disabled].active,
+.form-control.bg-amber[disabled].active,
+.btn.bg-amber.disabled.active,
+.form-control.bg-amber.disabled.active {
+  background-color: #ffc107;
+}
+.bg-amber-l,
+.btn.bg-amber-l,
+.form-control.bg-amber-l {
+  background-color: #ffce3a;
+}
+.btn.bg-amber-l:hover,
+.form-control.bg-amber-l:hover,
+.btn.bg-amber-l:focus,
+.form-control.bg-amber-l:focus,
+.btn.bg-amber-l:active,
+.form-control.bg-amber-l:active,
+.btn.bg-amber-l.focus,
+.form-control.bg-amber-l.focus,
+.btn.bg-amber-l.active,
+.form-control.bg-amber-l.active {
+  background-color: #ffc107;
+}
+.btn.bg-amber-l[disabled]:hover,
+.form-control.bg-amber-l[disabled]:hover,
+.btn.bg-amber-l.disabled:hover,
+.form-control.bg-amber-l.disabled:hover,
+.btn.bg-amber-l[disabled]:focus,
+.form-control.bg-amber-l[disabled]:focus,
+.btn.bg-amber-l.disabled:focus,
+.form-control.bg-amber-l.disabled:focus,
+.btn.bg-amber-l[disabled].active,
+.form-control.bg-amber-l[disabled].active,
+.btn.bg-amber-l.disabled.active,
+.form-control.bg-amber-l.disabled.active {
+  background-color: #ffce3a;
+}
+.bg-amber-d,
+.btn.bg-amber-d,
+.form-control.bg-amber-d {
+  background-color: #d39e00;
+}
+.btn.bg-amber-d:hover,
+.form-control.bg-amber-d:hover,
+.btn.bg-amber-d:focus,
+.form-control.bg-amber-d:focus,
+.btn.bg-amber-d:active,
+.form-control.bg-amber-d:active,
+.btn.bg-amber-d.focus,
+.form-control.bg-amber-d.focus,
+.btn.bg-amber-d.active,
+.form-control.bg-amber-d.active {
+  background-color: #a07800;
+}
+.btn.bg-amber-d[disabled]:hover,
+.form-control.bg-amber-d[disabled]:hover,
+.btn.bg-amber-d.disabled:hover,
+.form-control.bg-amber-d.disabled:hover,
+.btn.bg-amber-d[disabled]:focus,
+.form-control.bg-amber-d[disabled]:focus,
+.btn.bg-amber-d.disabled:focus,
+.form-control.bg-amber-d.disabled:focus,
+.btn.bg-amber-d[disabled].active,
+.form-control.bg-amber-d[disabled].active,
+.btn.bg-amber-d.disabled.active,
+.form-control.bg-amber-d.disabled.active {
+  background-color: #d39e00;
+}
+.bg-orange,
+.btn.bg-orange,
+.form-control.bg-orange {
+  background-color: #ff9800;
+}
+.btn.bg-orange:hover,
+.form-control.bg-orange:hover,
+.btn.bg-orange:focus,
+.form-control.bg-orange:focus,
+.btn.bg-orange:active,
+.form-control.bg-orange:active,
+.btn.bg-orange.focus,
+.form-control.bg-orange.focus,
+.btn.bg-orange.active,
+.form-control.bg-orange.active {
+  background-color: #cc7a00;
+}
+.btn.bg-orange[disabled]:hover,
+.form-control.bg-orange[disabled]:hover,
+.btn.bg-orange.disabled:hover,
+.form-control.bg-orange.disabled:hover,
+.btn.bg-orange[disabled]:focus,
+.form-control.bg-orange[disabled]:focus,
+.btn.bg-orange.disabled:focus,
+.form-control.bg-orange.disabled:focus,
+.btn.bg-orange[disabled].active,
+.form-control.bg-orange[disabled].active,
+.btn.bg-orange.disabled.active,
+.form-control.bg-orange.disabled.active {
+  background-color: #ff9800;
+}
+.bg-orange-l,
+.btn.bg-orange-l,
+.form-control.bg-orange-l {
+  background-color: #ffad33;
+}
+.btn.bg-orange-l:hover,
+.form-control.bg-orange-l:hover,
+.btn.bg-orange-l:focus,
+.form-control.bg-orange-l:focus,
+.btn.bg-orange-l:active,
+.form-control.bg-orange-l:active,
+.btn.bg-orange-l.focus,
+.form-control.bg-orange-l.focus,
+.btn.bg-orange-l.active,
+.form-control.bg-orange-l.active {
+  background-color: #ff9800;
+}
+.btn.bg-orange-l[disabled]:hover,
+.form-control.bg-orange-l[disabled]:hover,
+.btn.bg-orange-l.disabled:hover,
+.form-control.bg-orange-l.disabled:hover,
+.btn.bg-orange-l[disabled]:focus,
+.form-control.bg-orange-l[disabled]:focus,
+.btn.bg-orange-l.disabled:focus,
+.form-control.bg-orange-l.disabled:focus,
+.btn.bg-orange-l[disabled].active,
+.form-control.bg-orange-l[disabled].active,
+.btn.bg-orange-l.disabled.active,
+.form-control.bg-orange-l.disabled.active {
+  background-color: #ffad33;
+}
+.bg-orange-d,
+.btn.bg-orange-d,
+.form-control.bg-orange-d {
+  background-color: #cc7a00;
+}
+.btn.bg-orange-d:hover,
+.form-control.bg-orange-d:hover,
+.btn.bg-orange-d:focus,
+.form-control.bg-orange-d:focus,
+.btn.bg-orange-d:active,
+.form-control.bg-orange-d:active,
+.btn.bg-orange-d.focus,
+.form-control.bg-orange-d.focus,
+.btn.bg-orange-d.active,
+.form-control.bg-orange-d.active {
+  background-color: #995b00;
+}
+.btn.bg-orange-d[disabled]:hover,
+.form-control.bg-orange-d[disabled]:hover,
+.btn.bg-orange-d.disabled:hover,
+.form-control.bg-orange-d.disabled:hover,
+.btn.bg-orange-d[disabled]:focus,
+.form-control.bg-orange-d[disabled]:focus,
+.btn.bg-orange-d.disabled:focus,
+.form-control.bg-orange-d.disabled:focus,
+.btn.bg-orange-d[disabled].active,
+.form-control.bg-orange-d[disabled].active,
+.btn.bg-orange-d.disabled.active,
+.form-control.bg-orange-d.disabled.active {
+  background-color: #cc7a00;
+}
+.bg-deep-orange,
+.btn.bg-deep-orange,
+.form-control.bg-deep-orange {
+  background-color: #ff5722;
+}
+.btn.bg-deep-orange:hover,
+.form-control.bg-deep-orange:hover,
+.btn.bg-deep-orange:focus,
+.form-control.bg-deep-orange:focus,
+.btn.bg-deep-orange:active,
+.form-control.bg-deep-orange:active,
+.btn.bg-deep-orange.focus,
+.form-control.bg-deep-orange.focus,
+.btn.bg-deep-orange.active,
+.form-control.bg-deep-orange.active {
+  background-color: #ee3900;
+}
+.btn.bg-deep-orange[disabled]:hover,
+.form-control.bg-deep-orange[disabled]:hover,
+.btn.bg-deep-orange.disabled:hover,
+.form-control.bg-deep-orange.disabled:hover,
+.btn.bg-deep-orange[disabled]:focus,
+.form-control.bg-deep-orange[disabled]:focus,
+.btn.bg-deep-orange.disabled:focus,
+.form-control.bg-deep-orange.disabled:focus,
+.btn.bg-deep-orange[disabled].active,
+.form-control.bg-deep-orange[disabled].active,
+.btn.bg-deep-orange.disabled.active,
+.form-control.bg-deep-orange.disabled.active {
+  background-color: #ff5722;
+}
+.bg-deep-orange-l,
+.btn.bg-deep-orange-l,
+.form-control.bg-deep-orange-l {
+  background-color: #ff7e55;
+}
+.btn.bg-deep-orange-l:hover,
+.form-control.bg-deep-orange-l:hover,
+.btn.bg-deep-orange-l:focus,
+.form-control.bg-deep-orange-l:focus,
+.btn.bg-deep-orange-l:active,
+.form-control.bg-deep-orange-l:active,
+.btn.bg-deep-orange-l.focus,
+.form-control.bg-deep-orange-l.focus,
+.btn.bg-deep-orange-l.active,
+.form-control.bg-deep-orange-l.active {
+  background-color: #ff5722;
+}
+.btn.bg-deep-orange-l[disabled]:hover,
+.form-control.bg-deep-orange-l[disabled]:hover,
+.btn.bg-deep-orange-l.disabled:hover,
+.form-control.bg-deep-orange-l.disabled:hover,
+.btn.bg-deep-orange-l[disabled]:focus,
+.form-control.bg-deep-orange-l[disabled]:focus,
+.btn.bg-deep-orange-l.disabled:focus,
+.form-control.bg-deep-orange-l.disabled:focus,
+.btn.bg-deep-orange-l[disabled].active,
+.form-control.bg-deep-orange-l[disabled].active,
+.btn.bg-deep-orange-l.disabled.active,
+.form-control.bg-deep-orange-l.disabled.active {
+  background-color: #ff7e55;
+}
+.bg-deep-orange-d,
+.btn.bg-deep-orange-d,
+.form-control.bg-deep-orange-d {
+  background-color: #ee3900;
+}
+.btn.bg-deep-orange-d:hover,
+.form-control.bg-deep-orange-d:hover,
+.btn.bg-deep-orange-d:focus,
+.form-control.bg-deep-orange-d:focus,
+.btn.bg-deep-orange-d:active,
+.form-control.bg-deep-orange-d:active,
+.btn.bg-deep-orange-d.focus,
+.form-control.bg-deep-orange-d.focus,
+.btn.bg-deep-orange-d.active,
+.form-control.bg-deep-orange-d.active {
+  background-color: #bb2d00;
+}
+.btn.bg-deep-orange-d[disabled]:hover,
+.form-control.bg-deep-orange-d[disabled]:hover,
+.btn.bg-deep-orange-d.disabled:hover,
+.form-control.bg-deep-orange-d.disabled:hover,
+.btn.bg-deep-orange-d[disabled]:focus,
+.form-control.bg-deep-orange-d[disabled]:focus,
+.btn.bg-deep-orange-d.disabled:focus,
+.form-control.bg-deep-orange-d.disabled:focus,
+.btn.bg-deep-orange-d[disabled].active,
+.form-control.bg-deep-orange-d[disabled].active,
+.btn.bg-deep-orange-d.disabled.active,
+.form-control.bg-deep-orange-d.disabled.active {
+  background-color: #ee3900;
+}
+.bg-brown,
+.btn.bg-brown,
+.form-control.bg-brown {
+  background-color: #795548;
+}
+.btn.bg-brown:hover,
+.form-control.bg-brown:hover,
+.btn.bg-brown:focus,
+.form-control.bg-brown:focus,
+.btn.bg-brown:active,
+.form-control.bg-brown:active,
+.btn.bg-brown.focus,
+.form-control.bg-brown.focus,
+.btn.bg-brown.active,
+.form-control.bg-brown.active {
+  background-color: #593f35;
+}
+.btn.bg-brown[disabled]:hover,
+.form-control.bg-brown[disabled]:hover,
+.btn.bg-brown.disabled:hover,
+.form-control.bg-brown.disabled:hover,
+.btn.bg-brown[disabled]:focus,
+.form-control.bg-brown[disabled]:focus,
+.btn.bg-brown.disabled:focus,
+.form-control.bg-brown.disabled:focus,
+.btn.bg-brown[disabled].active,
+.form-control.bg-brown[disabled].active,
+.btn.bg-brown.disabled.active,
+.form-control.bg-brown.disabled.active {
+  background-color: #795548;
+}
+.bg-brown-l,
+.btn.bg-brown-l,
+.form-control.bg-brown-l {
+  background-color: #996b5b;
+}
+.btn.bg-brown-l:hover,
+.form-control.bg-brown-l:hover,
+.btn.bg-brown-l:focus,
+.form-control.bg-brown-l:focus,
+.btn.bg-brown-l:active,
+.form-control.bg-brown-l:active,
+.btn.bg-brown-l.focus,
+.form-control.bg-brown-l.focus,
+.btn.bg-brown-l.active,
+.form-control.bg-brown-l.active {
+  background-color: #795548;
+}
+.btn.bg-brown-l[disabled]:hover,
+.form-control.bg-brown-l[disabled]:hover,
+.btn.bg-brown-l.disabled:hover,
+.form-control.bg-brown-l.disabled:hover,
+.btn.bg-brown-l[disabled]:focus,
+.form-control.bg-brown-l[disabled]:focus,
+.btn.bg-brown-l.disabled:focus,
+.form-control.bg-brown-l.disabled:focus,
+.btn.bg-brown-l[disabled].active,
+.form-control.bg-brown-l[disabled].active,
+.btn.bg-brown-l.disabled.active,
+.form-control.bg-brown-l.disabled.active {
+  background-color: #996b5b;
+}
+.bg-brown-d,
+.btn.bg-brown-d,
+.form-control.bg-brown-d {
+  background-color: #593f35;
+}
+.btn.bg-brown-d:hover,
+.form-control.bg-brown-d:hover,
+.btn.bg-brown-d:focus,
+.form-control.bg-brown-d:focus,
+.btn.bg-brown-d:active,
+.form-control.bg-brown-d:active,
+.btn.bg-brown-d.focus,
+.form-control.bg-brown-d.focus,
+.btn.bg-brown-d.active,
+.form-control.bg-brown-d.active {
+  background-color: #392822;
+}
+.btn.bg-brown-d[disabled]:hover,
+.form-control.bg-brown-d[disabled]:hover,
+.btn.bg-brown-d.disabled:hover,
+.form-control.bg-brown-d.disabled:hover,
+.btn.bg-brown-d[disabled]:focus,
+.form-control.bg-brown-d[disabled]:focus,
+.btn.bg-brown-d.disabled:focus,
+.form-control.bg-brown-d.disabled:focus,
+.btn.bg-brown-d[disabled].active,
+.form-control.bg-brown-d[disabled].active,
+.btn.bg-brown-d.disabled.active,
+.form-control.bg-brown-d.disabled.active {
+  background-color: #593f35;
+}
+.bg-grey,
+.btn.bg-grey,
+.form-control.bg-grey {
+  background-color: #9e9e9e;
+}
+.btn.bg-grey:hover,
+.form-control.bg-grey:hover,
+.btn.bg-grey:focus,
+.form-control.bg-grey:focus,
+.btn.bg-grey:active,
+.form-control.bg-grey:active,
+.btn.bg-grey.focus,
+.form-control.bg-grey.focus,
+.btn.bg-grey.active,
+.form-control.bg-grey.active {
+  background-color: #858585;
+}
+.btn.bg-grey[disabled]:hover,
+.form-control.bg-grey[disabled]:hover,
+.btn.bg-grey.disabled:hover,
+.form-control.bg-grey.disabled:hover,
+.btn.bg-grey[disabled]:focus,
+.form-control.bg-grey[disabled]:focus,
+.btn.bg-grey.disabled:focus,
+.form-control.bg-grey.disabled:focus,
+.btn.bg-grey[disabled].active,
+.form-control.bg-grey[disabled].active,
+.btn.bg-grey.disabled.active,
+.form-control.bg-grey.disabled.active {
+  background-color: #9e9e9e;
+}
+.bg-grey-l,
+.btn.bg-grey-l,
+.form-control.bg-grey-l {
+  background-color: #b8b8b8;
+}
+.btn.bg-grey-l:hover,
+.form-control.bg-grey-l:hover,
+.btn.bg-grey-l:focus,
+.form-control.bg-grey-l:focus,
+.btn.bg-grey-l:active,
+.form-control.bg-grey-l:active,
+.btn.bg-grey-l.focus,
+.form-control.bg-grey-l.focus,
+.btn.bg-grey-l.active,
+.form-control.bg-grey-l.active {
+  background-color: #9e9e9e;
+}
+.btn.bg-grey-l[disabled]:hover,
+.form-control.bg-grey-l[disabled]:hover,
+.btn.bg-grey-l.disabled:hover,
+.form-control.bg-grey-l.disabled:hover,
+.btn.bg-grey-l[disabled]:focus,
+.form-control.bg-grey-l[disabled]:focus,
+.btn.bg-grey-l.disabled:focus,
+.form-control.bg-grey-l.disabled:focus,
+.btn.bg-grey-l[disabled].active,
+.form-control.bg-grey-l[disabled].active,
+.btn.bg-grey-l.disabled.active,
+.form-control.bg-grey-l.disabled.active {
+  background-color: #b8b8b8;
+}
+.bg-grey-d,
+.btn.bg-grey-d,
+.form-control.bg-grey-d {
+  background-color: #858585;
+}
+.btn.bg-grey-d:hover,
+.form-control.bg-grey-d:hover,
+.btn.bg-grey-d:focus,
+.form-control.bg-grey-d:focus,
+.btn.bg-grey-d:active,
+.form-control.bg-grey-d:active,
+.btn.bg-grey-d.focus,
+.form-control.bg-grey-d.focus,
+.btn.bg-grey-d.active,
+.form-control.bg-grey-d.active {
+  background-color: #6b6b6b;
+}
+.btn.bg-grey-d[disabled]:hover,
+.form-control.bg-grey-d[disabled]:hover,
+.btn.bg-grey-d.disabled:hover,
+.form-control.bg-grey-d.disabled:hover,
+.btn.bg-grey-d[disabled]:focus,
+.form-control.bg-grey-d[disabled]:focus,
+.btn.bg-grey-d.disabled:focus,
+.form-control.bg-grey-d.disabled:focus,
+.btn.bg-grey-d[disabled].active,
+.form-control.bg-grey-d[disabled].active,
+.btn.bg-grey-d.disabled.active,
+.form-control.bg-grey-d.disabled.active {
+  background-color: #858585;
+}
+.bg-blue-grey,
+.btn.bg-blue-grey,
+.form-control.bg-blue-grey {
+  background-color: #607d8b;
+}
+.btn.bg-blue-grey:hover,
+.form-control.bg-blue-grey:hover,
+.btn.bg-blue-grey:focus,
+.form-control.bg-blue-grey:focus,
+.btn.bg-blue-grey:active,
+.form-control.bg-blue-grey:active,
+.btn.bg-blue-grey.focus,
+.form-control.bg-blue-grey.focus,
+.btn.bg-blue-grey.active,
+.form-control.bg-blue-grey.active {
+  background-color: #4b626d;
+}
+.btn.bg-blue-grey[disabled]:hover,
+.form-control.bg-blue-grey[disabled]:hover,
+.btn.bg-blue-grey.disabled:hover,
+.form-control.bg-blue-grey.disabled:hover,
+.btn.bg-blue-grey[disabled]:focus,
+.form-control.bg-blue-grey[disabled]:focus,
+.btn.bg-blue-grey.disabled:focus,
+.form-control.bg-blue-grey.disabled:focus,
+.btn.bg-blue-grey[disabled].active,
+.form-control.bg-blue-grey[disabled].active,
+.btn.bg-blue-grey.disabled.active,
+.form-control.bg-blue-grey.disabled.active {
+  background-color: #607d8b;
+}
+.bg-blue-grey-l,
+.btn.bg-blue-grey-l,
+.form-control.bg-blue-grey-l {
+  background-color: #7b96a3;
+}
+.btn.bg-blue-grey-l:hover,
+.form-control.bg-blue-grey-l:hover,
+.btn.bg-blue-grey-l:focus,
+.form-control.bg-blue-grey-l:focus,
+.btn.bg-blue-grey-l:active,
+.form-control.bg-blue-grey-l:active,
+.btn.bg-blue-grey-l.focus,
+.form-control.bg-blue-grey-l.focus,
+.btn.bg-blue-grey-l.active,
+.form-control.bg-blue-grey-l.active {
+  background-color: #607d8b;
+}
+.btn.bg-blue-grey-l[disabled]:hover,
+.form-control.bg-blue-grey-l[disabled]:hover,
+.btn.bg-blue-grey-l.disabled:hover,
+.form-control.bg-blue-grey-l.disabled:hover,
+.btn.bg-blue-grey-l[disabled]:focus,
+.form-control.bg-blue-grey-l[disabled]:focus,
+.btn.bg-blue-grey-l.disabled:focus,
+.form-control.bg-blue-grey-l.disabled:focus,
+.btn.bg-blue-grey-l[disabled].active,
+.form-control.bg-blue-grey-l[disabled].active,
+.btn.bg-blue-grey-l.disabled.active,
+.form-control.bg-blue-grey-l.disabled.active {
+  background-color: #7b96a3;
+}
+.bg-blue-grey-d,
+.btn.bg-blue-grey-d,
+.form-control.bg-blue-grey-d {
+  background-color: #4b626d;
+}
+.btn.bg-blue-grey-d:hover,
+.form-control.bg-blue-grey-d:hover,
+.btn.bg-blue-grey-d:focus,
+.form-control.bg-blue-grey-d:focus,
+.btn.bg-blue-grey-d:active,
+.form-control.bg-blue-grey-d:active,
+.btn.bg-blue-grey-d.focus,
+.form-control.bg-blue-grey-d.focus,
+.btn.bg-blue-grey-d.active,
+.form-control.bg-blue-grey-d.active {
+  background-color: #36474f;
+}
+.btn.bg-blue-grey-d[disabled]:hover,
+.form-control.bg-blue-grey-d[disabled]:hover,
+.btn.bg-blue-grey-d.disabled:hover,
+.form-control.bg-blue-grey-d.disabled:hover,
+.btn.bg-blue-grey-d[disabled]:focus,
+.form-control.bg-blue-grey-d[disabled]:focus,
+.btn.bg-blue-grey-d.disabled:focus,
+.form-control.bg-blue-grey-d.disabled:focus,
+.btn.bg-blue-grey-d[disabled].active,
+.form-control.bg-blue-grey-d[disabled].active,
+.btn.bg-blue-grey-d.disabled.active,
+.form-control.bg-blue-grey-d.disabled.active {
+  background-color: #4b626d;
+}
+/*---Border colors---*/
+.border-transparent {
+  border-color: transparent;
+}
+.border-white,
+.btn.border-white,
+.form-control.border-white {
+  border-color: #ffffff;
+}
+.btn.border-white:hover,
+.form-control.border-white:hover,
+.btn.border-white:focus,
+.form-control.border-white:focus,
+.btn.border-white:active,
+.form-control.border-white:active,
+.btn.border-white.focus,
+.form-control.border-white.focus,
+.btn.border-white.active,
+.form-control.border-white.active {
+  border-color: #e6e6e6;
+}
+.btn.border-white[disabled]:hover,
+.form-control.border-white[disabled]:hover,
+.btn.border-white.disabled:hover,
+.form-control.border-white.disabled:hover,
+.btn.border-white[disabled]:focus,
+.form-control.border-white[disabled]:focus,
+.btn.border-white.disabled:focus,
+.form-control.border-white.disabled:focus,
+.btn.border-white[disabled].active,
+.form-control.border-white[disabled].active,
+.btn.border-white.disabled.active,
+.form-control.border-white.disabled.active {
+  border-color: #ffffff;
+}
+.form-control.border-white:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffffff;
+}
+.border-white-l,
+.btn.border-white-l,
+.form-control.border-white-l {
+  border-color: #ffffff;
+}
+.btn.border-white-l:hover,
+.form-control.border-white-l:hover,
+.btn.border-white-l:focus,
+.form-control.border-white-l:focus,
+.btn.border-white-l:active,
+.form-control.border-white-l:active,
+.btn.border-white-l.focus,
+.form-control.border-white-l.focus,
+.btn.border-white-l.active,
+.form-control.border-white-l.active {
+  border-color: #e6e6e6;
+}
+.btn.border-white-l[disabled]:hover,
+.form-control.border-white-l[disabled]:hover,
+.btn.border-white-l.disabled:hover,
+.form-control.border-white-l.disabled:hover,
+.btn.border-white-l[disabled]:focus,
+.form-control.border-white-l[disabled]:focus,
+.btn.border-white-l.disabled:focus,
+.form-control.border-white-l.disabled:focus,
+.btn.border-white-l[disabled].active,
+.form-control.border-white-l[disabled].active,
+.btn.border-white-l.disabled.active,
+.form-control.border-white-l.disabled.active {
+  border-color: #ffffff;
+}
+.form-control.border-white-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffffff;
+}
+.border-white-d,
+.btn.border-white-d,
+.form-control.border-white-d {
+  border-color: #e6e6e6;
+}
+.btn.border-white-d:hover,
+.form-control.border-white-d:hover,
+.btn.border-white-d:focus,
+.form-control.border-white-d:focus,
+.btn.border-white-d:active,
+.form-control.border-white-d:active,
+.btn.border-white-d.focus,
+.form-control.border-white-d.focus,
+.btn.border-white-d.active,
+.form-control.border-white-d.active {
+  border-color: #cccccc;
+}
+.btn.border-white-d[disabled]:hover,
+.form-control.border-white-d[disabled]:hover,
+.btn.border-white-d.disabled:hover,
+.form-control.border-white-d.disabled:hover,
+.btn.border-white-d[disabled]:focus,
+.form-control.border-white-d[disabled]:focus,
+.btn.border-white-d.disabled:focus,
+.form-control.border-white-d.disabled:focus,
+.btn.border-white-d[disabled].active,
+.form-control.border-white-d[disabled].active,
+.btn.border-white-d.disabled.active,
+.form-control.border-white-d.disabled.active {
+  border-color: #e6e6e6;
+}
+.form-control.border-white-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e6e6e6;
+}
+.border-silver,
+.btn.border-silver,
+.form-control.border-silver {
+  border-color: #c0c0c0;
+}
+.btn.border-silver:hover,
+.form-control.border-silver:hover,
+.btn.border-silver:focus,
+.form-control.border-silver:focus,
+.btn.border-silver:active,
+.form-control.border-silver:active,
+.btn.border-silver.focus,
+.form-control.border-silver.focus,
+.btn.border-silver.active,
+.form-control.border-silver.active {
+  border-color: #a7a7a7;
+}
+.btn.border-silver[disabled]:hover,
+.form-control.border-silver[disabled]:hover,
+.btn.border-silver.disabled:hover,
+.form-control.border-silver.disabled:hover,
+.btn.border-silver[disabled]:focus,
+.form-control.border-silver[disabled]:focus,
+.btn.border-silver.disabled:focus,
+.form-control.border-silver.disabled:focus,
+.btn.border-silver[disabled].active,
+.form-control.border-silver[disabled].active,
+.btn.border-silver.disabled.active,
+.form-control.border-silver.disabled.active {
+  border-color: #c0c0c0;
+}
+.form-control.border-silver:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #c0c0c0;
+}
+.border-silver-l,
+.btn.border-silver-l,
+.form-control.border-silver-l {
+  border-color: #dadada;
+}
+.btn.border-silver-l:hover,
+.form-control.border-silver-l:hover,
+.btn.border-silver-l:focus,
+.form-control.border-silver-l:focus,
+.btn.border-silver-l:active,
+.form-control.border-silver-l:active,
+.btn.border-silver-l.focus,
+.form-control.border-silver-l.focus,
+.btn.border-silver-l.active,
+.form-control.border-silver-l.active {
+  border-color: #c0c0c0;
+}
+.btn.border-silver-l[disabled]:hover,
+.form-control.border-silver-l[disabled]:hover,
+.btn.border-silver-l.disabled:hover,
+.form-control.border-silver-l.disabled:hover,
+.btn.border-silver-l[disabled]:focus,
+.form-control.border-silver-l[disabled]:focus,
+.btn.border-silver-l.disabled:focus,
+.form-control.border-silver-l.disabled:focus,
+.btn.border-silver-l[disabled].active,
+.form-control.border-silver-l[disabled].active,
+.btn.border-silver-l.disabled.active,
+.form-control.border-silver-l.disabled.active {
+  border-color: #dadada;
+}
+.form-control.border-silver-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #dadada;
+}
+.border-silver-d,
+.btn.border-silver-d,
+.form-control.border-silver-d {
+  border-color: #a7a7a7;
+}
+.btn.border-silver-d:hover,
+.form-control.border-silver-d:hover,
+.btn.border-silver-d:focus,
+.form-control.border-silver-d:focus,
+.btn.border-silver-d:active,
+.form-control.border-silver-d:active,
+.btn.border-silver-d.focus,
+.form-control.border-silver-d.focus,
+.btn.border-silver-d.active,
+.form-control.border-silver-d.active {
+  border-color: #8d8d8d;
+}
+.btn.border-silver-d[disabled]:hover,
+.form-control.border-silver-d[disabled]:hover,
+.btn.border-silver-d.disabled:hover,
+.form-control.border-silver-d.disabled:hover,
+.btn.border-silver-d[disabled]:focus,
+.form-control.border-silver-d[disabled]:focus,
+.btn.border-silver-d.disabled:focus,
+.form-control.border-silver-d.disabled:focus,
+.btn.border-silver-d[disabled].active,
+.form-control.border-silver-d[disabled].active,
+.btn.border-silver-d.disabled.active,
+.form-control.border-silver-d.disabled.active {
+  border-color: #a7a7a7;
+}
+.form-control.border-silver-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #a7a7a7;
+}
+.border-black,
+.btn.border-black,
+.form-control.border-black {
+  border-color: #333333;
+}
+.btn.border-black:hover,
+.form-control.border-black:hover,
+.btn.border-black:focus,
+.form-control.border-black:focus,
+.btn.border-black:active,
+.form-control.border-black:active,
+.btn.border-black.focus,
+.form-control.border-black.focus,
+.btn.border-black.active,
+.form-control.border-black.active {
+  border-color: #1a1a1a;
+}
+.btn.border-black[disabled]:hover,
+.form-control.border-black[disabled]:hover,
+.btn.border-black.disabled:hover,
+.form-control.border-black.disabled:hover,
+.btn.border-black[disabled]:focus,
+.form-control.border-black[disabled]:focus,
+.btn.border-black.disabled:focus,
+.form-control.border-black.disabled:focus,
+.btn.border-black[disabled].active,
+.form-control.border-black[disabled].active,
+.btn.border-black.disabled.active,
+.form-control.border-black.disabled.active {
+  border-color: #333333;
+}
+.form-control.border-black:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #333333;
+}
+.border-black-l,
+.btn.border-black-l,
+.form-control.border-black-l {
+  border-color: #4d4d4d;
+}
+.btn.border-black-l:hover,
+.form-control.border-black-l:hover,
+.btn.border-black-l:focus,
+.form-control.border-black-l:focus,
+.btn.border-black-l:active,
+.form-control.border-black-l:active,
+.btn.border-black-l.focus,
+.form-control.border-black-l.focus,
+.btn.border-black-l.active,
+.form-control.border-black-l.active {
+  border-color: #333333;
+}
+.btn.border-black-l[disabled]:hover,
+.form-control.border-black-l[disabled]:hover,
+.btn.border-black-l.disabled:hover,
+.form-control.border-black-l.disabled:hover,
+.btn.border-black-l[disabled]:focus,
+.form-control.border-black-l[disabled]:focus,
+.btn.border-black-l.disabled:focus,
+.form-control.border-black-l.disabled:focus,
+.btn.border-black-l[disabled].active,
+.form-control.border-black-l[disabled].active,
+.btn.border-black-l.disabled.active,
+.form-control.border-black-l.disabled.active {
+  border-color: #4d4d4d;
+}
+.form-control.border-black-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #4d4d4d;
+}
+.border-black-d,
+.btn.border-black-d,
+.form-control.border-black-d {
+  border-color: #1a1a1a;
+}
+.btn.border-black-d:hover,
+.form-control.border-black-d:hover,
+.btn.border-black-d:focus,
+.form-control.border-black-d:focus,
+.btn.border-black-d:active,
+.form-control.border-black-d:active,
+.btn.border-black-d.focus,
+.form-control.border-black-d.focus,
+.btn.border-black-d.active,
+.form-control.border-black-d.active {
+  border-color: #000000;
+}
+.btn.border-black-d[disabled]:hover,
+.form-control.border-black-d[disabled]:hover,
+.btn.border-black-d.disabled:hover,
+.form-control.border-black-d.disabled:hover,
+.btn.border-black-d[disabled]:focus,
+.form-control.border-black-d[disabled]:focus,
+.btn.border-black-d.disabled:focus,
+.form-control.border-black-d.disabled:focus,
+.btn.border-black-d[disabled].active,
+.form-control.border-black-d[disabled].active,
+.btn.border-black-d.disabled.active,
+.form-control.border-black-d.disabled.active {
+  border-color: #1a1a1a;
+}
+.form-control.border-black-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #1a1a1a;
+}
+.border-red,
+.btn.border-red,
+.form-control.border-red {
+  border-color: #f44336;
+}
+.btn.border-red:hover,
+.form-control.border-red:hover,
+.btn.border-red:focus,
+.form-control.border-red:focus,
+.btn.border-red:active,
+.form-control.border-red:active,
+.btn.border-red.focus,
+.form-control.border-red.focus,
+.btn.border-red.active,
+.form-control.border-red.active {
+  border-color: #ea1c0d;
+}
+.btn.border-red[disabled]:hover,
+.form-control.border-red[disabled]:hover,
+.btn.border-red.disabled:hover,
+.form-control.border-red.disabled:hover,
+.btn.border-red[disabled]:focus,
+.form-control.border-red[disabled]:focus,
+.btn.border-red.disabled:focus,
+.form-control.border-red.disabled:focus,
+.btn.border-red[disabled].active,
+.form-control.border-red[disabled].active,
+.btn.border-red.disabled.active,
+.form-control.border-red.disabled.active {
+  border-color: #f44336;
+}
+.form-control.border-red:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f44336;
+}
+.border-red-l,
+.btn.border-red-l,
+.form-control.border-red-l {
+  border-color: #f77066;
+}
+.btn.border-red-l:hover,
+.form-control.border-red-l:hover,
+.btn.border-red-l:focus,
+.form-control.border-red-l:focus,
+.btn.border-red-l:active,
+.form-control.border-red-l:active,
+.btn.border-red-l.focus,
+.form-control.border-red-l.focus,
+.btn.border-red-l.active,
+.form-control.border-red-l.active {
+  border-color: #f44336;
+}
+.btn.border-red-l[disabled]:hover,
+.form-control.border-red-l[disabled]:hover,
+.btn.border-red-l.disabled:hover,
+.form-control.border-red-l.disabled:hover,
+.btn.border-red-l[disabled]:focus,
+.form-control.border-red-l[disabled]:focus,
+.btn.border-red-l.disabled:focus,
+.form-control.border-red-l.disabled:focus,
+.btn.border-red-l[disabled].active,
+.form-control.border-red-l[disabled].active,
+.btn.border-red-l.disabled.active,
+.form-control.border-red-l.disabled.active {
+  border-color: #f77066;
+}
+.form-control.border-red-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f77066;
+}
+.border-red-d,
+.btn.border-red-d,
+.form-control.border-red-d {
+  border-color: #ea1c0d;
+}
+.btn.border-red-d:hover,
+.form-control.border-red-d:hover,
+.btn.border-red-d:focus,
+.form-control.border-red-d:focus,
+.btn.border-red-d:active,
+.form-control.border-red-d:active,
+.btn.border-red-d.focus,
+.form-control.border-red-d.focus,
+.btn.border-red-d.active,
+.form-control.border-red-d.active {
+  border-color: #ba160a;
+}
+.btn.border-red-d[disabled]:hover,
+.form-control.border-red-d[disabled]:hover,
+.btn.border-red-d.disabled:hover,
+.form-control.border-red-d.disabled:hover,
+.btn.border-red-d[disabled]:focus,
+.form-control.border-red-d[disabled]:focus,
+.btn.border-red-d.disabled:focus,
+.form-control.border-red-d.disabled:focus,
+.btn.border-red-d[disabled].active,
+.form-control.border-red-d[disabled].active,
+.btn.border-red-d.disabled.active,
+.form-control.border-red-d.disabled.active {
+  border-color: #ea1c0d;
+}
+.form-control.border-red-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ea1c0d;
+}
+.border-pink,
+.btn.border-pink,
+.form-control.border-pink {
+  border-color: #e91e63;
+}
+.btn.border-pink:hover,
+.form-control.border-pink:hover,
+.btn.border-pink:focus,
+.form-control.border-pink:focus,
+.btn.border-pink:active,
+.form-control.border-pink:active,
+.btn.border-pink.focus,
+.form-control.border-pink.focus,
+.btn.border-pink.active,
+.form-control.border-pink.active {
+  border-color: #c1134e;
+}
+.btn.border-pink[disabled]:hover,
+.form-control.border-pink[disabled]:hover,
+.btn.border-pink.disabled:hover,
+.form-control.border-pink.disabled:hover,
+.btn.border-pink[disabled]:focus,
+.form-control.border-pink[disabled]:focus,
+.btn.border-pink.disabled:focus,
+.form-control.border-pink.disabled:focus,
+.btn.border-pink[disabled].active,
+.form-control.border-pink[disabled].active,
+.btn.border-pink.disabled.active,
+.form-control.border-pink.disabled.active {
+  border-color: #e91e63;
+}
+.form-control.border-pink:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e91e63;
+}
+.border-pink-l,
+.btn.border-pink-l,
+.form-control.border-pink-l {
+  border-color: #ee4c83;
+}
+.btn.border-pink-l:hover,
+.form-control.border-pink-l:hover,
+.btn.border-pink-l:focus,
+.form-control.border-pink-l:focus,
+.btn.border-pink-l:active,
+.form-control.border-pink-l:active,
+.btn.border-pink-l.focus,
+.form-control.border-pink-l.focus,
+.btn.border-pink-l.active,
+.form-control.border-pink-l.active {
+  border-color: #e91e63;
+}
+.btn.border-pink-l[disabled]:hover,
+.form-control.border-pink-l[disabled]:hover,
+.btn.border-pink-l.disabled:hover,
+.form-control.border-pink-l.disabled:hover,
+.btn.border-pink-l[disabled]:focus,
+.form-control.border-pink-l[disabled]:focus,
+.btn.border-pink-l.disabled:focus,
+.form-control.border-pink-l.disabled:focus,
+.btn.border-pink-l[disabled].active,
+.form-control.border-pink-l[disabled].active,
+.btn.border-pink-l.disabled.active,
+.form-control.border-pink-l.disabled.active {
+  border-color: #ee4c83;
+}
+.form-control.border-pink-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ee4c83;
+}
+.border-pink-d,
+.btn.border-pink-d,
+.form-control.border-pink-d {
+  border-color: #c1134e;
+}
+.btn.border-pink-d:hover,
+.form-control.border-pink-d:hover,
+.btn.border-pink-d:focus,
+.form-control.border-pink-d:focus,
+.btn.border-pink-d:active,
+.form-control.border-pink-d:active,
+.btn.border-pink-d.focus,
+.form-control.border-pink-d.focus,
+.btn.border-pink-d.active,
+.form-control.border-pink-d.active {
+  border-color: #930e3b;
+}
+.btn.border-pink-d[disabled]:hover,
+.form-control.border-pink-d[disabled]:hover,
+.btn.border-pink-d.disabled:hover,
+.form-control.border-pink-d.disabled:hover,
+.btn.border-pink-d[disabled]:focus,
+.form-control.border-pink-d[disabled]:focus,
+.btn.border-pink-d.disabled:focus,
+.form-control.border-pink-d.disabled:focus,
+.btn.border-pink-d[disabled].active,
+.form-control.border-pink-d[disabled].active,
+.btn.border-pink-d.disabled.active,
+.form-control.border-pink-d.disabled.active {
+  border-color: #c1134e;
+}
+.form-control.border-pink-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #c1134e;
+}
+.border-purple,
+.btn.border-purple,
+.form-control.border-purple {
+  border-color: #9c27b0;
+}
+.btn.border-purple:hover,
+.form-control.border-purple:hover,
+.btn.border-purple:focus,
+.form-control.border-purple:focus,
+.btn.border-purple:active,
+.form-control.border-purple:active,
+.btn.border-purple.focus,
+.form-control.border-purple.focus,
+.btn.border-purple.active,
+.form-control.border-purple.active {
+  border-color: #771e86;
+}
+.btn.border-purple[disabled]:hover,
+.form-control.border-purple[disabled]:hover,
+.btn.border-purple.disabled:hover,
+.form-control.border-purple.disabled:hover,
+.btn.border-purple[disabled]:focus,
+.form-control.border-purple[disabled]:focus,
+.btn.border-purple.disabled:focus,
+.form-control.border-purple.disabled:focus,
+.btn.border-purple[disabled].active,
+.form-control.border-purple[disabled].active,
+.btn.border-purple.disabled.active,
+.form-control.border-purple.disabled.active {
+  border-color: #9c27b0;
+}
+.form-control.border-purple:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #9c27b0;
+}
+.border-purple-l,
+.btn.border-purple-l,
+.form-control.border-purple-l {
+  border-color: #bc37d3;
+}
+.btn.border-purple-l:hover,
+.form-control.border-purple-l:hover,
+.btn.border-purple-l:focus,
+.form-control.border-purple-l:focus,
+.btn.border-purple-l:active,
+.form-control.border-purple-l:active,
+.btn.border-purple-l.focus,
+.form-control.border-purple-l.focus,
+.btn.border-purple-l.active,
+.form-control.border-purple-l.active {
+  border-color: #9c27b0;
+}
+.btn.border-purple-l[disabled]:hover,
+.form-control.border-purple-l[disabled]:hover,
+.btn.border-purple-l.disabled:hover,
+.form-control.border-purple-l.disabled:hover,
+.btn.border-purple-l[disabled]:focus,
+.form-control.border-purple-l[disabled]:focus,
+.btn.border-purple-l.disabled:focus,
+.form-control.border-purple-l.disabled:focus,
+.btn.border-purple-l[disabled].active,
+.form-control.border-purple-l[disabled].active,
+.btn.border-purple-l.disabled.active,
+.form-control.border-purple-l.disabled.active {
+  border-color: #bc37d3;
+}
+.form-control.border-purple-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #bc37d3;
+}
+.border-purple-d,
+.btn.border-purple-d,
+.form-control.border-purple-d {
+  border-color: #771e86;
+}
+.btn.border-purple-d:hover,
+.form-control.border-purple-d:hover,
+.btn.border-purple-d:focus,
+.form-control.border-purple-d:focus,
+.btn.border-purple-d:active,
+.form-control.border-purple-d:active,
+.btn.border-purple-d.focus,
+.form-control.border-purple-d.focus,
+.btn.border-purple-d.active,
+.form-control.border-purple-d.active {
+  border-color: #52145d;
+}
+.btn.border-purple-d[disabled]:hover,
+.form-control.border-purple-d[disabled]:hover,
+.btn.border-purple-d.disabled:hover,
+.form-control.border-purple-d.disabled:hover,
+.btn.border-purple-d[disabled]:focus,
+.form-control.border-purple-d[disabled]:focus,
+.btn.border-purple-d.disabled:focus,
+.form-control.border-purple-d.disabled:focus,
+.btn.border-purple-d[disabled].active,
+.form-control.border-purple-d[disabled].active,
+.btn.border-purple-d.disabled.active,
+.form-control.border-purple-d.disabled.active {
+  border-color: #771e86;
+}
+.form-control.border-purple-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #771e86;
+}
+.border-deep-purple,
+.btn.border-deep-purple,
+.form-control.border-deep-purple {
+  border-color: #673ab7;
+}
+.btn.border-deep-purple:hover,
+.form-control.border-deep-purple:hover,
+.btn.border-deep-purple:focus,
+.form-control.border-deep-purple:focus,
+.btn.border-deep-purple:active,
+.form-control.border-deep-purple:active,
+.btn.border-deep-purple.focus,
+.form-control.border-deep-purple.focus,
+.btn.border-deep-purple.active,
+.form-control.border-deep-purple.active {
+  border-color: #512e90;
+}
+.btn.border-deep-purple[disabled]:hover,
+.form-control.border-deep-purple[disabled]:hover,
+.btn.border-deep-purple.disabled:hover,
+.form-control.border-deep-purple.disabled:hover,
+.btn.border-deep-purple[disabled]:focus,
+.form-control.border-deep-purple[disabled]:focus,
+.btn.border-deep-purple.disabled:focus,
+.form-control.border-deep-purple.disabled:focus,
+.btn.border-deep-purple[disabled].active,
+.form-control.border-deep-purple[disabled].active,
+.btn.border-deep-purple.disabled.active,
+.form-control.border-deep-purple.disabled.active {
+  border-color: #673ab7;
+}
+.form-control.border-deep-purple:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #673ab7;
+}
+.border-deep-purple-l,
+.btn.border-deep-purple-l,
+.form-control.border-deep-purple-l {
+  border-color: #8259cb;
+}
+.btn.border-deep-purple-l:hover,
+.form-control.border-deep-purple-l:hover,
+.btn.border-deep-purple-l:focus,
+.form-control.border-deep-purple-l:focus,
+.btn.border-deep-purple-l:active,
+.form-control.border-deep-purple-l:active,
+.btn.border-deep-purple-l.focus,
+.form-control.border-deep-purple-l.focus,
+.btn.border-deep-purple-l.active,
+.form-control.border-deep-purple-l.active {
+  border-color: #673ab7;
+}
+.btn.border-deep-purple-l[disabled]:hover,
+.form-control.border-deep-purple-l[disabled]:hover,
+.btn.border-deep-purple-l.disabled:hover,
+.form-control.border-deep-purple-l.disabled:hover,
+.btn.border-deep-purple-l[disabled]:focus,
+.form-control.border-deep-purple-l[disabled]:focus,
+.btn.border-deep-purple-l.disabled:focus,
+.form-control.border-deep-purple-l.disabled:focus,
+.btn.border-deep-purple-l[disabled].active,
+.form-control.border-deep-purple-l[disabled].active,
+.btn.border-deep-purple-l.disabled.active,
+.form-control.border-deep-purple-l.disabled.active {
+  border-color: #8259cb;
+}
+.form-control.border-deep-purple-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #8259cb;
+}
+.border-deep-purple-d,
+.btn.border-deep-purple-d,
+.form-control.border-deep-purple-d {
+  border-color: #512e90;
+}
+.btn.border-deep-purple-d:hover,
+.form-control.border-deep-purple-d:hover,
+.btn.border-deep-purple-d:focus,
+.form-control.border-deep-purple-d:focus,
+.btn.border-deep-purple-d:active,
+.form-control.border-deep-purple-d:active,
+.btn.border-deep-purple-d.focus,
+.form-control.border-deep-purple-d.focus,
+.btn.border-deep-purple-d.active,
+.form-control.border-deep-purple-d.active {
+  border-color: #3b216a;
+}
+.btn.border-deep-purple-d[disabled]:hover,
+.form-control.border-deep-purple-d[disabled]:hover,
+.btn.border-deep-purple-d.disabled:hover,
+.form-control.border-deep-purple-d.disabled:hover,
+.btn.border-deep-purple-d[disabled]:focus,
+.form-control.border-deep-purple-d[disabled]:focus,
+.btn.border-deep-purple-d.disabled:focus,
+.form-control.border-deep-purple-d.disabled:focus,
+.btn.border-deep-purple-d[disabled].active,
+.form-control.border-deep-purple-d[disabled].active,
+.btn.border-deep-purple-d.disabled.active,
+.form-control.border-deep-purple-d.disabled.active {
+  border-color: #512e90;
+}
+.form-control.border-deep-purple-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #512e90;
+}
+.border-indigo,
+.btn.border-indigo,
+.form-control.border-indigo {
+  border-color: #3f51b5;
+}
+.btn.border-indigo:hover,
+.form-control.border-indigo:hover,
+.btn.border-indigo:focus,
+.form-control.border-indigo:focus,
+.btn.border-indigo:active,
+.form-control.border-indigo:active,
+.btn.border-indigo.focus,
+.form-control.border-indigo.focus,
+.btn.border-indigo.active,
+.form-control.border-indigo.active {
+  border-color: #32408f;
+}
+.btn.border-indigo[disabled]:hover,
+.form-control.border-indigo[disabled]:hover,
+.btn.border-indigo.disabled:hover,
+.form-control.border-indigo.disabled:hover,
+.btn.border-indigo[disabled]:focus,
+.form-control.border-indigo[disabled]:focus,
+.btn.border-indigo.disabled:focus,
+.form-control.border-indigo.disabled:focus,
+.btn.border-indigo[disabled].active,
+.form-control.border-indigo[disabled].active,
+.btn.border-indigo.disabled.active,
+.form-control.border-indigo.disabled.active {
+  border-color: #3f51b5;
+}
+.form-control.border-indigo:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #3f51b5;
+}
+.border-indigo-l,
+.btn.border-indigo-l,
+.form-control.border-indigo-l {
+  border-color: #606fc7;
+}
+.btn.border-indigo-l:hover,
+.form-control.border-indigo-l:hover,
+.btn.border-indigo-l:focus,
+.form-control.border-indigo-l:focus,
+.btn.border-indigo-l:active,
+.form-control.border-indigo-l:active,
+.btn.border-indigo-l.focus,
+.form-control.border-indigo-l.focus,
+.btn.border-indigo-l.active,
+.form-control.border-indigo-l.active {
+  border-color: #3f51b5;
+}
+.btn.border-indigo-l[disabled]:hover,
+.form-control.border-indigo-l[disabled]:hover,
+.btn.border-indigo-l.disabled:hover,
+.form-control.border-indigo-l.disabled:hover,
+.btn.border-indigo-l[disabled]:focus,
+.form-control.border-indigo-l[disabled]:focus,
+.btn.border-indigo-l.disabled:focus,
+.form-control.border-indigo-l.disabled:focus,
+.btn.border-indigo-l[disabled].active,
+.form-control.border-indigo-l[disabled].active,
+.btn.border-indigo-l.disabled.active,
+.form-control.border-indigo-l.disabled.active {
+  border-color: #606fc7;
+}
+.form-control.border-indigo-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #606fc7;
+}
+.border-indigo-d,
+.btn.border-indigo-d,
+.form-control.border-indigo-d {
+  border-color: #32408f;
+}
+.btn.border-indigo-d:hover,
+.form-control.border-indigo-d:hover,
+.btn.border-indigo-d:focus,
+.form-control.border-indigo-d:focus,
+.btn.border-indigo-d:active,
+.form-control.border-indigo-d:active,
+.btn.border-indigo-d.focus,
+.form-control.border-indigo-d.focus,
+.btn.border-indigo-d.active,
+.form-control.border-indigo-d.active {
+  border-color: #252f69;
+}
+.btn.border-indigo-d[disabled]:hover,
+.form-control.border-indigo-d[disabled]:hover,
+.btn.border-indigo-d.disabled:hover,
+.form-control.border-indigo-d.disabled:hover,
+.btn.border-indigo-d[disabled]:focus,
+.form-control.border-indigo-d[disabled]:focus,
+.btn.border-indigo-d.disabled:focus,
+.form-control.border-indigo-d.disabled:focus,
+.btn.border-indigo-d[disabled].active,
+.form-control.border-indigo-d[disabled].active,
+.btn.border-indigo-d.disabled.active,
+.form-control.border-indigo-d.disabled.active {
+  border-color: #32408f;
+}
+.form-control.border-indigo-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #32408f;
+}
+.border-blue,
+.btn.border-blue,
+.form-control.border-blue {
+  border-color: #2196f3;
+}
+.btn.border-blue:hover,
+.form-control.border-blue:hover,
+.btn.border-blue:focus,
+.form-control.border-blue:focus,
+.btn.border-blue:active,
+.form-control.border-blue:active,
+.btn.border-blue.focus,
+.form-control.border-blue.focus,
+.btn.border-blue.active,
+.form-control.border-blue.active {
+  border-color: #0c7cd5;
+}
+.btn.border-blue[disabled]:hover,
+.form-control.border-blue[disabled]:hover,
+.btn.border-blue.disabled:hover,
+.form-control.border-blue.disabled:hover,
+.btn.border-blue[disabled]:focus,
+.form-control.border-blue[disabled]:focus,
+.btn.border-blue.disabled:focus,
+.form-control.border-blue.disabled:focus,
+.btn.border-blue[disabled].active,
+.form-control.border-blue[disabled].active,
+.btn.border-blue.disabled.active,
+.form-control.border-blue.disabled.active {
+  border-color: #2196f3;
+}
+.form-control.border-blue:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #2196f3;
+}
+.border-blue-l,
+.btn.border-blue-l,
+.form-control.border-blue-l {
+  border-color: #51adf6;
+}
+.btn.border-blue-l:hover,
+.form-control.border-blue-l:hover,
+.btn.border-blue-l:focus,
+.form-control.border-blue-l:focus,
+.btn.border-blue-l:active,
+.form-control.border-blue-l:active,
+.btn.border-blue-l.focus,
+.form-control.border-blue-l.focus,
+.btn.border-blue-l.active,
+.form-control.border-blue-l.active {
+  border-color: #2196f3;
+}
+.btn.border-blue-l[disabled]:hover,
+.form-control.border-blue-l[disabled]:hover,
+.btn.border-blue-l.disabled:hover,
+.form-control.border-blue-l.disabled:hover,
+.btn.border-blue-l[disabled]:focus,
+.form-control.border-blue-l[disabled]:focus,
+.btn.border-blue-l.disabled:focus,
+.form-control.border-blue-l.disabled:focus,
+.btn.border-blue-l[disabled].active,
+.form-control.border-blue-l[disabled].active,
+.btn.border-blue-l.disabled.active,
+.form-control.border-blue-l.disabled.active {
+  border-color: #51adf6;
+}
+.form-control.border-blue-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #51adf6;
+}
+.border-blue-d,
+.btn.border-blue-d,
+.form-control.border-blue-d {
+  border-color: #0c7cd5;
+}
+.btn.border-blue-d:hover,
+.form-control.border-blue-d:hover,
+.btn.border-blue-d:focus,
+.form-control.border-blue-d:focus,
+.btn.border-blue-d:active,
+.form-control.border-blue-d:active,
+.btn.border-blue-d.focus,
+.form-control.border-blue-d.focus,
+.btn.border-blue-d.active,
+.form-control.border-blue-d.active {
+  border-color: #0960a5;
+}
+.btn.border-blue-d[disabled]:hover,
+.form-control.border-blue-d[disabled]:hover,
+.btn.border-blue-d.disabled:hover,
+.form-control.border-blue-d.disabled:hover,
+.btn.border-blue-d[disabled]:focus,
+.form-control.border-blue-d[disabled]:focus,
+.btn.border-blue-d.disabled:focus,
+.form-control.border-blue-d.disabled:focus,
+.btn.border-blue-d[disabled].active,
+.form-control.border-blue-d[disabled].active,
+.btn.border-blue-d.disabled.active,
+.form-control.border-blue-d.disabled.active {
+  border-color: #0c7cd5;
+}
+.form-control.border-blue-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #0c7cd5;
+}
+.border-cyan,
+.btn.border-cyan,
+.form-control.border-cyan {
+  border-color: #00bcd4;
+}
+.btn.border-cyan:hover,
+.form-control.border-cyan:hover,
+.btn.border-cyan:focus,
+.form-control.border-cyan:focus,
+.btn.border-cyan:active,
+.form-control.border-cyan:active,
+.btn.border-cyan.focus,
+.form-control.border-cyan.focus,
+.btn.border-cyan.active,
+.form-control.border-cyan.active {
+  border-color: #008fa1;
+}
+.btn.border-cyan[disabled]:hover,
+.form-control.border-cyan[disabled]:hover,
+.btn.border-cyan.disabled:hover,
+.form-control.border-cyan.disabled:hover,
+.btn.border-cyan[disabled]:focus,
+.form-control.border-cyan[disabled]:focus,
+.btn.border-cyan.disabled:focus,
+.form-control.border-cyan.disabled:focus,
+.btn.border-cyan[disabled].active,
+.form-control.border-cyan[disabled].active,
+.btn.border-cyan.disabled.active,
+.form-control.border-cyan.disabled.active {
+  border-color: #00bcd4;
+}
+.form-control.border-cyan:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00bcd4;
+}
+.border-cyan-l,
+.btn.border-cyan-l,
+.form-control.border-cyan-l {
+  border-color: #08e3ff;
+}
+.btn.border-cyan-l:hover,
+.form-control.border-cyan-l:hover,
+.btn.border-cyan-l:focus,
+.form-control.border-cyan-l:focus,
+.btn.border-cyan-l:active,
+.form-control.border-cyan-l:active,
+.btn.border-cyan-l.focus,
+.form-control.border-cyan-l.focus,
+.btn.border-cyan-l.active,
+.form-control.border-cyan-l.active {
+  border-color: #00bcd4;
+}
+.btn.border-cyan-l[disabled]:hover,
+.form-control.border-cyan-l[disabled]:hover,
+.btn.border-cyan-l.disabled:hover,
+.form-control.border-cyan-l.disabled:hover,
+.btn.border-cyan-l[disabled]:focus,
+.form-control.border-cyan-l[disabled]:focus,
+.btn.border-cyan-l.disabled:focus,
+.form-control.border-cyan-l.disabled:focus,
+.btn.border-cyan-l[disabled].active,
+.form-control.border-cyan-l[disabled].active,
+.btn.border-cyan-l.disabled.active,
+.form-control.border-cyan-l.disabled.active {
+  border-color: #08e3ff;
+}
+.form-control.border-cyan-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #08e3ff;
+}
+.border-cyan-d,
+.btn.border-cyan-d,
+.form-control.border-cyan-d {
+  border-color: #008fa1;
+}
+.btn.border-cyan-d:hover,
+.form-control.border-cyan-d:hover,
+.btn.border-cyan-d:focus,
+.form-control.border-cyan-d:focus,
+.btn.border-cyan-d:active,
+.form-control.border-cyan-d:active,
+.btn.border-cyan-d.focus,
+.form-control.border-cyan-d.focus,
+.btn.border-cyan-d.active,
+.form-control.border-cyan-d.active {
+  border-color: #00626e;
+}
+.btn.border-cyan-d[disabled]:hover,
+.form-control.border-cyan-d[disabled]:hover,
+.btn.border-cyan-d.disabled:hover,
+.form-control.border-cyan-d.disabled:hover,
+.btn.border-cyan-d[disabled]:focus,
+.form-control.border-cyan-d[disabled]:focus,
+.btn.border-cyan-d.disabled:focus,
+.form-control.border-cyan-d.disabled:focus,
+.btn.border-cyan-d[disabled].active,
+.form-control.border-cyan-d[disabled].active,
+.btn.border-cyan-d.disabled.active,
+.form-control.border-cyan-d.disabled.active {
+  border-color: #008fa1;
+}
+.form-control.border-cyan-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #008fa1;
+}
+.border-teal,
+.btn.border-teal,
+.form-control.border-teal {
+  border-color: #009688;
+}
+.btn.border-teal:hover,
+.form-control.border-teal:hover,
+.btn.border-teal:focus,
+.form-control.border-teal:focus,
+.btn.border-teal:active,
+.form-control.border-teal:active,
+.btn.border-teal.focus,
+.form-control.border-teal.focus,
+.btn.border-teal.active,
+.form-control.border-teal.active {
+  border-color: #00635a;
+}
+.btn.border-teal[disabled]:hover,
+.form-control.border-teal[disabled]:hover,
+.btn.border-teal.disabled:hover,
+.form-control.border-teal.disabled:hover,
+.btn.border-teal[disabled]:focus,
+.form-control.border-teal[disabled]:focus,
+.btn.border-teal.disabled:focus,
+.form-control.border-teal.disabled:focus,
+.btn.border-teal[disabled].active,
+.form-control.border-teal[disabled].active,
+.btn.border-teal.disabled.active,
+.form-control.border-teal.disabled.active {
+  border-color: #009688;
+}
+.form-control.border-teal:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #009688;
+}
+.border-teal-l,
+.btn.border-teal-l,
+.form-control.border-teal-l {
+  border-color: #00c9b6;
+}
+.btn.border-teal-l:hover,
+.form-control.border-teal-l:hover,
+.btn.border-teal-l:focus,
+.form-control.border-teal-l:focus,
+.btn.border-teal-l:active,
+.form-control.border-teal-l:active,
+.btn.border-teal-l.focus,
+.form-control.border-teal-l.focus,
+.btn.border-teal-l.active,
+.form-control.border-teal-l.active {
+  border-color: #009688;
+}
+.btn.border-teal-l[disabled]:hover,
+.form-control.border-teal-l[disabled]:hover,
+.btn.border-teal-l.disabled:hover,
+.form-control.border-teal-l.disabled:hover,
+.btn.border-teal-l[disabled]:focus,
+.form-control.border-teal-l[disabled]:focus,
+.btn.border-teal-l.disabled:focus,
+.form-control.border-teal-l.disabled:focus,
+.btn.border-teal-l[disabled].active,
+.form-control.border-teal-l[disabled].active,
+.btn.border-teal-l.disabled.active,
+.form-control.border-teal-l.disabled.active {
+  border-color: #00c9b6;
+}
+.form-control.border-teal-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00c9b6;
+}
+.border-teal-d,
+.btn.border-teal-d,
+.form-control.border-teal-d {
+  border-color: #00635a;
+}
+.btn.border-teal-d:hover,
+.form-control.border-teal-d:hover,
+.btn.border-teal-d:focus,
+.form-control.border-teal-d:focus,
+.btn.border-teal-d:active,
+.form-control.border-teal-d:active,
+.btn.border-teal-d.focus,
+.form-control.border-teal-d.focus,
+.btn.border-teal-d.active,
+.form-control.border-teal-d.active {
+  border-color: #00302c;
+}
+.btn.border-teal-d[disabled]:hover,
+.form-control.border-teal-d[disabled]:hover,
+.btn.border-teal-d.disabled:hover,
+.form-control.border-teal-d.disabled:hover,
+.btn.border-teal-d[disabled]:focus,
+.form-control.border-teal-d[disabled]:focus,
+.btn.border-teal-d.disabled:focus,
+.form-control.border-teal-d.disabled:focus,
+.btn.border-teal-d[disabled].active,
+.form-control.border-teal-d[disabled].active,
+.btn.border-teal-d.disabled.active,
+.form-control.border-teal-d.disabled.active {
+  border-color: #00635a;
+}
+.form-control.border-teal-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00635a;
+}
+.border-green,
+.btn.border-green,
+.form-control.border-green {
+  border-color: #4caf50;
+}
+.btn.border-green:hover,
+.form-control.border-green:hover,
+.btn.border-green:focus,
+.form-control.border-green:focus,
+.btn.border-green:active,
+.form-control.border-green:active,
+.btn.border-green.focus,
+.form-control.border-green.focus,
+.btn.border-green.active,
+.form-control.border-green.active {
+  border-color: #3d8b40;
+}
+.btn.border-green[disabled]:hover,
+.form-control.border-green[disabled]:hover,
+.btn.border-green.disabled:hover,
+.form-control.border-green.disabled:hover,
+.btn.border-green[disabled]:focus,
+.form-control.border-green[disabled]:focus,
+.btn.border-green.disabled:focus,
+.form-control.border-green.disabled:focus,
+.btn.border-green[disabled].active,
+.form-control.border-green[disabled].active,
+.btn.border-green.disabled.active,
+.form-control.border-green.disabled.active {
+  border-color: #4caf50;
+}
+.form-control.border-green:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #4caf50;
+}
+.border-green-l,
+.btn.border-green-l,
+.form-control.border-green-l {
+  border-color: #6ec071;
+}
+.btn.border-green-l:hover,
+.form-control.border-green-l:hover,
+.btn.border-green-l:focus,
+.form-control.border-green-l:focus,
+.btn.border-green-l:active,
+.form-control.border-green-l:active,
+.btn.border-green-l.focus,
+.form-control.border-green-l.focus,
+.btn.border-green-l.active,
+.form-control.border-green-l.active {
+  border-color: #4caf50;
+}
+.btn.border-green-l[disabled]:hover,
+.form-control.border-green-l[disabled]:hover,
+.btn.border-green-l.disabled:hover,
+.form-control.border-green-l.disabled:hover,
+.btn.border-green-l[disabled]:focus,
+.form-control.border-green-l[disabled]:focus,
+.btn.border-green-l.disabled:focus,
+.form-control.border-green-l.disabled:focus,
+.btn.border-green-l[disabled].active,
+.form-control.border-green-l[disabled].active,
+.btn.border-green-l.disabled.active,
+.form-control.border-green-l.disabled.active {
+  border-color: #6ec071;
+}
+.form-control.border-green-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #6ec071;
+}
+.border-green-d,
+.btn.border-green-d,
+.form-control.border-green-d {
+  border-color: #3d8b40;
+}
+.btn.border-green-d:hover,
+.form-control.border-green-d:hover,
+.btn.border-green-d:focus,
+.form-control.border-green-d:focus,
+.btn.border-green-d:active,
+.form-control.border-green-d:active,
+.btn.border-green-d.focus,
+.form-control.border-green-d.focus,
+.btn.border-green-d.active,
+.form-control.border-green-d.active {
+  border-color: #2d682f;
+}
+.btn.border-green-d[disabled]:hover,
+.form-control.border-green-d[disabled]:hover,
+.btn.border-green-d.disabled:hover,
+.form-control.border-green-d.disabled:hover,
+.btn.border-green-d[disabled]:focus,
+.form-control.border-green-d[disabled]:focus,
+.btn.border-green-d.disabled:focus,
+.form-control.border-green-d.disabled:focus,
+.btn.border-green-d[disabled].active,
+.form-control.border-green-d[disabled].active,
+.btn.border-green-d.disabled.active,
+.form-control.border-green-d.disabled.active {
+  border-color: #3d8b40;
+}
+.form-control.border-green-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #3d8b40;
+}
+.border-lime,
+.btn.border-lime,
+.form-control.border-lime {
+  border-color: #cddc39;
+}
+.btn.border-lime:hover,
+.form-control.border-lime:hover,
+.btn.border-lime:focus,
+.form-control.border-lime:focus,
+.btn.border-lime:active,
+.form-control.border-lime:active,
+.btn.border-lime.focus,
+.form-control.border-lime.focus,
+.btn.border-lime.active,
+.form-control.border-lime.active {
+  border-color: #b2c022;
+}
+.btn.border-lime[disabled]:hover,
+.form-control.border-lime[disabled]:hover,
+.btn.border-lime.disabled:hover,
+.form-control.border-lime.disabled:hover,
+.btn.border-lime[disabled]:focus,
+.form-control.border-lime[disabled]:focus,
+.btn.border-lime.disabled:focus,
+.form-control.border-lime.disabled:focus,
+.btn.border-lime[disabled].active,
+.form-control.border-lime[disabled].active,
+.btn.border-lime.disabled.active,
+.form-control.border-lime.disabled.active {
+  border-color: #cddc39;
+}
+.form-control.border-lime:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #cddc39;
+}
+.border-lime-l,
+.btn.border-lime-l,
+.form-control.border-lime-l {
+  border-color: #d8e464;
+}
+.btn.border-lime-l:hover,
+.form-control.border-lime-l:hover,
+.btn.border-lime-l:focus,
+.form-control.border-lime-l:focus,
+.btn.border-lime-l:active,
+.form-control.border-lime-l:active,
+.btn.border-lime-l.focus,
+.form-control.border-lime-l.focus,
+.btn.border-lime-l.active,
+.form-control.border-lime-l.active {
+  border-color: #cddc39;
+}
+.btn.border-lime-l[disabled]:hover,
+.form-control.border-lime-l[disabled]:hover,
+.btn.border-lime-l.disabled:hover,
+.form-control.border-lime-l.disabled:hover,
+.btn.border-lime-l[disabled]:focus,
+.form-control.border-lime-l[disabled]:focus,
+.btn.border-lime-l.disabled:focus,
+.form-control.border-lime-l.disabled:focus,
+.btn.border-lime-l[disabled].active,
+.form-control.border-lime-l[disabled].active,
+.btn.border-lime-l.disabled.active,
+.form-control.border-lime-l.disabled.active {
+  border-color: #d8e464;
+}
+.form-control.border-lime-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d8e464;
+}
+.border-lime-d,
+.btn.border-lime-d,
+.form-control.border-lime-d {
+  border-color: #b2c022;
+}
+.btn.border-lime-d:hover,
+.form-control.border-lime-d:hover,
+.btn.border-lime-d:focus,
+.form-control.border-lime-d:focus,
+.btn.border-lime-d:active,
+.form-control.border-lime-d:active,
+.btn.border-lime-d.focus,
+.form-control.border-lime-d.focus,
+.btn.border-lime-d.active,
+.form-control.border-lime-d.active {
+  border-color: #89951a;
+}
+.btn.border-lime-d[disabled]:hover,
+.form-control.border-lime-d[disabled]:hover,
+.btn.border-lime-d.disabled:hover,
+.form-control.border-lime-d.disabled:hover,
+.btn.border-lime-d[disabled]:focus,
+.form-control.border-lime-d[disabled]:focus,
+.btn.border-lime-d.disabled:focus,
+.form-control.border-lime-d.disabled:focus,
+.btn.border-lime-d[disabled].active,
+.form-control.border-lime-d[disabled].active,
+.btn.border-lime-d.disabled.active,
+.form-control.border-lime-d.disabled.active {
+  border-color: #b2c022;
+}
+.form-control.border-lime-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b2c022;
+}
+.border-yellow,
+.btn.border-yellow,
+.form-control.border-yellow {
+  border-color: #ffeb3b;
+}
+.btn.border-yellow:hover,
+.form-control.border-yellow:hover,
+.btn.border-yellow:focus,
+.form-control.border-yellow:focus,
+.btn.border-yellow:active,
+.form-control.border-yellow:active,
+.btn.border-yellow.focus,
+.form-control.border-yellow.focus,
+.btn.border-yellow.active,
+.form-control.border-yellow.active {
+  border-color: #ffe608;
+}
+.btn.border-yellow[disabled]:hover,
+.form-control.border-yellow[disabled]:hover,
+.btn.border-yellow.disabled:hover,
+.form-control.border-yellow.disabled:hover,
+.btn.border-yellow[disabled]:focus,
+.form-control.border-yellow[disabled]:focus,
+.btn.border-yellow.disabled:focus,
+.form-control.border-yellow.disabled:focus,
+.btn.border-yellow[disabled].active,
+.form-control.border-yellow[disabled].active,
+.btn.border-yellow.disabled.active,
+.form-control.border-yellow.disabled.active {
+  border-color: #ffeb3b;
+}
+.form-control.border-yellow:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffeb3b;
+}
+.border-yellow-l,
+.btn.border-yellow-l,
+.form-control.border-yellow-l {
+  border-color: #fff06e;
+}
+.btn.border-yellow-l:hover,
+.form-control.border-yellow-l:hover,
+.btn.border-yellow-l:focus,
+.form-control.border-yellow-l:focus,
+.btn.border-yellow-l:active,
+.form-control.border-yellow-l:active,
+.btn.border-yellow-l.focus,
+.form-control.border-yellow-l.focus,
+.btn.border-yellow-l.active,
+.form-control.border-yellow-l.active {
+  border-color: #ffeb3b;
+}
+.btn.border-yellow-l[disabled]:hover,
+.form-control.border-yellow-l[disabled]:hover,
+.btn.border-yellow-l.disabled:hover,
+.form-control.border-yellow-l.disabled:hover,
+.btn.border-yellow-l[disabled]:focus,
+.form-control.border-yellow-l[disabled]:focus,
+.btn.border-yellow-l.disabled:focus,
+.form-control.border-yellow-l.disabled:focus,
+.btn.border-yellow-l[disabled].active,
+.form-control.border-yellow-l[disabled].active,
+.btn.border-yellow-l.disabled.active,
+.form-control.border-yellow-l.disabled.active {
+  border-color: #fff06e;
+}
+.form-control.border-yellow-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff06e;
+}
+.border-yellow-d,
+.btn.border-yellow-d,
+.form-control.border-yellow-d {
+  border-color: #ffe608;
+}
+.btn.border-yellow-d:hover,
+.form-control.border-yellow-d:hover,
+.btn.border-yellow-d:focus,
+.form-control.border-yellow-d:focus,
+.btn.border-yellow-d:active,
+.form-control.border-yellow-d:active,
+.btn.border-yellow-d.focus,
+.form-control.border-yellow-d.focus,
+.btn.border-yellow-d.active,
+.form-control.border-yellow-d.active {
+  border-color: #d4be00;
+}
+.btn.border-yellow-d[disabled]:hover,
+.form-control.border-yellow-d[disabled]:hover,
+.btn.border-yellow-d.disabled:hover,
+.form-control.border-yellow-d.disabled:hover,
+.btn.border-yellow-d[disabled]:focus,
+.form-control.border-yellow-d[disabled]:focus,
+.btn.border-yellow-d.disabled:focus,
+.form-control.border-yellow-d.disabled:focus,
+.btn.border-yellow-d[disabled].active,
+.form-control.border-yellow-d[disabled].active,
+.btn.border-yellow-d.disabled.active,
+.form-control.border-yellow-d.disabled.active {
+  border-color: #ffe608;
+}
+.form-control.border-yellow-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffe608;
+}
+.border-amber,
+.btn.border-amber,
+.form-control.border-amber {
+  border-color: #ffc107;
+}
+.btn.border-amber:hover,
+.form-control.border-amber:hover,
+.btn.border-amber:focus,
+.form-control.border-amber:focus,
+.btn.border-amber:active,
+.form-control.border-amber:active,
+.btn.border-amber.focus,
+.form-control.border-amber.focus,
+.btn.border-amber.active,
+.form-control.border-amber.active {
+  border-color: #d39e00;
+}
+.btn.border-amber[disabled]:hover,
+.form-control.border-amber[disabled]:hover,
+.btn.border-amber.disabled:hover,
+.form-control.border-amber.disabled:hover,
+.btn.border-amber[disabled]:focus,
+.form-control.border-amber[disabled]:focus,
+.btn.border-amber.disabled:focus,
+.form-control.border-amber.disabled:focus,
+.btn.border-amber[disabled].active,
+.form-control.border-amber[disabled].active,
+.btn.border-amber.disabled.active,
+.form-control.border-amber.disabled.active {
+  border-color: #ffc107;
+}
+.form-control.border-amber:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffc107;
+}
+.border-amber-l,
+.btn.border-amber-l,
+.form-control.border-amber-l {
+  border-color: #ffce3a;
+}
+.btn.border-amber-l:hover,
+.form-control.border-amber-l:hover,
+.btn.border-amber-l:focus,
+.form-control.border-amber-l:focus,
+.btn.border-amber-l:active,
+.form-control.border-amber-l:active,
+.btn.border-amber-l.focus,
+.form-control.border-amber-l.focus,
+.btn.border-amber-l.active,
+.form-control.border-amber-l.active {
+  border-color: #ffc107;
+}
+.btn.border-amber-l[disabled]:hover,
+.form-control.border-amber-l[disabled]:hover,
+.btn.border-amber-l.disabled:hover,
+.form-control.border-amber-l.disabled:hover,
+.btn.border-amber-l[disabled]:focus,
+.form-control.border-amber-l[disabled]:focus,
+.btn.border-amber-l.disabled:focus,
+.form-control.border-amber-l.disabled:focus,
+.btn.border-amber-l[disabled].active,
+.form-control.border-amber-l[disabled].active,
+.btn.border-amber-l.disabled.active,
+.form-control.border-amber-l.disabled.active {
+  border-color: #ffce3a;
+}
+.form-control.border-amber-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffce3a;
+}
+.border-amber-d,
+.btn.border-amber-d,
+.form-control.border-amber-d {
+  border-color: #d39e00;
+}
+.btn.border-amber-d:hover,
+.form-control.border-amber-d:hover,
+.btn.border-amber-d:focus,
+.form-control.border-amber-d:focus,
+.btn.border-amber-d:active,
+.form-control.border-amber-d:active,
+.btn.border-amber-d.focus,
+.form-control.border-amber-d.focus,
+.btn.border-amber-d.active,
+.form-control.border-amber-d.active {
+  border-color: #a07800;
+}
+.btn.border-amber-d[disabled]:hover,
+.form-control.border-amber-d[disabled]:hover,
+.btn.border-amber-d.disabled:hover,
+.form-control.border-amber-d.disabled:hover,
+.btn.border-amber-d[disabled]:focus,
+.form-control.border-amber-d[disabled]:focus,
+.btn.border-amber-d.disabled:focus,
+.form-control.border-amber-d.disabled:focus,
+.btn.border-amber-d[disabled].active,
+.form-control.border-amber-d[disabled].active,
+.btn.border-amber-d.disabled.active,
+.form-control.border-amber-d.disabled.active {
+  border-color: #d39e00;
+}
+.form-control.border-amber-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d39e00;
+}
+.border-orange,
+.btn.border-orange,
+.form-control.border-orange {
+  border-color: #ff9800;
+}
+.btn.border-orange:hover,
+.form-control.border-orange:hover,
+.btn.border-orange:focus,
+.form-control.border-orange:focus,
+.btn.border-orange:active,
+.form-control.border-orange:active,
+.btn.border-orange.focus,
+.form-control.border-orange.focus,
+.btn.border-orange.active,
+.form-control.border-orange.active {
+  border-color: #cc7a00;
+}
+.btn.border-orange[disabled]:hover,
+.form-control.border-orange[disabled]:hover,
+.btn.border-orange.disabled:hover,
+.form-control.border-orange.disabled:hover,
+.btn.border-orange[disabled]:focus,
+.form-control.border-orange[disabled]:focus,
+.btn.border-orange.disabled:focus,
+.form-control.border-orange.disabled:focus,
+.btn.border-orange[disabled].active,
+.form-control.border-orange[disabled].active,
+.btn.border-orange.disabled.active,
+.form-control.border-orange.disabled.active {
+  border-color: #ff9800;
+}
+.form-control.border-orange:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ff9800;
+}
+.border-orange-l,
+.btn.border-orange-l,
+.form-control.border-orange-l {
+  border-color: #ffad33;
+}
+.btn.border-orange-l:hover,
+.form-control.border-orange-l:hover,
+.btn.border-orange-l:focus,
+.form-control.border-orange-l:focus,
+.btn.border-orange-l:active,
+.form-control.border-orange-l:active,
+.btn.border-orange-l.focus,
+.form-control.border-orange-l.focus,
+.btn.border-orange-l.active,
+.form-control.border-orange-l.active {
+  border-color: #ff9800;
+}
+.btn.border-orange-l[disabled]:hover,
+.form-control.border-orange-l[disabled]:hover,
+.btn.border-orange-l.disabled:hover,
+.form-control.border-orange-l.disabled:hover,
+.btn.border-orange-l[disabled]:focus,
+.form-control.border-orange-l[disabled]:focus,
+.btn.border-orange-l.disabled:focus,
+.form-control.border-orange-l.disabled:focus,
+.btn.border-orange-l[disabled].active,
+.form-control.border-orange-l[disabled].active,
+.btn.border-orange-l.disabled.active,
+.form-control.border-orange-l.disabled.active {
+  border-color: #ffad33;
+}
+.form-control.border-orange-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ffad33;
+}
+.border-orange-d,
+.btn.border-orange-d,
+.form-control.border-orange-d {
+  border-color: #cc7a00;
+}
+.btn.border-orange-d:hover,
+.form-control.border-orange-d:hover,
+.btn.border-orange-d:focus,
+.form-control.border-orange-d:focus,
+.btn.border-orange-d:active,
+.form-control.border-orange-d:active,
+.btn.border-orange-d.focus,
+.form-control.border-orange-d.focus,
+.btn.border-orange-d.active,
+.form-control.border-orange-d.active {
+  border-color: #995b00;
+}
+.btn.border-orange-d[disabled]:hover,
+.form-control.border-orange-d[disabled]:hover,
+.btn.border-orange-d.disabled:hover,
+.form-control.border-orange-d.disabled:hover,
+.btn.border-orange-d[disabled]:focus,
+.form-control.border-orange-d[disabled]:focus,
+.btn.border-orange-d.disabled:focus,
+.form-control.border-orange-d.disabled:focus,
+.btn.border-orange-d[disabled].active,
+.form-control.border-orange-d[disabled].active,
+.btn.border-orange-d.disabled.active,
+.form-control.border-orange-d.disabled.active {
+  border-color: #cc7a00;
+}
+.form-control.border-orange-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #cc7a00;
+}
+.border-deep-orange,
+.btn.border-deep-orange,
+.form-control.border-deep-orange {
+  border-color: #ff5722;
+}
+.btn.border-deep-orange:hover,
+.form-control.border-deep-orange:hover,
+.btn.border-deep-orange:focus,
+.form-control.border-deep-orange:focus,
+.btn.border-deep-orange:active,
+.form-control.border-deep-orange:active,
+.btn.border-deep-orange.focus,
+.form-control.border-deep-orange.focus,
+.btn.border-deep-orange.active,
+.form-control.border-deep-orange.active {
+  border-color: #ee3900;
+}
+.btn.border-deep-orange[disabled]:hover,
+.form-control.border-deep-orange[disabled]:hover,
+.btn.border-deep-orange.disabled:hover,
+.form-control.border-deep-orange.disabled:hover,
+.btn.border-deep-orange[disabled]:focus,
+.form-control.border-deep-orange[disabled]:focus,
+.btn.border-deep-orange.disabled:focus,
+.form-control.border-deep-orange.disabled:focus,
+.btn.border-deep-orange[disabled].active,
+.form-control.border-deep-orange[disabled].active,
+.btn.border-deep-orange.disabled.active,
+.form-control.border-deep-orange.disabled.active {
+  border-color: #ff5722;
+}
+.form-control.border-deep-orange:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ff5722;
+}
+.border-deep-orange-l,
+.btn.border-deep-orange-l,
+.form-control.border-deep-orange-l {
+  border-color: #ff7e55;
+}
+.btn.border-deep-orange-l:hover,
+.form-control.border-deep-orange-l:hover,
+.btn.border-deep-orange-l:focus,
+.form-control.border-deep-orange-l:focus,
+.btn.border-deep-orange-l:active,
+.form-control.border-deep-orange-l:active,
+.btn.border-deep-orange-l.focus,
+.form-control.border-deep-orange-l.focus,
+.btn.border-deep-orange-l.active,
+.form-control.border-deep-orange-l.active {
+  border-color: #ff5722;
+}
+.btn.border-deep-orange-l[disabled]:hover,
+.form-control.border-deep-orange-l[disabled]:hover,
+.btn.border-deep-orange-l.disabled:hover,
+.form-control.border-deep-orange-l.disabled:hover,
+.btn.border-deep-orange-l[disabled]:focus,
+.form-control.border-deep-orange-l[disabled]:focus,
+.btn.border-deep-orange-l.disabled:focus,
+.form-control.border-deep-orange-l.disabled:focus,
+.btn.border-deep-orange-l[disabled].active,
+.form-control.border-deep-orange-l[disabled].active,
+.btn.border-deep-orange-l.disabled.active,
+.form-control.border-deep-orange-l.disabled.active {
+  border-color: #ff7e55;
+}
+.form-control.border-deep-orange-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ff7e55;
+}
+.border-deep-orange-d,
+.btn.border-deep-orange-d,
+.form-control.border-deep-orange-d {
+  border-color: #ee3900;
+}
+.btn.border-deep-orange-d:hover,
+.form-control.border-deep-orange-d:hover,
+.btn.border-deep-orange-d:focus,
+.form-control.border-deep-orange-d:focus,
+.btn.border-deep-orange-d:active,
+.form-control.border-deep-orange-d:active,
+.btn.border-deep-orange-d.focus,
+.form-control.border-deep-orange-d.focus,
+.btn.border-deep-orange-d.active,
+.form-control.border-deep-orange-d.active {
+  border-color: #bb2d00;
+}
+.btn.border-deep-orange-d[disabled]:hover,
+.form-control.border-deep-orange-d[disabled]:hover,
+.btn.border-deep-orange-d.disabled:hover,
+.form-control.border-deep-orange-d.disabled:hover,
+.btn.border-deep-orange-d[disabled]:focus,
+.form-control.border-deep-orange-d[disabled]:focus,
+.btn.border-deep-orange-d.disabled:focus,
+.form-control.border-deep-orange-d.disabled:focus,
+.btn.border-deep-orange-d[disabled].active,
+.form-control.border-deep-orange-d[disabled].active,
+.btn.border-deep-orange-d.disabled.active,
+.form-control.border-deep-orange-d.disabled.active {
+  border-color: #ee3900;
+}
+.form-control.border-deep-orange-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ee3900;
+}
+.border-brown,
+.btn.border-brown,
+.form-control.border-brown {
+  border-color: #795548;
+}
+.btn.border-brown:hover,
+.form-control.border-brown:hover,
+.btn.border-brown:focus,
+.form-control.border-brown:focus,
+.btn.border-brown:active,
+.form-control.border-brown:active,
+.btn.border-brown.focus,
+.form-control.border-brown.focus,
+.btn.border-brown.active,
+.form-control.border-brown.active {
+  border-color: #593f35;
+}
+.btn.border-brown[disabled]:hover,
+.form-control.border-brown[disabled]:hover,
+.btn.border-brown.disabled:hover,
+.form-control.border-brown.disabled:hover,
+.btn.border-brown[disabled]:focus,
+.form-control.border-brown[disabled]:focus,
+.btn.border-brown.disabled:focus,
+.form-control.border-brown.disabled:focus,
+.btn.border-brown[disabled].active,
+.form-control.border-brown[disabled].active,
+.btn.border-brown.disabled.active,
+.form-control.border-brown.disabled.active {
+  border-color: #795548;
+}
+.form-control.border-brown:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #795548;
+}
+.border-brown-l,
+.btn.border-brown-l,
+.form-control.border-brown-l {
+  border-color: #996b5b;
+}
+.btn.border-brown-l:hover,
+.form-control.border-brown-l:hover,
+.btn.border-brown-l:focus,
+.form-control.border-brown-l:focus,
+.btn.border-brown-l:active,
+.form-control.border-brown-l:active,
+.btn.border-brown-l.focus,
+.form-control.border-brown-l.focus,
+.btn.border-brown-l.active,
+.form-control.border-brown-l.active {
+  border-color: #795548;
+}
+.btn.border-brown-l[disabled]:hover,
+.form-control.border-brown-l[disabled]:hover,
+.btn.border-brown-l.disabled:hover,
+.form-control.border-brown-l.disabled:hover,
+.btn.border-brown-l[disabled]:focus,
+.form-control.border-brown-l[disabled]:focus,
+.btn.border-brown-l.disabled:focus,
+.form-control.border-brown-l.disabled:focus,
+.btn.border-brown-l[disabled].active,
+.form-control.border-brown-l[disabled].active,
+.btn.border-brown-l.disabled.active,
+.form-control.border-brown-l.disabled.active {
+  border-color: #996b5b;
+}
+.form-control.border-brown-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #996b5b;
+}
+.border-brown-d,
+.btn.border-brown-d,
+.form-control.border-brown-d {
+  border-color: #593f35;
+}
+.btn.border-brown-d:hover,
+.form-control.border-brown-d:hover,
+.btn.border-brown-d:focus,
+.form-control.border-brown-d:focus,
+.btn.border-brown-d:active,
+.form-control.border-brown-d:active,
+.btn.border-brown-d.focus,
+.form-control.border-brown-d.focus,
+.btn.border-brown-d.active,
+.form-control.border-brown-d.active {
+  border-color: #392822;
+}
+.btn.border-brown-d[disabled]:hover,
+.form-control.border-brown-d[disabled]:hover,
+.btn.border-brown-d.disabled:hover,
+.form-control.border-brown-d.disabled:hover,
+.btn.border-brown-d[disabled]:focus,
+.form-control.border-brown-d[disabled]:focus,
+.btn.border-brown-d.disabled:focus,
+.form-control.border-brown-d.disabled:focus,
+.btn.border-brown-d[disabled].active,
+.form-control.border-brown-d[disabled].active,
+.btn.border-brown-d.disabled.active,
+.form-control.border-brown-d.disabled.active {
+  border-color: #593f35;
+}
+.form-control.border-brown-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #593f35;
+}
+.border-grey,
+.btn.border-grey,
+.form-control.border-grey {
+  border-color: #9e9e9e;
+}
+.btn.border-grey:hover,
+.form-control.border-grey:hover,
+.btn.border-grey:focus,
+.form-control.border-grey:focus,
+.btn.border-grey:active,
+.form-control.border-grey:active,
+.btn.border-grey.focus,
+.form-control.border-grey.focus,
+.btn.border-grey.active,
+.form-control.border-grey.active {
+  border-color: #858585;
+}
+.btn.border-grey[disabled]:hover,
+.form-control.border-grey[disabled]:hover,
+.btn.border-grey.disabled:hover,
+.form-control.border-grey.disabled:hover,
+.btn.border-grey[disabled]:focus,
+.form-control.border-grey[disabled]:focus,
+.btn.border-grey.disabled:focus,
+.form-control.border-grey.disabled:focus,
+.btn.border-grey[disabled].active,
+.form-control.border-grey[disabled].active,
+.btn.border-grey.disabled.active,
+.form-control.border-grey.disabled.active {
+  border-color: #9e9e9e;
+}
+.form-control.border-grey:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #9e9e9e;
+}
+.border-grey-l,
+.btn.border-grey-l,
+.form-control.border-grey-l {
+  border-color: #b8b8b8;
+}
+.btn.border-grey-l:hover,
+.form-control.border-grey-l:hover,
+.btn.border-grey-l:focus,
+.form-control.border-grey-l:focus,
+.btn.border-grey-l:active,
+.form-control.border-grey-l:active,
+.btn.border-grey-l.focus,
+.form-control.border-grey-l.focus,
+.btn.border-grey-l.active,
+.form-control.border-grey-l.active {
+  border-color: #9e9e9e;
+}
+.btn.border-grey-l[disabled]:hover,
+.form-control.border-grey-l[disabled]:hover,
+.btn.border-grey-l.disabled:hover,
+.form-control.border-grey-l.disabled:hover,
+.btn.border-grey-l[disabled]:focus,
+.form-control.border-grey-l[disabled]:focus,
+.btn.border-grey-l.disabled:focus,
+.form-control.border-grey-l.disabled:focus,
+.btn.border-grey-l[disabled].active,
+.form-control.border-grey-l[disabled].active,
+.btn.border-grey-l.disabled.active,
+.form-control.border-grey-l.disabled.active {
+  border-color: #b8b8b8;
+}
+.form-control.border-grey-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b8b8b8;
+}
+.border-grey-d,
+.btn.border-grey-d,
+.form-control.border-grey-d {
+  border-color: #858585;
+}
+.btn.border-grey-d:hover,
+.form-control.border-grey-d:hover,
+.btn.border-grey-d:focus,
+.form-control.border-grey-d:focus,
+.btn.border-grey-d:active,
+.form-control.border-grey-d:active,
+.btn.border-grey-d.focus,
+.form-control.border-grey-d.focus,
+.btn.border-grey-d.active,
+.form-control.border-grey-d.active {
+  border-color: #6b6b6b;
+}
+.btn.border-grey-d[disabled]:hover,
+.form-control.border-grey-d[disabled]:hover,
+.btn.border-grey-d.disabled:hover,
+.form-control.border-grey-d.disabled:hover,
+.btn.border-grey-d[disabled]:focus,
+.form-control.border-grey-d[disabled]:focus,
+.btn.border-grey-d.disabled:focus,
+.form-control.border-grey-d.disabled:focus,
+.btn.border-grey-d[disabled].active,
+.form-control.border-grey-d[disabled].active,
+.btn.border-grey-d.disabled.active,
+.form-control.border-grey-d.disabled.active {
+  border-color: #858585;
+}
+.form-control.border-grey-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #858585;
+}
+.border-blue-grey,
+.btn.border-blue-grey,
+.form-control.border-blue-grey {
+  border-color: #607d8b;
+}
+.btn.border-blue-grey:hover,
+.form-control.border-blue-grey:hover,
+.btn.border-blue-grey:focus,
+.form-control.border-blue-grey:focus,
+.btn.border-blue-grey:active,
+.form-control.border-blue-grey:active,
+.btn.border-blue-grey.focus,
+.form-control.border-blue-grey.focus,
+.btn.border-blue-grey.active,
+.form-control.border-blue-grey.active {
+  border-color: #4b626d;
+}
+.btn.border-blue-grey[disabled]:hover,
+.form-control.border-blue-grey[disabled]:hover,
+.btn.border-blue-grey.disabled:hover,
+.form-control.border-blue-grey.disabled:hover,
+.btn.border-blue-grey[disabled]:focus,
+.form-control.border-blue-grey[disabled]:focus,
+.btn.border-blue-grey.disabled:focus,
+.form-control.border-blue-grey.disabled:focus,
+.btn.border-blue-grey[disabled].active,
+.form-control.border-blue-grey[disabled].active,
+.btn.border-blue-grey.disabled.active,
+.form-control.border-blue-grey.disabled.active {
+  border-color: #607d8b;
+}
+.form-control.border-blue-grey:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #607d8b;
+}
+.border-blue-grey-l,
+.btn.border-blue-grey-l,
+.form-control.border-blue-grey-l {
+  border-color: #7b96a3;
+}
+.btn.border-blue-grey-l:hover,
+.form-control.border-blue-grey-l:hover,
+.btn.border-blue-grey-l:focus,
+.form-control.border-blue-grey-l:focus,
+.btn.border-blue-grey-l:active,
+.form-control.border-blue-grey-l:active,
+.btn.border-blue-grey-l.focus,
+.form-control.border-blue-grey-l.focus,
+.btn.border-blue-grey-l.active,
+.form-control.border-blue-grey-l.active {
+  border-color: #607d8b;
+}
+.btn.border-blue-grey-l[disabled]:hover,
+.form-control.border-blue-grey-l[disabled]:hover,
+.btn.border-blue-grey-l.disabled:hover,
+.form-control.border-blue-grey-l.disabled:hover,
+.btn.border-blue-grey-l[disabled]:focus,
+.form-control.border-blue-grey-l[disabled]:focus,
+.btn.border-blue-grey-l.disabled:focus,
+.form-control.border-blue-grey-l.disabled:focus,
+.btn.border-blue-grey-l[disabled].active,
+.form-control.border-blue-grey-l[disabled].active,
+.btn.border-blue-grey-l.disabled.active,
+.form-control.border-blue-grey-l.disabled.active {
+  border-color: #7b96a3;
+}
+.form-control.border-blue-grey-l:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #7b96a3;
+}
+.border-blue-grey-d,
+.btn.border-blue-grey-d,
+.form-control.border-blue-grey-d {
+  border-color: #4b626d;
+}
+.btn.border-blue-grey-d:hover,
+.form-control.border-blue-grey-d:hover,
+.btn.border-blue-grey-d:focus,
+.form-control.border-blue-grey-d:focus,
+.btn.border-blue-grey-d:active,
+.form-control.border-blue-grey-d:active,
+.btn.border-blue-grey-d.focus,
+.form-control.border-blue-grey-d.focus,
+.btn.border-blue-grey-d.active,
+.form-control.border-blue-grey-d.active {
+  border-color: #36474f;
+}
+.btn.border-blue-grey-d[disabled]:hover,
+.form-control.border-blue-grey-d[disabled]:hover,
+.btn.border-blue-grey-d.disabled:hover,
+.form-control.border-blue-grey-d.disabled:hover,
+.btn.border-blue-grey-d[disabled]:focus,
+.form-control.border-blue-grey-d[disabled]:focus,
+.btn.border-blue-grey-d.disabled:focus,
+.form-control.border-blue-grey-d.disabled:focus,
+.btn.border-blue-grey-d[disabled].active,
+.form-control.border-blue-grey-d[disabled].active,
+.btn.border-blue-grey-d.disabled.active,
+.form-control.border-blue-grey-d.disabled.active {
+  border-color: #4b626d;
+}
+.form-control.border-blue-grey-d:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #4b626d;
+}
+.has-error .form-control {
+  border-color: #a94442;
+}
+.has-error .form-control:hover,
+.has-error .form-control:focus {
+  border-color: #a94442;
+}
+.has-error .form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-success .form-control {
+  border-color: #3c763d;
+}
+.has-success .form-control:hover,
+.has-success .form-control:focus {
+  border-color: #3c763d;
+}
+.has-success .form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3c763d;
+}
+.text-normal {
+  font-weight: normal;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-itelic {
+  font-style: italic;
+}
+.text-small {
+  font-size: 65%;
+}
+.text-big {
+  font-size: 135%;
+}
+/*---overlay gradient---*/
+.gradient,
+.btn,
+.btn.active,
+.btn:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(6, 6, 6, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(6, 6, 6, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(6, 6, 6, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(6, 6, 6, 0.15));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(6, 6, 6, 0.15));
+}
+/**/
