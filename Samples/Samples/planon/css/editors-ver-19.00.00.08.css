@@ -1,0 +1,737 @@
+/*
+Seperate css file for editors. Editors are shared in the application. They are used in the grid, quicksearch, filterpanel, BOMArgumentsDialog, etc. etc.
+This file contians the common styling for the editors. Special handling like, for instance, comment fields should be in the styling for the grid.
+*/
+
+.fieldValueEditor {
+  display : flex;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+img.editorIcon {
+  margin: 6px 0 0 6px;
+}
+
+.quickSearchBar img.editorIcon {       /* hide editorIcon in quicksearch pannel*/
+    display: none;    
+}
+
+img.uploadIcon {
+	margin-left: -24px;
+	display: block;
+}
+
+img.clearSDIcon {
+	margin-left: -42px;
+	display: block;
+}
+
+img.uploadSDIcon {
+	margin-left: -24px;
+	margin-top: -17px;
+	display: block;
+}
+
+.fieldEditor {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.editorDisabled .field-editor-con {
+  background-color: #f2f2f2;
+  border-left: none;
+}
+
+
+.textAreaFieldValueEditor,
+.detailListFieldValueEditor {
+  flex-direction: column;
+  display: block;
+}
+
+.textAreaFieldValueEditor .fieldEditor,
+.detailListFieldValueEditor .fieldEditor {
+   border-left: none;
+   flex-direction: column;
+ }
+
+.detailListFieldValueEditor tbody tr td {
+  height: 24px;
+  padding: 0;
+}
+
+.PnWebReservationCostDetailPopup .field-editor-con {
+  width: 50%;
+  border: none;
+}
+
+.PnWebReferenceDatePanel .referenceDateEditor .field-editor-con,
+.PnWebReferenceDatePanel .referenceDateEditor .fieldEditor {
+  display: inline-block;
+}
+
+.fieldValueEditor input[type="text"],
+.fieldValueEditor input[type="password"],
+.filterNamePanel .filterNameEditor {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fieldValueEditor img.lifecycleIcon {
+  margin: 4px 0 0 6px;
+}
+
+div.fieldValueEditor img.newQuestion{
+	margin-top: 2px;
+	margin-left:6px;
+}
+
+.fieldValueEditor label {
+  line-height: 24px; /* To make label vertically align middle with the text field */
+}
+
+.booleanRadioButtonChoice label {
+  margin-left: 4px;
+}
+
+.field-label {
+  width: 30%;
+  display: flex;
+  background-color: #f2f2f2;
+}
+
+.textAreaFieldValueEditor .field-label,
+.detailListFieldValueEditor .field-label {
+  width: 100%; 
+}
+
+.field-editor-con {
+  flex: 1;
+  display: flex;
+  background-color: #FFFFFF;
+  border-left: 1px solid #d7d7d7;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.textAreaFieldValueEditor .field-editor-con,
+.detailListFieldValueEditor .field-editor-con{
+  display: block;
+  width: 100%;
+  background: transparent;
+  border-left: none;
+}
+
+.field-label label{
+    flex: 1;
+    padding-left: 6px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+.mandatory-symbol {
+  padding-top: 8px;
+  background-color: #2795d1;
+  margin-left: -10px;
+  color: #ffffff;
+  border-radius: 2px 0 0 2px;
+  width: 10px;
+  text-align: center;
+}
+
+.booleanFieldValueEditor .radio{
+  display: inline-block;
+  padding: 0 0 0 2px;
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ /*
+ 	ISM-4733:Questionaire gets out of screen
+ 	Added CSS to align the radio buttons into 3 columns
+ */
+.fieldValueEditor.booleanFieldValueEditor.questionaireFieldValueEditor .radio {
+   float: left;
+   width: 33%;
+   padding: 0;
+}
+
+.fieldValueEditor.booleanFieldValueEditor.questionaireFieldValueEditor .booleanRadioGroup {
+  display: block;
+}
+
+.fieldValueEditor.questionaireFieldValueEditor.pnWebSingleSelectComboTypeQuestionValueEditor .fieldEditor {
+  flex: auto!important;
+}
+
+div.iconFieldValueEditor .fieldEditor {
+  padding: 4px 0px 0px 6px;
+}
+
+div.iconFieldValueEditor .editor-links img {
+	vertical-align: top;
+}
+
+.editor-links {
+  background-color: #ffffff;
+}
+
+.editor-link {
+  vertical-align: middle;
+  border-left: 1px solid #d7d7d7;
+  height: 18px;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.editorDisabled .editor-link {
+  height: 24px;
+  margin-top: 0;
+}
+
+.editorDisabled .editor-link img {
+  margin-top: 0;
+}
+
+.editor-link:hover img{
+  opacity: 1;
+}
+
+.editor-link.disabled {
+  display: none;
+}
+
+.fieldEditor .editor-link:first-child {
+  border-left: none;
+}
+
+.editor-link img {
+  vertical-align: middle;
+  margin-top: -2px;
+  opacity: 0.6;
+}
+
+.fieldEditor #colorFieldClear {
+  height: 24px;
+}
+
+.clear-button {  /*for clear filter button in resource planner configuration TSI */
+  margin: 4px 3px 0 0;
+}
+
+div.fieldValueEditor span.unitOfMeasureLabel ,
+div.fieldValueEditor span.currencyLabel {
+  padding: 5px 6px 0px 6px;
+  color: #8D9DAF;
+}
+
+span.currencyLabel {
+  order: -1;
+  color: #8D9DAF;
+}
+
+.booleanRadioButtonChoice {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.textAreaFieldValueEditor input {
+	float: left;
+	margin-right: 4px;
+}
+
+.detailListFieldValueEditor .wicket_orderUp .sortImage {
+    background: url('../img/ascend-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+
+.detailListFieldValueEditor .wicket_orderDown .sortImage {
+    background: url('../img/descend-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+
+/*-----------------------------------------------------------------------------------------
+  Questionaire related styling: the styling for these kind of fields is different
+  because the requirement for these fields was that the input field is on a separate line
+  below the field label.
+  -----------------------------------------------------------------------------------------*/
+div.questionaireFieldValueEditor {
+  flex-direction: column;
+}
+
+/*-----------------------------------------------------------------------------------------
+	ISM-4219: Styling issues: Service Manager after new Data Panel Styling changes
+	The following changes are related to the new webclient styling which was implemented
+	by team UX. I have to override some CSS and add some additional styling to align
+	everything again.
+-----------------------------------------------------------------------------------------*/
+.questionaireFieldValueEditor .field-editor-con {
+  flex: none;
+}
+
+.questionaireFieldValueEditor .field-editor-con a {
+  height: 20px;
+  margin: 2px 0;
+  float: left;
+  border-left: 1px solid #C4C4C4;
+  opacity: 0.6;
+}
+
+.questionaireFieldValueEditor .field-editor-con a:hover {
+  opacity: 1;
+}
+
+.questionaireFieldValueEditor .field-editor-con input {
+  margin-top:2px;
+}
+
+.questionaireFieldValueEditor .field-editor-con .booleanRadioGroup .radio label {
+  margin-left: 6px;
+}
+
+/*285950.00 - UX: Question truncated on Web client*/
+div.questionaireFieldValueEditor .field-label {
+	width: 100%;
+}
+
+div.questionaireFieldValueEditor .fieldEditor input {
+  height: 24px;
+  width: 100%;
+}
+
+
+div.questionaireFieldValueEditor .fieldEditor input.dateTimeQuestionField,
+div.questionaireFieldValueEditor .fieldEditor input.dateQuestionField {
+  width: auto;
+}
+
+
+div.questionaireFieldValueEditor .textAreaEditor {
+	margin-left: 0px !important;
+	padding-left: 0px !important;
+}
+
+.textAreaFieldValueEditor.questionaireFieldValueEditor .textAreaEditor textarea {
+  margin-left: 0px!important;
+}
+
+/*
+  Following styling is related to radio group values for boolean of multiple choices.
+ */
+
+div.fieldValueEditor.booleanFieldValueEditor.questionaireFieldValueEditor {
+	height: auto;
+}
+
+div.fieldValueEditor.booleanFieldValueEditor.questionaireFieldValueEditor .fieldEditor input {
+	width: auto;
+	margin: 0px !important;
+	vertical-align: middle;
+}
+
+div.fieldValueEditor.questionaireFieldValueEditor input.dateTimeQuestionField,
+div.fieldValueEditor.questionaireFieldValueEditor input.dateQuestionField {
+  color: #3F4751;
+  height: 14px; 
+  padding: 2px;
+  float: left;
+}
+
+/*--------------------[ END STYLING Questionaire related fields ]------------------------ */
+
+.textAreaFieldValueEditor textarea,
+.detailListFieldValueEditor .PnWebProxyListPanel {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.detailListFieldValueEditor .proxyList{
+  width: 100%;
+}
+
+.detailListFieldValueEditor .truncate-text {
+  text-indent: 6px;
+}
+
+.textAreaFieldValueEditor textarea {
+  min-height: 100px;
+  resize: vertical; /* Allow users to resize manually, but only vertical */
+  border: none;
+  box-sizing: border-box;
+  padding: 6px;
+  display: block;
+}
+
+.editorDisabled textarea {
+  background-color: #F2F2F2;
+}
+
+/**
+ * max-height is added to scroll bar if the records exceeds 4,
+ * min-height is mandatory to show the scroll bar visible properly when
+ * there are less then 3 records and resize the proxy panel or browser.
+ */
+.detailListFieldValueEditor  .PnWebProxyListPanel {
+  min-height: 85px;
+  max-height: 500px;
+  background-color: #f2f2f2;
+}
+
+.detailListFieldValueEditor input[type="text"]:not(disabled),
+.detailListFieldValueEditor input[type="password"]:not(disabled) {
+  border: none;
+  height: 24px;
+}
+
+.quick-search-panel .textAreaFieldValueEditor textarea {
+	resize: none;
+}
+
+.textAreaFieldValueEditor .textAreaReplacement {
+	border:  1px solid #C4C4C4;
+	clear: both;
+	display: block;
+	height: 95px;
+	margin: 2px 0 0 5px;
+	overflow-y: scroll;
+	white-space: pre-line;
+	width: 85%;
+}
+
+/* 'last' large field, textareas that appear as last element in grids */
+.lastLargeField .textAreaFieldValueEditor {
+	padding: 0 0 4px 0;
+	border: none;
+}
+
+div.PnWebListGridRefDialog div.PnWebProxyListPanel {
+	width: 100%;
+}
+
+.editors { /*it is needed for some areas where old grid markup is used. */
+  width: 100%;
+}
+
+.fieldValueEditor .textEditor,
+.iconFieldValueEditor .fieldEditor,
+.booleanFieldValueEditor .booleanRadioGroup{
+  border: none;
+  flex: 1;
+  padding-right: 6px;
+}
+
+.dropdownFieldValueEditor .fieldEditor select,
+.questionaireFieldValueEditor .fieldEditor select{
+  width: 100%;
+  border: none;
+}
+
+.editorDisabled select {
+  background: transparent;
+}
+
+/* In Firefox dropdown arrow and expanded box are off. Fix with a rule targeting only Firefox. */
+@-moz-document url-prefix() {
+	.dropdownFieldValueEditor .fieldEditor select,
+	.PlanonWebBaseDialog .dropdownFieldValueEditor .fieldEditor select {
+		text-indent: 0px;
+	}
+
+	.dropdownFieldValueEditor .fieldEditor select option,
+	.PlanonWebBaseDialog .dropdownFieldValueEditor .fieldEditor select option {
+		padding: 0px 2px 0px 2px;
+		border-right: 1px solid black;
+	}
+}
+
+select {
+  height: auto;
+  padding: 1px 1px 1px 0;
+}
+
+
+.booleanFieldValueEditor .booleanRadioGroup {
+  display: flex;
+  flex: 1;
+}
+
+.booleanWith3Options .radio {
+	width: auto;  /* Removed the 32%, as if letters increases they are overlapping with buttons pcis:256435.01*/
+}
+
+div.PnWebAddCommunicationLogDialog .editorDisabled input ,
+.PnWebAddCommunicationLogDialog .editorDisabled textarea {
+  background: transparent !important;
+  border: 1px solid #C4C4C4;
+}
+
+td.lastLargeField {
+	vertical-align: top;
+}
+.PnWebGenerateMaintenanceBudgetDialog .PlanonWebBaseDialog .fieldValueEditor label {
+	vertical-align: middle;
+}
+
+.modalwindow .ui-layout-north div.fieldValueEditor .textEditor{
+	width: 100px;
+}
+
+.fieldValueEditor input.textEditor,
+.fieldValueEditor select,
+.fieldValueEditor .radio {
+  flex: 1;
+  height: 24px;
+  text-indent: 6px;
+}
+
+/* To make checkbox verticalyy align middle */
+.fieldValueEditor .planonCheckBox {
+  align-self: center;
+}
+ 
+ /* to align with text editors */
+ .fieldEditor .planonCheckBox {
+  margin-left: 5px;
+}
+ 
+/* to have space bewteen editor and checkbox */
+.field-label .planonCheckBox {
+  margin-right: 5px;
+}
+ 
+ /* for image field to align top instead of center */
+.fieldValueEditorWithIcon .planonCheckBox {
+  align-self: baseline;
+  margin-top: 5px;
+}
+
+/*  added fieldValueEditor to make sure it is only in data panel */ 
+.fieldValueEditor .btn-round-1.disabled {
+	display: none;
+}
+
+div.imageFieldValueEditor {
+ width:100%;
+ padding-right:6px;
+ display:inline-block;
+}
+
+
+div.imageFieldValueEditor img {
+ max-height: 110px;
+ max-width: 100%;
+ image-orientation: from-image;
+ position: absolute;
+ margin: auto;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
+
+div.imageFieldValueEditor .imagecontainer {
+ height:110px;
+ width: 100%;
+ background: #FFF;
+ padding: 2px;
+ position:relative;
+}
+
+div.fieldValueEditor .disabled img {
+	display: none;
+}
+
+.booleanWith3Options .booleanRadioGroup {
+	height: 21px;
+	width: 100%;
+}
+
+div.groupPanel .fieldsPanel .fieldValueEditor.booleanFieldValueEditor.booleanWith3Options .booleanRadioGroup {
+	width: 100%;
+}
+
+.PnWebSaveReportDialog .fieldValueEditor {
+  display: block;
+  border: none;
+}
+
+.PlanonWebBaseDialog .BOMParameters .fieldValueEditor label {
+	float: none;
+	display: block;
+	width: 99%;
+}
+
+.PlanonWebBaseDialog .BOMParameters .fieldValueEditor .textEditor,
+.PlanonWebBaseDialog .BOMParameters .booleanFieldValueEditor .fieldEditor,
+.PlanonWebBaseDialog .BOMParameters .booleanFieldValueEditor .fieldEditor .booleanRadioGroup {
+	width: 98%;
+}
+
+.PlanonWebBaseDialog .BOMParameters .fieldValueEditor select:disabled {
+    opacity: .5;
+}
+
+.PlanonWebBaseDialog .BOMParameters .dropdownFieldValueEditor .fieldEditor select {
+	width: 98.6%;
+}
+
+.PlanonWebBaseDialog .BOMParameters .booleanFieldValueEditor .fieldEditor .booleanRadioGroup span.radio{
+	width: 49%;
+}
+
+.PlanonWebBaseDialog .BOMParameters .fieldValueEditor textarea,
+.PlanonWebBaseDialog .BOMParameters .textAreaFieldValueEditor textarea {
+	width: 98%;
+}
+
+.colorSettingDialogLabels{
+	margin: 8px 0px 8px 18px;
+}
+
+/* Buttons */
+.PnWebFileUploadDialog .uploadControls input,
+input.PnWebButton {
+	border-radius: 5px;
+}
+
+.textAreaEditor  .okButton{
+	float: right;
+	font-weight: bold;
+	width: 75px;
+}
+
+.textAreaEditor .okButton:focus,
+.okButton:hover {
+	border: 1px solid #045a8b;
+	cursor: pointer;
+}
+
+.mceLayout{
+	height: 100%!important;
+	width: 100%!important;
+}
+
+/* Styling for PnWebColourReferenceFieldValueEditor */
+.colorTextEditor span .textEditor {
+	width: 50% !important;
+}
+
+.colorTextEditor .colorEditor {
+	width: 30px;
+}
+
+/* Styling for the text area proxylist fields */
+div.fieldValueEditor div.proxyListWrapper textarea {
+	width: 100%;
+	resize: none;
+	height: 61px;
+}
+
+div.fieldValueEditor div.proxyListWrapper textarea.translated-name-textarea {
+  height:  60px!important;
+}
+
+.file-chooser-input {
+  border: 1px solid #C4C4C4;
+}
+
+.fieldValueEditor .defaultValueFieldValueEditor {
+  width: 100%;
+}
+
+.defaultValueFieldValueEditor .fieldValueEditor {
+  display: block;
+  border: none;
+}
+
+.defaultValueFieldValueEditor .field-editor-con {
+  border: none;
+}
+
+.fields-group-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-top: 13px;
+}
+
+.BOGrid .fields-group-container:last-child {
+  flex: 1 0 auto;
+}
+
+.tabsheet .fields-group-container .bar {
+  padding-top: 0;
+}
+
+.fields-group {
+  border: 1px solid #C4C4C4;
+  border-radius: 2px;
+}
+
+.fields-group .fieldValueEditor:first-child .field-label {
+  border-top-left-radius: 2px;
+}
+
+.fields-group .fieldValueEditor:first-child .field-editor-con,
+.fields-group .fieldValueEditor:first-child .field-editor-con > .fieldEditor,
+.fields-group .fieldValueEditor:first-child .field-editor-con > .editor-links,
+.fields-group .fieldValueEditor:first-child .field-editor-con > .fieldEditor > * {
+  border-top-right-radius: 2px;
+}
+
+.fields-group .fieldValueEditor:last-child .field-label {
+  border-bottom-left-radius: 2px;
+}
+
+.fields-group .fieldValueEditor:last-child .field-editor-con,
+.fields-group .fieldValueEditor:last-child .field-editor-con > .fieldEditor,
+.fields-group .fieldValueEditor:last-child .field-editor-con > .editor-links,
+.fields-group .fieldValueEditor:last-child .field-editor-con > .fieldEditor > * {
+  border-bottom-right-radius: 2px;
+}
+
+.fields-group .fieldValueEditor:last-child {
+  border-bottom: 0;
+}
+
+.fields-group.last-large-field-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.last-large-field-container .fieldValueEditor:last-child {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-large-field-container .fieldValueEditor:last-child .field-editor-con {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.tsi-layout-grid > .fieldValueEditor:last-child > .field-editor-con {
+  flex: 1 0 0px; 
+}
+
+/* RaKauf: changed this selector to not target Field Value Editors inside other Field Value Editors. This caused issues in the Layout Manager and the PSS Manager. */
+.last-large-field-container > .fieldValueEditor:last-child > .field-editor-con > .fieldEditor {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.last-large-field-container .fieldValueEditor:last-child .fieldEditor,
+.last-large-field-container .fieldValueEditor:last-child .fieldEditor textarea,
+.last-large-field-container .fieldValueEditor:last-child .fieldEditor > .PnWebProxyListPanel {
+  height: 100%;
+}
+
+.questionaireFieldValueEditor .fieldEditor {
+  width: 100%!important;
+  flex: none!important;
+  display: block!important;
+}

@@ -1,0 +1,296 @@
+/**
+ * Css for tablet support for FrameUI
+ *
+ * @see https://planon.atlassian.net/browse/UX-416
+ * @see http://uvtosq.axshare.com/#p=responsivewebclient_-_2nd_interation
+ */
+.tablet #mainGrid, .tablet #mainBlock {
+  height: 100%;
+}
+
+/* In Ipad due to iframe height issue we see a shadow in the background when gadgets exceeds the device height */
+#pn-container[data-render-mode=tablet] .workspace {
+  box-shadow: none;
+}
+
+#pn-container[data-render-mode=tablet] #mainGrid,
+#pn-container[data-render-mode=tablet] .pn-content {
+  margin: 0;
+}
+
+/* To avoid the gadgets scrolling in ipad when we have overlay */
+#pn-container[data-render-mode=tablet] .pn-content.show-nav {
+  overflow: hidden;
+}
+
+.hamburger,
+#pn-container[data-render-mode=tablet] .pn-navigator-container {
+  display: none;
+}
+
+#pn-container[data-render-mode=tablet] .hamburger {
+  background: transparent url(../../images/hamburger.png) no-repeat center center;
+  border: 1px solid #EAEAEA;
+  border-radius: 3px;
+  box-shadow: 0 0 1px #EAEAEA;
+  cursor: pointer;
+  display: block;
+  font-size: 3em;
+  height: 20px;
+  left: 0;
+  margin: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  width: 16px;
+  z-index: 98;
+}
+
+#pn-container[data-render-mode=tablet] .pn-navigator-container {
+  box-shadow: 1px 0 4px rgba(0,0,0,0.2);
+  border-radius: 0;
+  display: block;
+  left: 0;
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  z-index: 99;
+  transform: translateX(-100%);
+  transition: transform .3s ease-out 0s;
+  -webkit-backface-visibility: hidden; /* prevent iPad flickering */
+          backface-visibility: hidden;
+}
+
+#pn-container[data-render-mode=tablet] .pn-content.show-nav .pn-navigator-container {
+  transform: translateX(0);
+  position: fixed;
+}
+
+#pn-container[data-render-mode=tablet] .pn-navigator {
+  background-color: #fff !important;
+  box-shadow: 1px 0 4px rgba(0,0,0,0.2);
+  border-radius: 0;
+  max-height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 1px;
+}
+
+#pn-container[data-render-mode=tablet] .toggle-navigator{
+  display : none;
+}
+#pn-container[data-render-mode=tablet] .pn-modal-dialog-overlay {
+  background-color: rgba(255,255,255,.5);
+  border-radius: 0;
+  overflow: hidden;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all .1s ease-out 0s;
+  -webkit-backface-visibility: hidden; /* prevent iPad flickering */
+  z-index: 98 !important;
+}
+
+#pn-container[data-render-mode=tablet] .pn-content.show-nav + .pn-modal-dialog-overlay {
+  left: 320px;
+  opacity: 1;
+  transform: translateX(0);
+  display: block;
+}
+
+#pn-container[data-render-mode=tablet] .home {
+  display: block;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to right, rgba(13, 107, 162, 0.97), rgba(8, 82, 140, 0.94)) ,url(../../images/header/header-background.jpg) repeat ;
+}
+
+#pn-container[data-render-mode=tablet] .navbar {
+  height: 170px;
+  padding: 16px;
+  margin: 0;
+}
+
+#pn-container[data-render-mode=tablet] .header-toolbar {
+  border: none;
+  margin-right: 0;
+}
+
+#pn-container[data-render-mode=tablet] .toolbar-entry {
+  display: inline-block;
+}
+
+#pn-container[data-render-mode=tablet] .user-info-entry {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 2px rgba(0,0,0,.5);
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 9px 0 3px 0;
+  width: 100%;
+}
+
+#pn-container[data-render-mode=tablet] .reference-date-entry {
+  float: right;
+}
+
+#pn-container[data-render-mode=tablet] .toolbar-button {
+  margin: 0;
+}
+
+#pn-container[data-render-mode=tablet] .alarm-button {
+  margin-right: 15px;
+}
+
+#pn-container[data-render-mode=tablet] a.user-info-button:hover {
+  background: #fff;
+}
+
+#pn-container[data-render-mode=tablet] #user-name {
+  color: #2e2e2e;
+  font-size: 15px;
+  margin-right: 16px;
+  order: 1;
+  line-height: 3;
+}
+
+#pn-container[data-render-mode=tablet] .profile-photo {
+  padding: 0 24px;
+}
+
+#pn-container[data-render-mode=tablet] .user-info-popup {
+  background-color: #FFFFFF;
+  left: 8px;
+  max-width: 265px;
+}
+
+#pn-container[data-render-mode=tablet] .user-info-btns {
+  margin: 0;
+}
+
+#pn-container[data-render-mode=tablet] .reference-date-button {
+  display: inline-block;
+  float: left;
+}
+
+.user-info-popup,
+#referenceDatePopup {
+  overflow: visible !important; /* to show triangle to the right */
+}
+
+#pn-container[data-render-mode=tablet] .reference-date-entry > div {
+  margin-left: 8px !important;
+  top: -215px !important;
+}
+
+#pn-container[data-render-mode=tablet] .pn-popup:before {
+  left: -18px;
+  border-color: transparent #C5C5C5 transparent transparent;
+}
+
+#pn-container[data-render-mode=tablet] .pn-popup:after { 
+  left: -16px;
+  border-color: transparent #FEFEFE transparent transparent;
+}
+
+#pn-container[data-render-mode=tablet] .user-info-popup:before,
+#pn-container[data-render-mode=tablet] .user-info-popup:after {
+  right: auto;
+  top: auto;
+  bottom: 14px;
+}
+
+#pn-container[data-render-mode=tablet] .pn-reference-date-tooltip {
+  right: 45px;
+}
+
+#pn-container[data-render-mode=tablet] .reference-date-popup:before,
+#pn-container[data-render-mode=tablet] .reference-date-popup:after {
+  right: auto;
+  top: 59%;
+}
+
+/* align the popup position always towards right with the arrow(cap) */
+#pn-container[data-render-mode=tablet] .user-info-entry .k-animation-container {
+   bottom: 4px;
+   top: auto !important;
+}
+
+/* Blur effect */
+.blur { 
+	filter: blur(5px); 
+	-webkit-filter: blur(5px); 
+	transition: filter 1s, -webkit-filter 1s;
+}
+
+/* adding opacity as a workaround for Widget clicks and taps do not work as expected in iOS 8.4.1 */
+.k-icon,
+.k-icon:hover {
+  opacity: 1 !important;
+}
+
+#pn-container[data-render-mode=tablet] .pn-otap-desc {
+  background-image: url("../../images/header/striped-bar-vertical.png");
+  background-repeat: repeat-y;
+  border-radius: 0 2px 2px 0;
+  font-size: 14px;
+  line-height: 2.5;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  padding-left: 18px;
+}
+
+#pn-container[data-render-mode=tablet] .pn-content .pn-navigator-container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 104px;
+}
+
+#pn-container[data-render-mode=tablet] #navigator .homeLink {
+  top: 48px;
+}
+
+#pn-container[data-render-mode=tablet] #navigator .homeLink > a,
+#pn-container[data-render-mode=tablet] #navigator .navigatorGroup > span {
+  font-size: 16px;
+  line-height: 55px;
+}
+
+#pn-container[data-render-mode=tablet] .homeLink .k-image {
+  padding: 20px 15px;
+}
+
+#pn-container[data-render-mode=tablet] #navigator .navigatorGroup .navigatorItem {
+  line-height: 50px;
+}
+
+#pn-container[data-render-mode=tablet] #navigator .navigatorGroup .navigatorItem a {
+  font-size: 15px;
+  height: 100%;
+}
+
+#pn-container[data-render-mode=tablet] .navigatorItem a img {
+  padding: 16px;
+}
+
+#pn-container[data-render-mode=tablet] #referenceDateStatus, 
+#pn-container[data-render-mode=tablet] .header-toolbar-button.toolbar-button {
+  width: 36px;
+  height: 36px;
+  background-position: center;
+}
+
+#pn-container[data-render-mode=tablet] .pn-notification {
+  top: 24px;
+}
+
+.k-link:not(.k-state-disabled):hover > .k-i-arrow-s {
+  background-position: left;
+}
+
+.switch-mode-container {
+  margin-top: 8px;
+}

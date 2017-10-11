@@ -1,0 +1,835 @@
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - General Form
+------------------------------------------------------------------------------------------------------
+*/
+
+.PlanonWebBaseDialog,
+.PnWebGridActionDialog,
+.PnWebKnowledgeBaseItemPopupGrid,
+.PlanonWebBaseDialog .modalwindow .dialogContentPanel .BOGridTabbedPanel,
+.PlanonWebBaseDialog .dialogContentPanel .resultsSection .ui-layout-container .ui-layout-west {
+    height: 100%;
+}
+
+.PlanonWebBaseDialog .dialogContentPanel {
+	padding: 12px;
+	overflow-y: auto;
+}
+
+.PnWebWorkflowDialog .dialogContentPanel {
+  padding: 0;
+  margin: 0;
+}
+
+.PnWebExcursionSearchDialog .dialogContentPanel {
+	overflow-y: hidden;
+}
+
+.excursionSearchFeild {
+  margin-top: 12px;
+  width: 98%;
+}
+
+.PlanonWebBaseDialog.PnWebChangeWithinSelectionOnActionDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebDuplicateRequestsDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebFinancialYearAwareDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebKnowledgeBaseHistoryDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebLifeCycleAwareRefDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebListGridActionRefDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebListGridRefDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebNewLifeCycleAwareRefDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebParkingAreaSelectDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebProcessSurveyDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebProxyRefDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebReservationCostDetailDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebSLAMtoNContractLineWithRefDateDialog .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebStandardOrderDialogWithFilterAndSubOrderDisplay .dialogContentPanel,
+.PlanonWebBaseDialog.PnWebStandardSubOrderWithFilterDialog .dialogContentPanel {
+	overflow-y: hidden;
+}
+
+.PnWebGenerateMaintenanceBudgetDialog .dialogContentPanel {
+	overflow-y: auto;
+}
+
+
+/* Some dialogs have a different layout and need the border on the center/main panel suppressed. */
+.PlanonWebBaseDialog.PnWebListGridRefDialog .layoutProxy .ui-layout-center,
+.PlanonWebBaseDialog.PnWebProxyGridDialog .modalwindow .mainPane {
+	border: none;
+}
+
+.PnWebProxyRefDialogWithFilterInContext .layoutProxy,
+.pn-mainContentPanel {
+	min-height: 200px;
+}
+
+.pn-dialogContentPanel {
+	min-height: 335px;
+}
+
+.PlanonWebBaseDialog .dialogContentPanel .fieldEditorContainer {
+	height: 220px;  /* initial/default height only */
+	margin: 3px;
+	padding: 3px;
+}
+
+.PlanonWebBaseDialog .dialogContentPanel .fieldEditorContainer .gridPanel,
+.PlanonWebBaseDialog .dialogContentPanel .resultsSection .ui-layout-container .ui-layout-west .proxyListPanel {
+	overflow: auto;
+}
+
+.baseButtonPanel {
+  padding-bottom: 2px;
+  text-align: center;
+  border-width: 1px 0 0;
+  border-style: solid;
+}
+
+.baseButtonPanel .btn {
+  margin-top: 5px;
+}
+
+input.PnWebButton {
+	min-width: 80px;
+	max-width: 160px;
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 12px 0px 6px 3px;
+	height: 22px;
+	padding: 0px 12px 0px 12px;
+}
+
+.calendarOccurrenceInputPanel {
+    margin-top: 12px;
+}
+
+.PlanonWebBaseDialog .dialogContentPanel .resultsSection .ui-layout-container {
+	border: 1px solid #BBB;
+	background-color: white;
+}
+
+.PlanonWebBaseDialog .arrows .disabled,
+.PlanonWebBaseDialog .reportBOType .disabled {
+	opacity: .3;
+}
+
+.subreportButtonPanel {
+  margin-bottom: auto;
+}
+
+.moveButtonPanel,
+.positionButtonPanel {
+  margin-top: auto;
+}
+
+.round-button {
+	border-radius: 50%;
+}
+
+.disabled .round-button {
+	opacity: 0.3;
+}
+
+.PlanonWebBaseDialog .topPanel {
+	margin-bottom: 10px;
+}
+
+.PlanonWebBaseDialog .custom-mton-wizard-page-panel  {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Form */
+.modalwindow {
+	height: 100%;
+}
+
+.error-title-text,
+.error-title-img {
+    vertical-align: middle;
+}
+
+.modalwindow div.errorMessage {
+	padding: 10px;
+}
+
+.modalwindow .errorMessage div.messageContext {
+	margin-bottom: 18px;
+}
+
+.modalwindow .errorMessage > div { margin-bottom: 12px; }
+
+.modalwindow div.confirmationMessage .radioGroup { margin-top: 6px; }
+
+.modalwindow .dialogContentPanel .resultsSection {
+	padding-top: 5px;
+}
+
+.PlanonWebBaseDialog .pnwilayout {
+	height: 100%;
+}
+
+.modalwindow div.dialogContentPanel fieldset {
+	border: none;
+	padding: 5px 0px 5px 0px;
+}
+
+.modalwindow div.dialogContentPanel fieldset ul {
+	margin-left: 5px;
+	list-style-type: none;
+}
+
+.modalwindow div.dialogContentPanel fieldset ul div.checkboxPanel {
+	height: 20px;
+}
+
+.modalwindow div.dialogContentPanel fieldset ul div.checkboxPanel label {
+	vertical-align: top;
+}
+
+.PlanonWebBaseDialog .PnWebDialogGrid {
+    padding-left: 5px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebBOGridDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebBOGridDialog .pn-grid-panel { height: 100%; }
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebMessageDialog
+------------------------------------------------------------------------------------------------------
+*/
+
+.PnWebMessageDialog .dialogContentPanel .messagePanel {
+	height: 100%;
+	overflow-y: auto;
+	vertical-align: middle;
+}
+
+.PnWebMessageDialog .dialogContentPanel .messagePanel img {
+	float: left;
+	margin-right: 10px;
+}
+
+.PnWebMessageDialog .dialogContentPanel .messagePanel .messageContent div {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebOrderCostsDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebOrderCostsDialog table.proxyList th span {
+	display: inline-block;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebFieldValuesDialog
+------------------------------------------------------------------------------------------------------
+*/
+div.PnWebFieldValuesDialog div.dialogContentPanel div.fieldEditorContainer div.gridPanel {
+	overflow: hidden;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebPeriodDialog
+------------------------------------------------------------------------------------------------------
+*/
+div.PnWebPeriodDialog div.PnWebPeriodPopupEditor select {
+	vertical-align: top;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+div.PnWebPeriodDialog div.PnWebPeriodPopupEditor label {
+	width: 35%;
+	position: relative;
+	top: 2px;
+}
+
+div.PnWebPeriodDialog div.PnWebPeriodPopupEditor input {
+	width: 65%;
+	float: right;
+	text-indent: 3px;
+	padding: 1px 0px;
+	height: 18px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebKnowledgeBaseItemPopup
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebKnowledgeBaseItemPopup {
+	padding: 3px;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemSearchLabel {
+	display: block;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemPopupSearch a img {
+	vertical-align: bottom;
+	margin: 0 0 2px 0;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemPopupSearch input {
+	width: 70%;
+    padding: 2px 0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0 2px 2px 0;
+    height: 16px;	
+}
+
+.PnWebKnowledgeBaseItemPopup input.knowledgeBaseSearchField {
+  margin-right: 2px;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemPopupSearch input.radiobutton {
+	width: auto;
+	vertical-align: middle;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemPopupSearch .checkboxPanel .planonCheckBox {
+	width: auto;
+}
+
+.PnWebKnowledgeBaseItemPopup .checkboxPanel,
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemSearchFilter {
+	margin: 0 0 6px;
+}
+
+.PnWebKnowledgeBaseItemPopup .PnWebKnowledgeBaseItemSearchFilter label {
+	margin-left: 6px;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebKnowledgeBaseItemRefDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebKnowledgeBaseItemRefDialog .PnWebKnowledgeBaseItemSearchLabel {
+	margin-top: 3px;
+	margin-bottom: 12px;
+}
+
+.PnWebKnowledgeBaseItemRefDialog .radiobutton .planonCheckBox {
+	margin-left: 3px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebAddStandardAssetDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebAddStandardAssetDialog .fieldlabelcontainer {
+	width: 27%;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebAddStandardBuildingElementDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebAddStandardBuildingElementDialog .fieldlabelcontainer {
+	width: 27%;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebGeneratePurchaseOrderDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebGeneratePurchaseOrderDialog .fieldlabelcontainer {
+	width: 27%;
+}
+
+.PnWebGeneratePurchaseOrderDialog .radiobutton {
+	margin-left: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.PnWebGeneratePurchaseOrderDialog .defaultPropertyField,
+.PnWebGeneratePurchaseOrderDialog .defaultDeliveryAddressField {
+	margin-left:38px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebBOTypeIconPopupEditor
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebBOTypeIconPopupEditor .mainPanel {
+	overflow: auto;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebAdoptRecurringBudgetsDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebAdoptRecurringBudgetsDialog tr {
+	height: 24px;
+}
+.PnWebAdoptRecurringBudgetsDialog .planonCheckBox {
+	vertical-allign: bottom;
+}
+
+.PnWebAdoptRecurringBudgetsDialog {
+	width: 100%;
+}
+
+.PnWebAdoptRecurringBudgetsDialog .field-label {
+  display: none;
+}
+
+.index-percentage-con {
+  display: flex;
+  margin-top: 8px;
+}
+
+.indexPercentageEditor .fieldValueEditor {
+  height: 24px;
+}
+
+#indexPercLabel {
+  margin-top: 5px;
+}
+
+.indexPercentageEditor .field-editor-con {
+  border: 1px solid #d7d7d7;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebChangeWithinSelectionOnActionDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebChangeWithinSelectionOnActionDialog .ui-layout-center {
+	overflow-y: auto;
+}
+
+.modalwindow input.planonCheckBox {
+  vertical-align: middle;
+}
+
+.checkboxPanel > label {
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebSelectLayersDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebSelectLayers select.visibleList,
+.PnWebSelectLayers select.invisibleList {
+	border: 1px solid #BBB;
+	width: 100%;
+	height: 100%;
+}
+
+.PnWebSelectLayers .arrow-buttons {
+  top: 40%;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebColorRefDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebColorRefDialog .fieldValueEditor {
+	padding: 2px 0;
+}
+
+.PnWebColorRefDialog .fieldValueEditor .fieldEditor {
+	vertical-align: bottom;
+}
+
+.PnWebColorRefDialog .fieldValueEditor .fieldEditor input {
+	position: static;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebCopyContractDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebCopyContractDialog .fieldValueEditor label {
+	position: initial;
+}
+
+.PnWebCopyContractDialog .fieldValueEditor .fieldEditor {
+	margin-left: 0;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - .PnWebGenerateClusteredOrdersDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebGenerateClusteredOrdersDialog .borderBottom span {
+	margin-left: 4px;
+}
+
+.PnWebGenerateClusteredOrdersDialog .borderBottom .title {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.PnWebGenerateClusteredOrdersDialog .borderBottom table {
+	width: 100%;
+	margin-top: 3px;
+}
+
+.PnWebGenerateClusteredOrdersDialog .borderBottom table label {
+	position: relative;
+	top: 2px\9;
+	white-space: normal;
+}
+
+.PnWebGenerateClusteredOrdersDialog .borderBottom .radiobutton,
+.PnWebGenerateClusteredOrdersDialog .borderBottom .planonCheckBox {
+	margin: 2px 0 2px 4px;
+}
+
+.PnWebGenerateClusteredOrdersDialog .fieldValueEditor {
+	margin: 4px 5px;
+}
+
+.PnWebGenerateClusteredOrdersDialog .fieldValueEditor label {
+	top: 2px\9;
+	position: relative;
+}
+
+.PnWebGenerateClusteredOrdersDialog .fieldValueEditor .fieldEditor {
+	margin-left: 0;
+}
+
+.PnWebGenerateClusteredOrdersDialog .checkboxPanel {
+	white-space: normal;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebPlannedMaintenanceFrequencyDialog
+------------------------------------------------------------------------------------------------------
+*/
+
+.PnWebPlannedMaintenanceFrequencyDialog .titleBorder .radiobutton,
+.PnWebPlannedMaintenanceFrequencyDialog .titleBorder .planonCheckBox {
+	white-space: normal;
+	margin-top: 0;
+	vertical-align: middle;
+}
+
+.PnWebPlannedMaintenanceFrequencyDialog .field-label {
+ width : 0;
+}
+
+.planned-maintenance-frequency-col {
+ width : 50%;
+}
+
+.PnWebPlannedMaintenanceFrequencyDialog .titleBorder label
+{
+ vertical-align: middle;
+}
+
+
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebProcessSurveyDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebProcessSurveyDialog .fieldValueEditor label {
+	top: auto;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebRepeatDateCalculatorDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebRepeatDateCalculatorDialog .borderBottom label,
+.PnWebRepeatDateCalculatorDialog .borderBottom table label {
+	position: relative;
+	top: 0px;
+	white-space: normal;
+	display: inline;
+}
+
+.PnWebRepeatDateCalculatorDialog .borderBottom .radiobutton,
+.PnWebRepeatDateCalculatorDialog .borderBottom .planonCheckBox {
+	position: relative;
+	top: 1px;
+	white-space: normal;
+}
+
+.PnWebRepeatDateCalculatorDialog div.fieldValueEditor {
+	overflow: visible;
+	width:55%;
+	margin-left:85px;
+}
+
+.PnWebRepeatDateCalculatorDialog .editorDisabled .fieldValueEditor {
+	width:55%;
+	margin-left:-4px;
+}
+
+.PnWebRepeatDateCalculatorDialog div.fieldValueEditor {
+	width:55%
+}
+
+.PnWebRepeatDateCalculatorDialog .titleBorder .repeatEndDatePanel .fieldValueEditor .textEditor {
+	margin-left: -3px;
+    text-indent: 0;
+    width: 57%;
+}
+
+.PnWebRepeatDateCalculatorDialog .repeatBeginDatePanel .fieldlabelcontainer {
+	width: 24%;
+}
+
+.PnWebRepeatDateCalculatorDialog .repeatEndDatePanel .fieldlabelcontainer {
+	width:20%;
+}
+
+.PnWebRepeatDateCalculatorDialog .titleBorder .repeatBeginDatePanel .fieldEditor {
+	 margin-left: 0;
+}
+
+.PnWebRepeatDateCalculatorDialog .titleBorder .repeatEndDatePanel input.spinnerDays {
+	margin: 0px 0 1px 35px;
+	width: 30px;
+	height: 14px;
+}
+
+.PnWebRepeatDateCalculatorDialog .fieldValueEditor label {
+	padding-left: 0;
+	vertical-align:middle;
+}
+
+.PnWebRepeatDateCalculatorDialog .titleBorder span label {
+    margin-left: 6px;
+}
+.PnWebRepeatDateCalculatorDialog .radiobutton {
+    vertical-align: middle;
+}
+.PnWebRepeatDateCalculatorDialog .endDate label {
+    margin-top: 4px;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebSaveReportDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebSaveReportDialog .fieldValueEditor label {
+	position: static;
+}
+
+.PnWebSaveReportDialog .fieldValueEditor .fieldEditor {
+	margin-left: 4px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebGroupRefFilterDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebGroupRefFilterDialog .ui-layout-center {
+	overflow: auto;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebCADPrintDialog
+------------------------------------------------------------------------------------------------------
+*/
+
+.PnWebCADPrintDialog .textAreaEditor textarea {
+	width: 100%;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebCADSymbolDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebCADSymbolDialog .cadSymbolsList {
+	height: 100%;
+}
+
+.PnWebCADSymbolDialog .ui-layout-pane-center {
+	overflow: scroll;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebDeepCopyUsingControllerDialog
+------------------------------------------------------------------------------------------------------
+*/
+.PnWebDeepCopyUsingControllerDialog .fieldValueEditor {
+	margin: 4px 5px;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------------
+        CSS for Search available reservation units.
+--------------------------------------------------------------------------------------------------------------
+*/
+
+.PnWebSearchAvailableReservationUnitDialog label {
+    margin-top: 2px;
+}
+
+.PnWebSearchAvailableReservationUnitDialog .radiobutton {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.PnWebSearchAvailableReservationUnitDialog .datesPanel {
+	margin-left: 20px;
+}
+
+.PnWebTradeOnOrderDialogWithFilter input.radiobutton {
+    margin-left: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.PnWebSLAServiceWithValidSLADialog input.radiobutton {
+    margin-left: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+    Modal Windows - addLinkedRequest Dialog
+------------------------------------------------------------------------------------------------------
+*/
+.addLinkedRequest {
+    margin: 5px 0;
+}
+
+.addLinkedRequest .checkboxPanel {
+    margin-top: 5px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+    Modal Windows -  M to N view
+------------------------------------------------------------------------------------------------------
+*/
+
+.pn-dpvfield-editor-container {
+  flex-direction: column;
+}
+
+.pn-dpvfield-editor-container .field-label {
+  /* to avoid eclipses, even though it has space  */
+  width: 100%;
+}
+
+.pn-dpvfield-editor-container .field-editor-con {
+  /* fix for editor to be visible in IE */
+  flex: 1 1 auto;
+  white-space: normal;
+  overflow-x: auto;
+  border: none;
+}
+
+.pn-m2n-left-panel {
+  width: 30%;
+}
+
+.pn-m2n-right-panel {
+  flex: 1;  
+}
+
+.pn-m2n-btn-panel {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.pn-m2n-horiz-panel {
+  align-self: center; 
+}
+
+.pn-m2n-btn {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.pn-m2n-panel {
+  display: flex;
+  /* for IE to occupy avialible space */
+  flex: 1;
+}
+
+.pn-m2n-panel {
+  height: 238px;
+  margin: 0 0 10px 6px;
+}
+
+.pn-m2n-label {
+  display: block;
+  line-height: 2.36;
+  margin-bottom: 5px;
+}
+
+.pn-mton-proxy-panel {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+  padding: 5px 5px 0;
+  margin: 2px; /* needed to make box-shodow visible */
+  display: flex;
+  flex-direction: column; 
+}
+
+.pn-m2n-btn.button-disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* disable image in field value editor has made invisible by display none, so overriding */
+div.fieldValueEditor.pn-dpvfield-editor-container .disabled img {
+  display: inline;
+}
+
+.pn-right-btn {
+  background-image: url('../img/move-right-black-22-ver-19.00.00.08.png'); 
+}
+
+.pn-left-btn {
+  background-image: url('../img/move-left-black-22-ver-19.00.00.08.png'); 
+}
+
+.pn-m2n-horiz-panel .pn-m2n-btn {
+  background-color: #8D9DAF;
+}

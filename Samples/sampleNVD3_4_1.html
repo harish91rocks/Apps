@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Axelta Platform | Dashboard</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="resources/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="resources/nvd3/nv.d3.min.css"/>
+        <style>
+            .nvd3-chart{
+                width:100%;
+                border:1px solid #555;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+                margin-bottom:15px;
+            }
+            .nvd3-chart-header{
+                background-color:#666;
+            }
+            .nvd3-chart-header .title{
+                font-size: 18px;
+                padding: 3px;
+                display: inline-block;
+                color: #fff;
+            }
+            .nvd3-chart-header .title b{color:#FFC107;}
+            .nvd3-chart-body{
+                height:500px;
+            }
+            .nvd3-chart select{
+                padding: 6px;
+                border:none;
+                background-color: #666;
+                color: #fff;
+                outline-width: 0;
+                border:1px solid #555;
+            }
+
+            #chart .nv-point
+            {
+                fill-opacity: 1 !important;
+            }
+
+            .no-radius, .no-radius .form-control, .no-radius .btn{
+                border-radius:0;
+            }
+
+            #data-reports-form{
+                position:relative;
+            }
+            #data-reports-form.loading:after{
+                content:'Loading...';
+                position:absolute;
+                left:0;
+                top:0;
+                right:0;
+                bottom:0;
+                padding-top:3%;
+                font-size:32px;
+                text-align:center;
+                color: #000;
+                background-color: #fff;
+                opacity:0.5;
+                filter:alpha(opacity=50);
+            }
+            .nvtooltip{
+                border:none;
+                border-radius: 0;
+            }
+            .nvtooltip>div{
+                padding:4px;
+                border:2px solid;
+                background:#fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="page-header">Dashboard</h1>
+            <h3 class="alert alert-warning no-radius">Please Choose Device and Node to Generate Reports.</h3>
+            <form id="data-reports-form" class="no-radius">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group form-group-lg">
+                            <label for="device_no">Choose Device *</label>
+                            <select id="device_no" class="form-control" style="padding:0;"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group form-group-lg">
+                            <label for="node_no">Choose Node *</label>
+                            <select id="node_no" class="form-control" style="padding:0;"></select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="nvd3-chart">
+                <div class="nvd3-chart-header clearfix">
+                    <select id="chage-chart-type" class="pull-right">
+                        <option value="0">Line Chart</option>
+                        <option value="1">Line Chart with Zoom Focus</option>
+                        <option value="2">Bar Chart</option>
+                    </select>
+                    <span id="chart-title" class="title">Reposts</span>
+                </div>
+                <div class="nvd3-chart-body">
+                    <svg id="chart"></svg>
+                </div>
+                <div class="nvd3-chart-footer"></div>
+            </div>
+        </div>
+        <div data-has="javascript">
+            <script src="resources/jquery/jquery.min.js"></script>
+            <script src="resources/nvd3/d3.v3.min.js"></script>
+            <script src="resources/nvd3/nv.d3.min.js"></script>
+            <script>
+                var deleteObj = ['_id', 'timestamp', 'client', 'device_key', 'device_type', 'device_no', 'node_no', 'app_version', 'revision', 'longitude', 'latitude'];
+                var chart, chartData = [], dataFromDB = {};
+
+                var userName = 'amitasricky@gmail.com', deviceNo = '2001', nodeNo = '1', clientKey = "r3uR5t", clientName = "Intuit";
+                userName = 'axeltam2m@gmail.com';
+                deviceNo = 'TST-AX0';
+                nodeNo = '001';
+                clientName = 'Axelta';
+                clientKey = 'ABC123';
+
+                var $chart = $('#chart'),
+                        $chageChartType = $('#chage-chart-type'),
+                        $chartForm = $('#data-reports-form'),
+                        $deviceNo = $('#device_no'),
+                        $nodeNo = $('#node_no');
+
+                $chageChartType.on('change', function () {
+                    drawChart();
+                });
+
+                $deviceNo.on('change', function () {
+                    $nodeNo.html('<option disabled selected></option>');
+                    $.each(this.options[this.selectedIndex].data, function () {
+                        $('<option />', {
+                            text: this.node_no + ' --- ' + (this['assetname'] || this['asset name']),
+                            val: this.node_no,
+                            appendTo: $nodeNo
+                        });
+                    });
+                });
+
+                $nodeNo.on('change', function () {
+                    $chartForm.addClass('loading');
+                    clearTimeout(this.timeout);
+                    this.timeout = setTimeout(function () {
+                        dataFromDB = {};
+                        getData(30);
+                    });
+                });
+
+                $(window).on('get-devices-success', function (e, d) {
+                    e.preventDefault();
+                    $deviceNo.html('');
+                    $.each(d, function () {
+                        $('<option />', {
+                            text: this.device_no,
+                            data: {'node': this.node_data},
+                            appendTo: $deviceNo
+                        })[0].data = this.node_data;
+                    });
+                    $deviceNo.trigger('change');
+                }).on('get-devices-fail', function () {
+
+                }).on('get-device-data-success', function (e, d) {
+                    e.preventDefault();
+                    e = Object.keys(dataFromDB).length;
+                    $.each(d.reverse(), function () {
+                        var o = this;
+                        var t = o['timestamp'] * 1000;
+                        if (t) {
+                            $.each(deleteObj, function () {
+                                delete o[this];
+                            });
+                            $.map(o, function (v, i) {
+                                try {
+                                    v = parseFloat(v);
+                                    if (v || v === 0) {
+                                        if (!dataFromDB[i]) {
+                                            dataFromDB[i] = {};
+                                            dataFromDB[i]['key'] = i;
+                                            dataFromDB[i]['values'] = [];
+                                            dataFromDB[i]['time'] = [];
+                                        }
+                                        if ($.inArray(t, dataFromDB[i]['time']) === -1) {
+                                            dataFromDB[i]['time'].push(t);
+                                            dataFromDB[i]['values'].push({x: t, y: v, series: i});
+                                        }
+                                    }
+                                } catch (e) {
+                                }
+                            });
+                        }
+                    });
+                    chartData = [];
+                    $.each(dataFromDB, function () {
+                        chartData.push(this);
+                    });
+                    if (e) {
+                        chart.update();
+                    } else {
+                        drawChart();
+                    }
+                    $chartForm.removeClass('loading');
+                    $('#chart-title').html('Report on Device <b>' + $deviceNo.val() + '</b>, Node <b>' + $nodeNo[0].options[$nodeNo[0].selectedIndex].text + '</b>');
+
+                    clearInterval(window.autoUpdateTimeout);
+                    window.autoUpdateTimeout = setTimeout(function () {
+                        getData();
+                    }, 1000 * 1);
+                }).on('get-device-data-fail', function () {
+
+                });
+            </script>
+            <script>
+                function drawChart() {
+                    $chart.html('');
+                    nv.addGraph(function () {
+                        switch ($('.nvd3-chart select').val()) {
+                            case '1':
+                                chart = nv.models.lineWithFocusChart();
+                                break;
+                            case '2':
+                                chart = nv.models.multiBarChart().stacked(false);
+                                break;
+                            default:
+                                chart = nv.models.lineChart();
+                                break;
+                        }
+                        chart.xAxis
+                                .showMaxMin(false)
+                                .tickFormat(function (d) {
+                                    d = new Date(d);
+                                    return d3.time.format('%a %H:%M')(d);
+                                });
+                        if (chart.x2Axis) {
+                            chart.x2Axis
+                                    .showMaxMin(false)
+                                    .tickFormat(function (d) {
+                                        d = new Date(d);
+                                        return d3.time.format('%a %H:%M')(d);
+                                    });
+                        }
+                        chart.tooltip.contentGenerator(function (d) {
+                            $('.nvtooltip').css('opacity', 0);
+                            var s = d.series[0].key, a = (d.data || d.point);
+                            return '<div style="border-color:' + d.series[0].color + '"><b>' + d3.time.format('%x %a %H:%M')(new Date(a.x)) + '</b><br/><span>' + s + ' : ' + a.y + '</span></div>';
+                        });
+                        d3.select($chart[0])
+                                .datum(chartData)
+                                .transition().duration(500)
+                                .call(chart);
+                        nv.utils.windowResize(function () {
+                            clearTimeout(chart.timeout);
+                            chart.timeout = setTimeout(function () {
+                                chart.update();
+                            }, 1000 * 0.25);
+                        });
+                        return chart;
+                    });
+                }
+
+                function getDevices() {
+                    var xhr = $.ajax({
+                        url: 'http://aws2.axelta.com/services/device/deviceNodeAsset/' + clientName + '/' + userName + '/' + clientKey,
+                        dataType: "json"
+                    });
+                    xhr.success(function (res) {
+                        $(window).trigger('get-devices-success', [res]);
+                    });
+                    xhr.fail(function () {
+                        $(window).trigger('get-devices-fail');
+                    });
+                }
+
+                function getData(limit) {
+                    limit = limit || 1;
+                    var xhr = $.ajax({
+                        url: 'http://aws2.axelta.com/services/node/getTransactions',
+                        data: {'user_name': userName, 'device_no': $deviceNo.val(), 'node_no': $nodeNo.val(), 'limit': limit},
+                        dataType: "json"
+                    });
+                    xhr.success(function (res) {
+                        $(window).trigger('get-device-data-success', [res]);
+                    });
+                }
+            </script>
+            <script>
+                getDevices();
+                drawChart();
+            </script>
+        </div>
+    </body>
+</html>

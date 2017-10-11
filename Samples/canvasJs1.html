@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Canvas JS</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="resources/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div id="chartContainer" style="height:500px; width: 100%;"></div>
+        </div>
+
+        <div data-has="javascript">
+            <script src="resources/jquery/jquery.min.js"></script>
+            <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <script>
+                var userName = 'amitasricky@gmail.com', deviceNo = '2001', nodeNo = '1';
+//                userName = 'axeltam2m@gmail.com';
+//                deviceNo = 'TST-AX0';
+//                nodeNo = '001';
+                function getData(limit) {
+                    var data = [];
+                    limit = limit || 1;
+                    var xhr = $.ajax({
+                        url: 'http://aws2.axelta.com/services/node/getTransactions',
+                        async: false,
+                        data: {'user_name': userName, 'device_no': deviceNo, 'node_no': nodeNo, 'limit': limit},
+                        dataType: "json"
+                    });
+                    xhr.success(function (res) {
+                        var dO = ['_id', 'timestamp', 'client', 'device_key', 'device_type', 'device_no', 'node_no'];
+                        var dd = {};
+                        $.each(res, function () {
+                            var o = this;
+                            var t = o['timestamp'] * 1000;
+                            if (t) {
+                                for (var i = 0; i < dO.length; i++)
+                                    delete o[dO[i]];
+                                $.map(o, function (v, i) {
+                                    if (!dd[i]) {
+                                        dd[i] = {};
+                                        dd[i]['name'] = i;
+                                        dd[i]['dataPoints'] = [];
+                                        dd[i]['type'] = 'line';
+                                        dd[i]['showInLegend'] = true;
+                                    }
+                                    v = parseFloat(v);
+                                    if (v !== NaN) {
+                                        dd[i]['dataPoints'].push({x: new Date(t), y: v});
+                                    }
+                                    return i;
+                                });
+                            }
+                        });
+                        var chartData = [];
+                        $.each(dd, function () {
+                            chartData.push(this);
+                        });
+                        data = chartData;
+                    });
+                    return data;
+                }
+                function drawChart(data) {
+                    var chart = new CanvasJS.Chart("chartContainer",
+                            {
+                                animationEnabled: true,
+                                zoomEnabled: true,
+                                title: {
+                                    text: "Multi Series Spline Chart - Hide / Unhide via Legend"
+                                },
+                                data: data,
+                                legend: {
+                                    cursor: "pointer",
+                                    itemclick: function (e) {
+                                        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                            e.dataSeries.visible = false;
+                                        } else {
+                                            e.dataSeries.visible = true;
+                                        }
+                                        chart.render();
+                                    }
+                                }
+                            });
+
+                    chart.render();
+                }
+                drawChart(getData(30));
+            </script>
+        </div>
+    </body>
+</html>

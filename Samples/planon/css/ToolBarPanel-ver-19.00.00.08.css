@@ -1,0 +1,131 @@
+/*
+------------------------------------------------------------------------------------------------------
+	Start Toolbar Panel
+------------------------------------------------------------------------------------------------------
+*/
+#toolBarPanel {
+	float: left;
+	clear: both;
+	width: 100%;
+	background-repeat: repeat;
+	vertical-align: middle;
+	overflow: hidden;
+	padding: 0px 12px 0px 12px;
+
+}
+
+#toolBarPanel:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#toolBarPanel .toolbarButtonPanel {
+	float: left;
+	height: 40px;
+	padding: 1px 0px 1px 0px;
+}
+
+#toolBarPanel .toolbarButton {
+	display: inline-block;
+	height: 38px;
+	margin: 1px 0px 1px 0px;
+	padding: 0px 4px 0px 4px;
+}
+
+#toolBarPanel .toolbarButton a,
+#toolBarPanel .toolbarButton span em {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+
+#toolBarPanel .toolbarButton .left {
+	display: inline-block;
+	height: 100%;
+	width: 13px;
+}
+
+#toolBarPanel .toolbarButton .right {
+	display: inline-block;
+	height: 100%;
+	width: 13px;
+}
+
+#toolBarPanel .toolbarButton .middle {
+	display: inline-block;
+	width: auto;
+	min-width: 20px;
+	height: 100%;
+}
+
+#toolBarPanel .toolbarButton .middle img {
+	float: left;
+	margin: 12px 6px 0px 0px;
+}
+
+#toolBarPanel .toolbarButton .middle span {
+	float: left;
+	margin: 12px 6px 0px 0px;
+	font-weight: bold;
+}
+
+#toolBarPanel a:hover {
+	display: block;
+}
+
+#toolBarPanel a.selected, #toolBarPanel a.selected:hover {
+	display: block;
+}
+
+#toolBarPanel a.about-button {
+	float: right;
+}
+
+/*
+Applies to the toolbarButton divs that get a second class assigned to them
+*/
+#toolBarPanel a.strikingColor span {
+	font-weight: bold;
+}
+
+#toolBarPanel span.disabled img {
+  /* for IE */
+  filter: alpha(opacity=30);
+  /* CSS3 standard */
+  opacity:0.4;
+}
+
+#toolBarPanel .toolbarButtonPanel .toolbarButton .left,
+#toolBarPanel .toolbarButtonPanel .toolbarButton .middle,
+#toolBarPanel .toolbarButtonPanel .toolbarButton .middle span,
+#toolBarPanel .toolbarButtonPanel .toolbarButton .right {
+	outline: none;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Buttonpanel
+------------------------------------------------------------------------------------------------------
+*/
+div.buttonPanel {
+	width: 65%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	text-align: right;
+	padding: 5px 5px 5px 0px;
+}
+
+div.buttonPanel div {
+	display: inline;
+}
+
+div.buttonPanel input {
+	width: 100px;
+	margin: 0px 5px 0px 0px;
+	display: inline;
+}

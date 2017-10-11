@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: 	url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.eot#iefix') format('embedded-opentype'),  /* for IE8 */
+       	url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.woff') format("woff"), /* for IE9 */
+       	url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.svg') format("svg"); /* for firefox, chrome */
+}
+
+body {
+  /* overriding the browser specific styles */
+  margin: inherit;
+}
+
+html, body, .tabel-container {
+  height:100%;
+}
+
+.error-box {
+ 	min-height: 141px;
+	width: 400px;
+	background: #fff;
+	border-radius: 2px;
+	border: 1px solid #d8d8d8;
+	border-bottom: 1px solid #dedede;
+	font-family: 'Open Sans Semibold';
+	background-color: #F2F2F2;
+}
+
+.error-box-large {
+  width: 600px;
+}
+
+#legend {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px 2px 0px 0px;
+	height: 40px;
+	background: #ffffff;
+}
+#legend_text {
+	background: transparent url('/static/images/error_icon.png') no-repeat center left;
+	background-position: 10px 8px;
+	color: #f63939;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 2.5;
+    padding-left: 49px;
+}
+.message {
+	font-size: 13px;
+	color: #3f4751;
+	line-height: 1.84;
+	padding: 24px;
+}
+
+.message_error_code,
+.pn-error-message {
+  word-wrap: break-word;
+}
+
+.tabel-container {
+  display: table;
+  margin: auto;
+}
+
+.tabel-cell {
+  display: table-cell;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.error-box .errorTitle {
+  display: none;
+}
+
+.link {
+ color: #1464a1;
+ font-size: 15px;
+ text-decoration: none;
+}

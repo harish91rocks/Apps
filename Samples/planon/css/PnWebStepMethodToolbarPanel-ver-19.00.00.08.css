@@ -1,0 +1,54 @@
+/*
+------------------------------------------------------------------------------------------------------
+	data view  and grid tool bar panel styling
+------------------------------------------------------------------------------------------------------
+*/
+.dataViewToolbarPanel {
+  margin-right: 6px;
+  position: relative;
+  text-align: right;
+  z-index: 5;
+}
+
+.dataViewToolbar {
+  position: absolute;
+  right: 0;
+  top: -11px;
+}
+
+.dataViewToolbar .webstepmethod-toolbar {
+  cursor: default;
+  float: left;
+}
+
+.dataViewToolbar .sm-link {
+  line-height: 2;
+  font-size: 13px;
+}
+
+.dataViewToolbar .disabled .sm-link {
+  font-weight: bold;
+}
+
+.dataViewToolbar .disabled .sm-link:hover,
+.dataViewToolbar .disabled .sm-link {
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+}
+
+.proxyToolbarPanel .tool-bar-text,
+.webentry_stepmethod_toolbar .tool-bar-text {
+  display: none;
+}
+
+.gridToolbarPanel {
+  line-height: 2.5;
+}
+
+.gridToolbarPanel .btn {
+  font-size: 12px;
+}
+
+.gridToolbarPanel img {
+  display: none;
+}

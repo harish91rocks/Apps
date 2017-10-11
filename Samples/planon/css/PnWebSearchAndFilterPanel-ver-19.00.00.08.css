@@ -1,0 +1,492 @@
+/*
+------------------------------------------------------------------------------------------------------
+	Quick search bar related styling
+------------------------------------------------------------------------------------------------------
+*/
+.search-and-filter-panel {
+    border-radius: 2px;
+}
+
+.PlanonWebBaseDialog .searchBar {
+  border-radius: 2px;
+  padding-right: 12px;
+  min-width: 270px;
+  display: flex;
+}
+
+.pn-searchpanel,
+.searchEditor {
+  display: flex;
+} 
+
+.quickSearchBar {
+  padding: 6px 12px;
+}
+
+.quickSearchBar .searchOperators select,
+.fieldSearchPanel .searchOperators select,
+.searchExpression select {
+ border-width: 1px;
+ border-style: solid;
+}
+
+.searchExpression select {
+  border-radius: 2px 0 0 2px;
+}
+
+.searchEditors,
+.searchPanels,
+.searchExpression, 
+.searchOperators,
+.searchPanelsContainer  {
+  flex: 1;
+}
+
+.search-editors{
+  width: 100%;
+}
+
+.search-editors .fieldEditor {
+  flex-basis: 0px;
+}
+
+.searchEditor .fieldValueEditor {
+  border: none;
+  flex: 1;
+}
+
+.fieldSearchPanel .searchEditors {
+  margin-right: 10px;
+}
+
+.searchButton .btn-round-1,
+.searchButtons .btn-round-1,
+.filterNodePanelSearchClear .btn-round-1,
+.pn-filterpanelrightcolumn .btn-round-1{
+  border-radius: 2px;
+  height: 22px;
+  width: 22px;
+  border-color: #279fd1;
+}
+
+.searchEditors .editor-link{
+  border-radius: 2px;
+  height: 22px;
+  width: 22px;
+  border: 1px solid #279fd1;
+  margin: 0 0 0 5px;
+  background-color: #FFFFFF;
+}
+
+.fieldSearchPanel .editor-link {
+  border-color: #8D9DAF;
+}
+
+.quickSearchBar .searchButton .btn-round-1 {
+  margin: 0 0 0 6px;
+}
+
+.quickSearchBar .searchButton .btn-round-1:hover {
+  border-color: #1f7ea5;
+}
+
+.activeSearch .searchButton .btn-round-1:hover {
+  border-color: #b37600;
+}
+
+.activeSearch .searchButton .btn-round-1 {
+  border-color: #e49600;
+}
+
+.pn-quicksearch-sprite {
+  background-image: url('../img/quicksearch-sprite-ver-19.00.00.08.png');
+  background-repeat: no-repeat;
+}
+
+.pn-clear-icon {
+  background-position: 0 0;
+}
+
+.pn-clear-icon:hover {
+  background-position: -22px 0;
+}
+
+.activeSearch .pn-clear-icon {
+  background-position: -44px 0;
+}
+
+.activeSearch .pn-clear-icon:hover {
+  background-position: -66px 0;
+}
+
+.pn-search-icon {
+  background-position: 0 -22px;
+}
+
+.pn-search-icon:hover {
+  background-position: -22px -22px;
+}
+
+.activeSearch .pn-search-icon {
+  background-position: -44px -22px;
+}
+
+.activeSearch .pn-search-icon:hover {
+  background-position: -66px -22px;
+}
+
+.pn-searchpanel select {
+  height: 24px;
+  width: 100%;
+}
+
+.pn-searchpanel .fieldValueEditor textarea {
+    height: 18px;
+    margin-top: 0;
+    min-height: 22px;
+    vertical-align: top; /* for aligning with other feilds, when you resize change can be seen */
+    width: 100%;
+}
+
+.pn-searchpanel .textAreaFieldValueEditor {
+	margin-right: 6px;
+}
+
+.searchEditorContainer {
+  flex: 2;
+  display: flex;
+}
+
+.searchButtons {
+  margin-top: 6px;
+}
+
+.searchEditors .searchEditor .fieldValueEditor input[type="text"] {
+  width: 100%;
+  padding: 2px 0;
+  border-width: 1px ;
+  border-style: solid;
+  border-radius: 0 2px 2px 0;
+  height: 18px;
+}
+
+
+.searchEditors .fieldValueEditor input[type="text"][disabled],
+.activeSearch .searchEditors .fieldValueEditor input[type="text"][disabled] {
+    border-color: transparent;
+}
+
+.pn-searchpanel .unitSymbol {
+  display: flex;
+}
+
+.searchEditor .fieldValueEditor.colorTextEditor input[type="text"] {
+    width: 50%;
+}
+
+.searchEditor .booleanFieldValueEditor {
+    border: 1px solid #279fd1;
+}
+
+.fieldSearchPanel .searchEditors .multiEditor2.referenceField .fieldValueEditor {
+    margin-right: 55px; /* includes clear button and look up reference value buttons */
+}
+
+/* PnWebAdvacedSearchPanel related styling */
+
+.PnWebGenerateMaintenanceBudgetDialog .searchBar {
+    margin-bottom: 12px;
+}
+.modalwindow div.dialogContentPanel div.popupFilterPanel .radio {
+    height: auto;
+}
+
+.modalwindow div.dialogContentPanel div.popupFilterPanel div.radio span {
+    display: block;
+}
+
+.modalwindow div.dialogContentPanel div.popupFilterPanel div.radio span label {
+    margin-left: 6px;
+    vertical-align: top;
+}
+.modalwindow .popupFilterPanel .radio {
+    margin-top: 12px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebFilterpanel related styling
+------------------------------------------------------------------------------------------------------
+*/
+
+.pn-filterpanelcentercolumn {
+  flex: 1;
+  cursor: pointer;
+}
+
+.pn-filterpanelrightcolumn {
+  margin-left: 5px;
+  position : relative;
+}
+
+.filterpanel {
+	padding: 6px 12px;
+}
+
+.pn-filterpanel-list {
+  display: flex;
+}
+
+.filterpanel li {
+  display: inline-block;
+}
+
+.filterpanel select {
+	height: 24px;
+	width: 100%;
+}
+
+.temporary-onoff-filter {
+  border-radius: 2px;
+  border: 1px solid;
+  display: block;
+  height: 22px;
+  margin-right: 5px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.temporary-onoff-filter.disabled {
+  opacity: 0.4;
+}
+
+/* opacity is not applied for pseudo selectors when opacity is added to container in IE browsers*/
+.temporary-onoff-filter.disabled:after {
+  opacity: 0.5;
+}
+
+.temporary-onoff-filter:after,
+.temporary-onoff-filter:before {
+	border-style: solid;
+    content: "";
+    position: absolute;
+}
+
+.temporary-onoff-filter:after {
+  border-color: transparent transparent transparent #FFFFFF;
+  left: 19px;
+}
+
+.temporary-onoff-filter:before {
+  border-color: transparent transparent transparent #B7B7B7;
+  left: 20px;
+}
+
+.temporary-onoff-filter:after,
+.temporary-onoff-filter:before {
+  border-width: 5px;
+  top: 4px;
+}
+
+.noFilter .filterGroupButton {
+  background: center url('../../images/filterpanel/filter-group-inactive-22-ver-19.00.00.08.png') #FFFFFF no-repeat;
+}
+
+.activeFilter .filterGroupButton {
+  background: center url('../../images/filterpanel/filter-group-active-22-ver-19.00.00.08.png') #FFFFFF no-repeat;
+  border-color: #e49600;
+}
+
+/*	Grouping Filter Buttons Styling */
+.SearchAndFilterPanel:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.SearchAndFilterPanel {
+    overflow: visible;
+}
+.filterpanel .leftContextMenuContainer a img {
+    margin-right: 0;
+}
+
+.filterpanel .leftContextMenu {
+    background-color: #FEFEFE;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 3px rgba(63, 71, 81, 0.18);
+    border-radius: 4px;
+    display: none;
+    position: relative;
+    top: 3px;
+    z-index: 100;
+}
+
+.filterpanel .leftContextMenu > li,
+.filterpanel .showLeftContextMenu ul {
+	display: block;
+}
+
+.leftContextMenu a,
+.leftContextMenu li > span {
+    display: block;
+    line-height: 1.77;
+    padding: 0 12px;
+}
+
+.leftContextMenu:after,
+.leftContextMenu:before {
+	border-style: solid;
+	border-width: 5px;
+    content: "";
+    position: absolute;
+    right: 5px;
+}
+
+.leftContextMenu:after {
+	border-color:  transparent transparent  #FFFFFF transparent;
+    top: -9px;
+}
+
+.leftContextMenu:before {
+	border-color:  transparent transparent #C4C4C4 transparent;
+    top: -10px;
+}
+
+.leftContextMenu img {
+    display: none;
+}
+
+.leftContextMenuContainer > div {
+	position: absolute;
+	right: 0;
+}
+
+.leftContextMenu li > span {
+    cursor: default;
+}
+
+.leftContextMenu span {
+    white-space: nowrap;
+}
+
+.firstElement {
+	margin-top: 6px;
+}
+
+.lastElement {
+	margin-bottom: 8px;
+}
+
+/* PnWebFilterNodeView related styling */
+.filterFieldsPanel {
+	overflow: auto;
+}
+
+.filterNodePanelSearchEditor .fieldValueEditor{
+  border: 1px solid #C2C2BE;
+  background: #ffffff;
+}
+
+.filterNodePanelSearchOperators select {
+	height: 22px;
+	border: 1px solid #C2C2BE;
+	width: 100%;
+}
+
+.filterNodePanelSearchEditor textarea,
+.filterNodePanelSearchEditor .fieldValueEditor .textEditor,
+.filterNodePanelSearchEditor .iconFieldValueEditor .fieldEditor {
+  width: 100%;
+  height: 22px;
+}
+
+.filterNodePanelQuickSearchBar {
+  margin: 4px 12px 4px 4px;
+  display: flex; 
+}
+
+.filterNodePanelsearchEditorContainer {
+  display: flex;
+  flex: 2;
+}
+
+.filterNodePanelSearchOperators,
+.filterNodePanelSearchEditor,
+.filterNodePanelSearchLabel {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin : 0 5px;
+}
+
+.filterNodePanelSearchClear {
+  margin: 0 5px;
+}
+
+.filterNodePanelSearchEditor.multiEditor2 {
+  display: flex;
+}
+
+/* PnWebAdvacedFilterPanel related styling */
+.groupPanel{
+  margin-left: 27px;
+  margin-top: 8px;
+}
+
+.addButtonPanel{
+  text-align: right;
+}
+
+.addButtonPanel .addButton img{
+  background-color: #fff;
+  border: 1px solid #b7b7b7;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.PlanonWebBaseDialog .advanceFilterMainPanel .searchBar {
+  background: none;
+  padding-right: 0;
+  display: block;
+}
+
+.advSearchButtonPanel {
+  border-top: 1px solid #B7B7B7;
+  padding: 12px 0;
+}
+
+.groupButtonPanel {
+  margin-right: 5px;
+}
+
+.advancedFilterContainerPanel {
+  display: flex;
+}
+
+.advanceFilterMainPanel {
+  flex: 1;
+}
+
+.fieldSearchPanel {
+  padding-left: 8px;
+  flex: 1;
+  margin-bottom: 6px;
+}
+
+.advanceFilterMainPanel .field-panel {
+  display: flex;
+}
+
+.PnWebFilterDialog .searchEditors input[type="text"], 
+.PnWebFilterDialog .searchEditors input[type="password"], 
+.PnWebFilterDialog .searchEditors select {
+  border: 1px solid #C4C4C4;
+}
+
+.pn-searchpanel .booleanWith3Options .booleanRadioGroup,
+.filterNodePanelSearchEditor .booleanWith3Options .booleanRadioGroup {
+  height: 22px;
+}

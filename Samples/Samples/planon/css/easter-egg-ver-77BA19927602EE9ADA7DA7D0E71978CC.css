@@ -1,0 +1,11 @@
+/*
+CSS for Easter eggs. Also see PnEasterEgg.js file
+*/
+
+.easter-egg-koert {
+ background: #fefefe url("../../images/smart_koert.gif") no-repeat scroll center center;
+}
+
+.easter-egg-koert .labelWithValueContainer {
+ visibility: hidden; /* Hide the about box contents*/
+}

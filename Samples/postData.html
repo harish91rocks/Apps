@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post Data to Osmosis Platform</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="resources/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+        <style>
+            .form-control, .btn,.alert{
+                border-radius:0;
+            }
+            .btn{
+                padding:6px 30px;
+                text-transform:uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="page-header">Post Data to Osmosis Platform</h1>
+            <div id='form'>
+                <div class="form-group">
+                    <label for="url" class="control-label">URL *</label>
+                    <input type="url" id="url" class="form-control" value="http://aws2.axelta.com/services/data" required="" />
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="method" class="control-label">Method *</label>
+                            <select id="method" class="form-control">
+                                <option>GET</option>
+                                <option selected="">POST</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="content-type" class="control-label">Content Type *</label>
+                            <select id="content-type" class="form-control">
+                                <option>application/json</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="payload" class="control-label">Payload *</label>
+                    <textarea id="payload" class="form-control" required=""></textarea>
+                </div>
+                <!--                <div class="form-group text-right">
+                                    <button type="button" id="send" class="btn btn-primary">Send</button>
+                                </div>-->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group has-warning">
+                            <label for="timer" class="control-label">Repeat this every(seconds) *</label>
+                            <input id="timer" type="number" class="form-control" value="1" min="1" required="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group has-warning">
+                            <label for="frequency" class="control-label">Repeat this every(times) *</label>
+                            <input id="frequency" type="number" class="form-control" value="1" min="1" max="100" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <button type="button" id="stop" class="btn btn-danger" disabled="">Stop</button>
+                    <button type="button" id="start" class="btn btn-success">Start</button>
+                </div>
+            </div>
+            <p class="h4">Response</p>
+            <div id="response" class="alert alert-success"></div>
+        </div>
+        <div data-has="javascript">
+            <script src="resources/jquery/jquery.min.js"></script>
+            <script>
+                var $form = $('#form'),
+                        $url = $('#url'),
+                        $method = $('#method'),
+                        $contentType = $('#content-type'),
+                        $payload = $('#payload'),
+                        $timer = $('#timer'),
+                        $frequency = $('#frequency'),
+                        $start = $('#start'),
+                        $stop = $('#stop'),
+                        $response = $('#response');
+                $start.click(function () {
+                    start();
+                });
+                $stop.click(function () {
+                    stop();
+                });
+                function start() {
+                    var counter = $frequency[0].value * 1;
+                    $start.attr('disabled', true);
+                    $stop.attr('disabled', false);
+                    window.postTimer = setInterval(function () {
+                        if (counter === 1)
+                            stop();
+                        counter--;
+                        console.log(counter, new Date());
+                    }, $timer[0].value * 1000);
+                }
+                function stop() {
+                    $stop.attr('disabled', true);
+                    $start.attr('disabled', false);
+                    clearInterval(window.postTimer);
+                }
+            </script>
+        </div>
+    </body>
+</html>

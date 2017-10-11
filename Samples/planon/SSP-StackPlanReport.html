@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TRowe | SSP | Stack Plan Report</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                font: normal 12px Arial, Helvetica, sans-serif;
+                color:#3F4751;
+                background: #666;
+            }
+            *{
+                box-sizing:border-box;
+            }
+            #id_report_container{
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                overflow: auto;
+            }
+            #id_report_container, #id_report_container *{
+                box-sizing:border-box;
+            }
+            #id_report_container .clearfix:before,.clearfix:after, .input-group:before, .input-group:after{
+                display: table;
+                content: " ";
+            }
+            #id_report_container .clearfix:after, .input-group:after{
+                clear:both;
+            }
+            #id_report_filters{
+                background: #FFF;
+                height: 100%;
+                float: right;
+                width: 250px;
+                padding: 4px;
+                padding-bottom: 30px;
+                overflow: auto;
+            }
+            #id_report_preview_block{
+                background: #f0f0f0;
+                height: 100%;
+                margin-right: 250px;
+                overflow: auto;
+                font: normal 14px Arial, Helvetica, sans-serif;
+            }
+            #id_report_filters .legend{
+                display:inline-block;
+                height:14px;
+                width:14px;
+                background-color:#ccc;
+            }
+            #id_report_filters .input-group{
+                margin-bottom:5px;
+                position:relative;
+            }
+            #id_report_filters .input-group label{
+                display:inline-block;
+                width:60%;
+                margin-top: 4px;
+                float:left;
+            }
+            #id_report_filters .input-group input, #id_report_filters select{
+                display: inline-block;
+                height: 20px;
+                width: 40%;
+                float:left;
+                background:#fff;
+                color:#03A9F4;
+                border: 1px solid #03A9F4;
+                padding: 2px;
+                font-size: 12px;
+                text-align:left;
+            }
+            #id_report_filters .input-group input:focus{
+                outline:none;
+                border-color:#1a4e65;
+            }
+            #id_report_filters hr{
+                border-top: 1px solid #ccc;
+                border-bottom: none;
+                margin:5px 0;
+            }
+            #id_report_filters .ok-button{
+                background-color: #03A9F4;
+                color: #fff;
+                border:1px solid #03A9F4;
+                height:28px;
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            #id_report_filters .ok-button:hover{
+                background-color: #147acc;
+            }
+            #id_report_filters .cancel-button{
+                background-color: #FF5722;
+                color: #fff;
+                border:1px solid #FF5722;
+                height:28px;
+                font-size: 14px;
+            }
+            #id_report_filters .cancel-button:hover{
+                background:#d83226;
+            }
+            #id_report_filters .absolute-btns{
+                position: absolute;
+                width: 250px;
+                bottom: 0;
+                right: 0;
+                padding-top: 3px;
+                padding-left: 3px;
+                background: #fff;
+            }
+            #id_report_filters li.feedbackPanelERROR{
+                list-style:none;
+                padding:6px;
+                background-color:#ea837c;
+                margin-bottom:5px;
+                color:#fff;
+            }
+
+            #id_report_preview_block:empty:before{
+                content: "Preview";
+                display: block;
+                font-size: 25px;
+                text-align: center;
+                color: #bbb;
+                font-weight: bold;
+                padding-top: 10%;
+            }
+            #id_report_filters .yui-skin-sam{
+                position:absolute;
+                top: 1px;
+                right: 2px;
+            }
+            #id_report_filters .yui-calcontainer{
+                min-width: 190px;
+                left: auto !important;
+                right: 0;
+                top: auto !important;
+                margin: 1px -2px;
+                border-color: #03A9F4;
+            }
+        </style>
+        <style>
+            .feedbackPanel{padding: 0;margin:0;}
+        </style>
+    </head>
+    <body>
+        <div style="width:1200px;height:500px;margin:auto;margin-top:70px;border:2px solid #ccc;border-radius:4px;position:relative;">
+            <div style="padding:5px;border-bottom:1px solid #ccc;height:30px;font-size:16px;font-weight:bold;background:#fff;">Site Chart</div>
+            <div class="in_container" id="id_report_container">
+                <div id="id_report_filters" style="overflow:hidden;padding:0 0 30px;">
+                    <div style="height:100%;padding:4px;overflow:auto;">
+                        <div class="input-group">
+                            <label for="id_for_ssp_property" style="width:40%;">
+                                <b>* SSP Property</b>
+                            </label>
+                            <select id="id_for_ssp_property" wicket:id="ssp_property" style="width:60%;height:24px;font-weight:bold;"></select>
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                            <label for="id_for_percentage">
+                                <span class="legend">&nbsp;</span> 
+                                <span>Strategic Vacancy</span>
+                            </label>
+                            <input type="number" id="id_for_percentage" placeholder="00.00%" wicket:id="strategic_vacancy" />
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                            <label for="id_for_percentage">
+                                <span class="legend" style="background:#666;">&nbsp;</span> 
+                                <span>Workspace</span>
+                            </label>
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                            <label>
+                                <span class="legend" style="background:#2196F3;">&nbsp;</span> 
+                                <span>GR3 Forecast</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_min_date_to_chart">
+                                <b>* Minimum Date to Chart</b>
+                            </label>
+                            <input type="text" id="id_for_min_date_to_chart" placeholder="MM/dd/yyyy" wicket:id="minimim_date_to_chart" />
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_mx_date_to_chart">
+                                <b>* Maximum Date to Chart</b>
+                            </label>
+                            <input type="text" id="id_for_mx_date_to_chart" placeholder="MM/dd/yyyy" wicket:id="maximum_date_to_chart" />
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                            <label for="id_for_projection_date">
+                                <b>* Projection Initial Date</b>
+                            </label>
+                            <input type="text" id="id_for_projection_date" placeholder="MM/dd/yyyy" wicket:id="pojection_initial_date" />
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_agr_est_1">
+                                <span class="legend" style="background:#FFC107;">&nbsp;</span> 
+                                <span>AGR Est.</span>
+                            </label>
+                            <input type="number" id="id_for_agr_est_1" placeholder="00.00%" wicket:id="agr_est_1" />
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_agr_est_2">
+                                <span class="legend" style="background:#4CAF50;">&nbsp;</span> 
+                                <span>AGR Est.</span>
+                            </label>
+                            <input type="number" id="id_for_agr_est_2" placeholder="00.00%" wicket:id="agr_est_2" />
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_agr_est_3">
+                                <span class="legend" style="background:#FF5722;">&nbsp;</span> 
+                                <span>AGR Est.</span>
+                            </label>
+                            <input type="number" id="id_for_agr_est_3" placeholder="00.00%" wicket:id="agr_est_3" />
+                        </div>
+                        <hr/>
+                        <div class="input-group">
+                            <label for="id_for_chart_start_date">
+                                <b>* Chart Start Date</b>
+                            </label>
+                            <input type="text" id="id_for_chart_start_date" placeholder="MM/dd/yyyy" wicket:id="chart_strat_date" />
+                        </div>
+                        <div class="input-group">
+                            <label for="id_for_chart_end_date">
+                                <b>* Chart End Date</b>
+                            </label>
+                            <input type="text" id="id_for_chart_end_date" placeholder="MM/dd/yyyy" wicket:id="chart_end_date" />
+                        </div>
+                        <hr/>
+                        <div wicket:id="feedback">
+                            <ul class="feedbackPanel">
+                                <li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'ssp_property' is required.</span>
+                                </li><li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'chart_strat_date' is required.</span>
+                                </li><li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'chart_end_date' is required.</span>
+                                </li><li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'minimim_date_to_chart' is required.</span>
+                                </li><li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'maximum_date_to_chart' is required.</span>
+                                </li><li class="feedbackPanelERROR">
+                                    <span class="feedbackPanelERROR">'pojection_initial_date' is required.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" wicket:id="btnOk" class="ok-button" style="width:100%;">Generate Report</button>
+                        </div>
+                    </div>
+                    <div class="absolute-btns" style="height:54px;">
+                        <input type="text" style="width:100%;margin-bottom:2px;border:1px solid #ccc;height:20px;" id="report_title_textbox" placeholder="Enter report title" />
+                        <button type="submit" class="ok-button" style="width:70.5%;">Download Report</button>
+                        <button type="button" wicket:id="btnCancel" class="cancel-button" style="width:28%;float:right;">Close</button>
+                    </div>
+                </div>
+                <div id="id_report_preview_block" style="overflow:hidden;">
+                    <h3 style="margin:0;">Supply & Demand Chart, Hyderabad</h3>
+                    <h4 style="margin:0;color:#999;">2015-2018</h4>
+                    <svg style="height:500px" id="svg"></svg>
+                </div>
+            </div>
+        </div>
+        <div>
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+            <script src="js/nvd3.js" crossorigin="anonymous"></script>
+            <link href="css/nvd3.css" rel="stylesheet" />
+            <style>
+                .nvd3 g.nv-groups path.nv-line {
+                    stroke-width: 2.2px;
+                }
+                .nvtooltip{padding:0;border:none;margin-top:40px;}
+                .dashed {
+                    stroke-dasharray: 5, 5;
+                }
+                .nvtooltip.xy-tooltip{box-shadow:0 5px 10px rgba(0,0,0,0.5);}
+            </style>
+
+            <script>
+                /*These lines are all chart setup.  Pick and choose which chart features you want to utilize. */
+                createSSPSiteChartReport(dd());
+                function createSSPSiteChartReport(siteChartReportData) {
+                    var $svg = $('#id_report_preview_block svg');
+                    var xAxis = [], finalData = [], yAxis = [];
+                    var data = siteChartReportData;
+                    $.each(siteChartReportData, function (k, v) {
+                        var map=[];
+                        if (v.area === true) {
+                            try {
+                                var series = $.extend(true, {}, v);
+                                series['disabled'] = false;
+                                series.values = [];
+                                var values = v.values, diff;
+                                var index = 0;
+                                for (var i = 0; i < values.length; i++) {
+                                    var f = values[i], l = values[i + 1], vs, ve;
+                                    if ($.inArray(f.time, xAxis) === -1) {
+                                        xAxis.push(f.time);
+                                    }
+                                    vs = f.time;
+                                    if (l) {
+                                        ve = l.time;
+                                        diff = ve - vs;
+                                    } else {
+                                        diff = diff ? diff : (1000 * 60 * 60 * 24 * 1);
+                                        ve = f.time + diff;
+                                    }
+
+                                    var a1 = $.extend(true, {}, f), a2 = $.extend(true, {}, f);
+                                    a1.time = vs;
+                                    a2.time = ve;
+                                    a2.dummy = true;
+                                    map[a1.time]=index;
+                                    a1.index = index++;
+                                    a2.index = index;
+                                    series.values.push(a1);
+                                    series.values.push(a2);
+
+                                }
+//                                var ds = (1000 * 60 * 60 * 24 * 1), vs, vm, ve;
+//                                for (var i = 0; i < values.length; i++) {
+//                                    var f = values[i], l = values[i + 1];
+//                                    vm = f.time;
+//                                    if (l) {
+//                                        ds = (l.time - f.time) / 2;
+//                                    }
+//                                    if (i === 0) {
+//                                        vs = vm - ds;
+//                                    } else {
+//                                        vs = ve;
+//                                    }
+//                                    ve = vm + ds;
+//                                    var as = $.extend(true, {}, f), am = $.extend(true, {}, f), ae = $.extend(true, {}, f);
+//                                    as.time = vs;
+//                                    am.time = vm;
+//                                    ae.time = ve;
+//
+//                                    am.dummy = true;
+//                                    ae.dummy = true;
+//                                    series.values.push(as);
+//                                    series.values.push(am);
+//                                    series.values.push(ae);
+//                                }
+                                finalData.push(series);
+                            } catch (err) {
+                                console.log(err);
+                            }
+                        } else {
+                            var values = v.values, diff;
+                            var index = 0;
+                            for (var i = 0; i < values.length; i++) {
+                                var f = values[i];
+                                //f.index = index;
+                            }
+                            console.log(v);
+                            finalData.push(v);
+                        }
+                        for (var i = 0; i < v.values.length; i++) {
+                            if ($.inArray(v.values[i].time, xAxis) === -1) {
+                                xAxis.push(v.values[i].time);
+                            }
+                            if ($.inArray(v.values[i].value, yAxis) === -1) {
+                                yAxis.push(v.values[i].value);
+                            }
+                        }
+                    });
+                    xAxis.sort();
+                    yAxis.sort();
+
+                    data = finalData;
+                    $svg.html('');
+                    updateSvgChart();
+                    nv.addGraph(function () {
+                        var chart = nv.models.lineChart()
+                                .margin({bottom: 70})
+                                .useInteractiveGuideline(true)  //We want nice looking tooltips and a guideline!
+//                                .transitionDuration(350)  //how fast do you want the lines to transition?
+                                .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
+                                .showYAxis(true)        //Show the y-axis
+                                .showXAxis(true)        //Show the x-axis
+                                .x(function (d) {
+                                    var x = d ? d.index : null;
+                                    if ($.inArray(x, xAxis) === -1 || d.dummy) {
+                                        // $('.nvtooltip.xy-tooltip').hide();
+                                    } else {
+                                        //$('.nvtooltip.xy-tooltip').css('display', '');
+                                    }
+                                    return x;
+                                })
+                                .y(function (d) {
+                                    return d.value;
+                                })
+                                .tooltipContent(function (key, x, y, e) {
+                                    if (x === '') {
+                                        return '';
+                                    }
+                                    if (key.toLowerCase() === 'workspace') {
+                                        key = 'Strategic Vacancy';
+                                    } else if (key.toLowerCase() === 'strategic vacancy') {
+                                        key = 'Workspace';
+                                    }
+                                    return '<div style="border:1px solid ' + e.series.color + ';"><h3>' + key + '</h3>' +
+                                            '<p>' + y + ' at ' + x + '</p><div>';
+                                });
+                        chart.interactiveLayer.tooltip.contentGenerator(function (d) {
+                            var $table = $('<table/>').addClass('nv-pointer-events-none');
+                            $table.append('<thead><tr><td  colspan="3"><strong>' + d.value + '</strong></td></tr></thead>');
+                            var $tbody = $('<tbody />').appendTo($table);
+                            $.each(d.series, function (i, s) {
+                                var $tr = $('<tr/>').appendTo($tbody);
+                                var c = s['color'], k = s['key'], v = s['value'];
+                                if (k.toLowerCase() === 'strategic vacancy') {
+                                    v = Math.ceil(d.series[i - 1]['value'] - v);
+                                }
+                                $('<td/>').addClass('legend-color-guide').html($('<div/>').css('background-color', c)).appendTo($tr);
+                                $('<td/>').addClass('key').text(k).appendTo($tr);
+                                $('<td/>').addClass('value').text(v).appendTo($tr);
+                            });
+                            return $table[0].outerHTML;
+                        });
+                        chart.xAxis
+                                .showMaxMin(false)
+                                .tickValues(xAxis)
+                                .tickFormat(function (d) {
+                                    if ($.inArray(d, xAxis) === -1) {
+                                        return '';
+                                    }
+                                    return d3.time.format('%b %y')(new Date(d));
+                                });
+                        chart.forceY([0]);
+                        chart.yAxis
+                                .showMaxMin(false)
+                                //.tickValues(yAxis)
+                                .tickFormat(d3.format('f'));
+
+                        d3.select('#id_report_preview_block svg')
+                                .datum(data)
+                                .call(chart);
+
+                        //Update the chart when window resizes.
+                        nv.utils.windowResize(function () {
+                            chart.update();
+                            updateSvgChart();
+                        });
+                        chart.dispatch.on('stateChange', function () {
+                            setTimeout(function () {
+                                updateSvgChart();
+                            });
+                        });
+                        chart.legend.dispatch.on('legendClick', function (newState, index) {
+                            setTimeout(function () {
+                                if (index === 0 || index === 1) {
+                                    data[1]['disabled'] = newState.disabled;
+                                    data[0]['disabled'] = newState.disabled;
+                                    chart.update();
+                                }
+                            });
+                        });
+                        updateSvgChart();
+                        return chart;
+                    });
+                    function updateSvgChart() {
+                        $svg.css({'width': $svg.parent().width() - 10, 'height': $svg.parent().height() - 40});
+                        $svg.find('.nv-x.nv-axis').find('text').attr('transform', 'translate(-15,35) rotate(270)');
+                        $svg.find('.nvd3.nv-wrap.nv-line .nv-group.nv-series-0>.nv-area').parent().css({'fill': '#CCC', 'stroke': '#CCC'});
+                        $svg.find('.nvd3.nv-wrap.nv-line .nv-group.nv-series-1>.nv-area').parent().css({'fill': '#666', 'stroke': '#666'});
+
+                        $svg.find('.nv-x.nv-axis').find('.tick.major').each(function () {
+                            var $el = $(this), $prevEl = $el.prev();
+                            if ($prevEl.length > 0) {
+                                if ($el.find('text').offset().left - $prevEl.find('text').offset().left < 10) {
+                                    $el.find('text').hide();
+                                }
+                            }
+                        });
+
+                        $svg.find('.nv-group').each(function () {
+                            if ($(this).find('.nv-area,.nv-line').length === 2) {
+                                $(this).find('.nv-line').remove();
+                                $('.' + $(this).attr('class').split(' ').join('.')).find('.nv-point').hide();
+                            }
+                        });
+                        $svg.find('.nv-groups').each(function () {
+                            var $grps = $(this);
+                            $grps.html($grps.find('.nv-group').sort(sortMe));
+                        });
+                    }
+                }
+                function sortMe(a, b) {
+                    a = parseInt(a.className.baseVal.replace('nv-group', '').replace(' nv-series-', ''));
+                    b = parseInt(b.className.baseVal.replace('nv-group', '').replace(' nv-series-', ''));
+                    return a > b;
+                }
+                function dd() {
+//                    return [{"area": true, "color": "#AAAAAA", "values": [{"value": 60, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "Workspace"}, {"value": 110, "id": 3, "time": 1485109800000, "date": "Mon Jan 23 00:00:00 IST 2017", "strDate": "01/23/2017", "legend": "Workspace"}, {"value": 120, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "Workspace"}], "key": "Workspace"}, {"area": true, "color": "#333333", "values": [{"value": 54, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "Strategic Vacancy"}, {"value": 99, "id": 3, "time": 1485109800000, "date": "Mon Jan 23 00:00:00 IST 2017", "strDate": "01/23/2017", "legend": "Strategic Vacancy"}, {"value": 108, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "Strategic Vacancy"}], "key": "Strategic Vacancy"}, {"color": "#00BCD4", "values": [{"value": 30, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "GR3 Forecast"}, {"value": 40, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "GR3 Forecast"}], "key": "GR3 Forecast"}, {"color": "#FFC107", "values": [{"value": 30, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "3.0% AGR Est."}, {"value": 30.9, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "3.0% AGR Est."}], "key": "3.0% AGR Est."}, {"color": "#4CAF50", "values": [{"value": 30, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "6.0% AGR Est."}, {"value": 31.8, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "6.0% AGR Est."}], "key": "6.0% AGR Est."}, {"color": "#FF5722", "values": [{"value": 30, "id": 25, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "strDate": "01/01/2017", "legend": "9.0% AGR Est."}, {"value": 32.7, "id": 26, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "strDate": "07/01/2017", "legend": "9.0% AGR Est."}], "key": "9.0% AGR Est."}];
+//                    return [{"area": true, "color": "#AAAAAA", "values": [{"value": 310, "id": 3, "date": "Mon Jan 23 00:00:00 IST 2017", "time": 1485109800000, "strDate": "01/23/2017", "legend": "Workspace"}], "key": "Workspace"}, {"area": true, "color": "#333333", "values": [{"value": 279, "id": 3, "date": "Mon Jan 23 00:00:00 IST 2017", "time": 1485109800000, "strDate": "01/23/2017", "legend": "Strategic Vacancy"}], "key": "Strategic Vacancy"}, {"color": "#2196F3", "values": [], "key": "GR3 Forecast"}, {"color": "#FFC107", "values": [], "key": "3.0% AGR Est."}, {"color": "#4CAF50", "values": [], "key": "6.0% AGR Est."}, {"color": "#FF5722", "values": [], "key": "9.0% AGR Est."}];
+//                    return [{"area":true,"color":"#666666","values":[{"value":164,"id":3,"time":1480345000000,"date":"Thu Dec 22 00:00:00 IST 2016","legend":"Workspace","strDate":"12/22/2016"},{"value":364,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"Workspace","strDate":"12/31/2016"},{"value":0,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":164,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":164,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":0,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":0,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":0,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":100,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Workspace","strDate":"01/01/2017"},{"value":210,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"Workspace","strDate":"04/01/2017"},{"value":120,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"Workspace","strDate":"07/01/2017"},{"value":80,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"Workspace","strDate":"10/01/2017"},{"value":105,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"Workspace","strDate":"01/01/2018"}],"key":"Workspace"},{"area":true,"color":"#CCCCCC","values":[{"value":147.6,"id":3,"time":1480345000000,"date":"Thu Dec 22 00:00:00 IST 2016","legend":"Strategic Vacancy","strDate":"12/22/2016"},{"value":327.6,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"Strategic Vacancy","strDate":"12/31/2016"},{"value":0,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":147.6,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":147.6,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":0,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":0,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":0,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":90,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"01/01/2017"},{"value":189,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"04/01/2017"},{"value":108,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"07/01/2017"},{"value":72,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"Strategic Vacancy","strDate":"10/01/2017"},{"value":94.5,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"Strategic Vacancy","strDate":"01/01/2018"}],"key":"Strategic Vacancy"},{"color":"#00BCD4","values":[{"value":498,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"GR3 Forecast","strDate":"12/31/2016"},{"value":579,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":251,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":62,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":136,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":62,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":40,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":175,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":220,"id":104,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":667,"id":105,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":2200,"id":103,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"01/01/2017"},{"value":60,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"04/01/2017"},{"value":25,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"07/01/2017"},{"value":75,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"GR3 Forecast","strDate":"10/01/2017"},{"value":50,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"GR3 Forecast","strDate":"01/01/2018"}],"key":"GR3 Forecast"},{"color":"#FFC107","values":[{"value":498,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"3.0% AGR Est.","strDate":"12/31/2016"},{"value":512.94,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":528.3282,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":544.17804,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":560.50336,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":577.3185,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":594.63806,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":612.4772,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":630.8515,"id":104,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":649.77704,"id":105,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":669.2703,"id":103,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"01/01/2017"},{"value":689.34845,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"04/01/2017"},{"value":710.02893,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"07/01/2017"},{"value":731.3298,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"3.0% AGR Est.","strDate":"10/01/2017"},{"value":753.26965,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"3.0% AGR Est.","strDate":"01/01/2018"}],"key":"3.0% AGR Est."},{"color":"#4CAF50","values":[{"value":498,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"6.0% AGR Est.","strDate":"12/31/2016"},{"value":527.88,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":559.5528,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":593.126,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":628.71356,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":666.4364,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":706.4226,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":748.808,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":793.73645,"id":104,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":841.36066,"id":105,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":891.8423,"id":103,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"01/01/2017"},{"value":945.35284,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"04/01/2017"},{"value":1002.07404,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"07/01/2017"},{"value":1062.1985,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"6.0% AGR Est.","strDate":"10/01/2017"},{"value":1125.9304,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"6.0% AGR Est.","strDate":"01/01/2018"}],"key":"6.0% AGR Est."},{"color":"#FF5722","values":[{"value":498,"id":106,"time":1483122600000,"date":"Sat Dec 31 00:00:00 IST 2016","legend":"9.0% AGR Est.","strDate":"12/31/2016"},{"value":542.82,"id":83,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":591.6738,"id":146,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":644.9245,"id":148,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":702.9677,"id":145,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":766.2348,"id":147,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":835.1959,"id":163,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":910.3635,"id":124,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":992.29626,"id":104,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":1081.6029,"id":105,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":1178.9471,"id":103,"time":1483209000000,"date":"Sun Jan 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"01/01/2017"},{"value":1285.0524,"id":164,"time":1490985000000,"date":"Sat Apr 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"04/01/2017"},{"value":1400.707,"id":165,"time":1498847400000,"date":"Sat Jul 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"07/01/2017"},{"value":1526.7706,"id":166,"time":1506796200000,"date":"Sun Oct 01 00:00:00 IST 2017","legend":"9.0% AGR Est.","strDate":"10/01/2017"},{"value":1664.1799,"id":167,"time":1514745000000,"date":"Mon Jan 01 00:00:00 IST 2018","legend":"9.0% AGR Est.","strDate":"01/01/2018"}],"key":"9.0% AGR Est."}];
+//                    return [{"area": true, "color": "#666666", "values": [{"value": 164, "id": 3, "time": 1480345000000, "date": "Thu Dec 22 00:00:00 IST 2016", "legend": "Workspace", "strDate": "12/22/2016"}, {"value": 364, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "Workspace", "strDate": "12/31/2016"}, {"value": 428, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "Workspace", "strDate": "01/01/2017"}], "key": "Workspace"}, {"area": true, "color": "#CCCCCC", "values": [{"value": 147.6, "id": 3, "time": 1480345000000, "date": "Thu Dec 22 00:00:00 IST 2016", "legend": "Strategic Vacancy", "strDate": "12/22/2016"}, {"value": 327.6, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "Strategic Vacancy", "strDate": "12/31/2016"}, {"value": 385.2, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "Strategic Vacancy", "strDate": "01/01/2017"}], "key": "Strategic Vacancy"}, {"color": "#00BCD4", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "GR3 Forecast", "strDate": "12/31/2016"}, {"value": 4392, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "GR3 Forecast", "strDate": "01/01/2017"}], "key": "GR3 Forecast"}, {"color": "#FFC107", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "3.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 512.94, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "3.0% AGR Est.", "strDate": "01/01/2017"}], "key": "3.0% AGR Est."}, {"color": "#4CAF50", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "6.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 527.88, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "6.0% AGR Est.", "strDate": "01/01/2017"}], "key": "6.0% AGR Est."}, {"color": "#FF5722", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "9.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 542.82, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "9.0% AGR Est.", "strDate": "01/01/2017"}], "key": "9.0% AGR Est."}];
+                    return [{"area": true, "color": "#666666", "values": [{"value": 164, "id": 3, "time": 1480345000000, "date": "Thu Dec 22 00:00:00 IST 2016", "legend": "Workspace", "strDate": "12/22/2016"}, {"value": 364, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "Workspace", "strDate": "12/31/2016"}, {"value": 428, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "Workspace", "strDate": "01/01/2017"}, {"value": 210, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "Workspace", "strDate": "04/01/2017"}, {"value": 120, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "Workspace", "strDate": "07/01/2017"}, {"value": 80, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "Workspace", "strDate": "10/01/2017"}, {"value": 105, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "Workspace", "strDate": "01/01/2018"}], "key": "Workspace"}, {"area": true, "color": "#CCCCCC", "values": [{"value": 147.6, "id": 3, "time": 1480345000000, "date": "Thu Dec 22 00:00:00 IST 2016", "legend": "Strategic Vacancy", "strDate": "12/22/2016"}, {"value": 327.6, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "Strategic Vacancy", "strDate": "12/31/2016"}, {"value": 385.2, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "Strategic Vacancy", "strDate": "01/01/2017"}, {"value": 189, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "Strategic Vacancy", "strDate": "04/01/2017"}, {"value": 108, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "Strategic Vacancy", "strDate": "07/01/2017"}, {"value": 72, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "Strategic Vacancy", "strDate": "10/01/2017"}, {"value": 94.5, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "Strategic Vacancy", "strDate": "01/01/2018"}], "key": "Strategic Vacancy"}, {"color": "#00BCD4", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "GR3 Forecast", "strDate": "12/31/2016"}, {"value": 770, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "GR3 Forecast", "strDate": "01/01/2017"}, {"value": 60, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "GR3 Forecast", "strDate": "04/01/2017"}, {"value": 25, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "GR3 Forecast", "strDate": "07/01/2017"}, {"value": 75, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "GR3 Forecast", "strDate": "10/01/2017"}, {"value": 50, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "GR3 Forecast", "strDate": "01/01/2018"}], "key": "GR3 Forecast"}, {"color": "#FFC107", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "3.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 512.94, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "3.0% AGR Est.", "strDate": "01/01/2017"}, {"value": 528.3282, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "3.0% AGR Est.", "strDate": "04/01/2017"}, {"value": 544.17804, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "3.0% AGR Est.", "strDate": "07/01/2017"}, {"value": 560.50336, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "3.0% AGR Est.", "strDate": "10/01/2017"}, {"value": 577.3185, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "3.0% AGR Est.", "strDate": "01/01/2018"}], "key": "3.0% AGR Est."}, {"color": "#4CAF50", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "6.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 527.88, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "6.0% AGR Est.", "strDate": "01/01/2017"}, {"value": 559.5528, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "6.0% AGR Est.", "strDate": "04/01/2017"}, {"value": 593.126, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "6.0% AGR Est.", "strDate": "07/01/2017"}, {"value": 628.71356, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "6.0% AGR Est.", "strDate": "10/01/2017"}, {"value": 666.4364, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "6.0% AGR Est.", "strDate": "01/01/2018"}], "key": "6.0% AGR Est."}, {"color": "#FF5722", "values": [{"value": 498, "id": 106, "time": 1483122600000, "date": "Sat Dec 31 00:00:00 IST 2016", "legend": "9.0% AGR Est.", "strDate": "12/31/2016"}, {"value": 542.82, "id": 83, "time": 1483209000000, "date": "Sun Jan 01 00:00:00 IST 2017", "legend": "9.0% AGR Est.", "strDate": "01/01/2017"}, {"value": 591.6738, "id": 164, "time": 1490985000000, "date": "Sat Apr 01 00:00:00 IST 2017", "legend": "9.0% AGR Est.", "strDate": "04/01/2017"}, {"value": 644.9245, "id": 165, "time": 1498847400000, "date": "Sat Jul 01 00:00:00 IST 2017", "legend": "9.0% AGR Est.", "strDate": "07/01/2017"}, {"value": 702.9677, "id": 166, "time": 1506796200000, "date": "Sun Oct 01 00:00:00 IST 2017", "legend": "9.0% AGR Est.", "strDate": "10/01/2017"}, {"value": 766.2348, "id": 167, "time": 1514745000000, "date": "Mon Jan 01 00:00:00 IST 2018", "legend": "9.0% AGR Est.", "strDate": "01/01/2018"}], "key": "9.0% AGR Est."}];
+                }
+            </script>
+
+        </div>
+    </body>
+</html>

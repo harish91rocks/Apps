@@ -1,0 +1,126 @@
+/*common styles for tree component */
+
+.wicket-tree .tree-junction-collapsed,
+.wicket-tree .tree-junction-expanded,
+.wicket-tree .tree-junction {
+	display: block;
+    float: left;
+    width: 12px;
+    margin-left: 3px;
+}
+
+.root-node .tree-junction-collapsed,
+.root-node .tree-junction-expanded,
+.root-node .tree-junction { background-image: none; margin: 0; width: 0; }
+
+.wicket-tree .tree-content .tree-folder-closed,
+.wicket-tree .tree-content .tree-folder-open,
+.wicket-tree .tree-content .tree-folder-other {
+	padding-left: 21px;
+	background-repeat: no-repeat;
+}
+
+.proxyTree {
+  line-height: 2;
+  overflow: auto;
+}
+
+.proxyTree .wicket-tree .tree-content .tree-folder-closed,
+.proxyTree .wicket-tree .tree-content .tree-folder-open,
+.proxyTree .wicket-tree .tree-content .tree-folder-other {
+	padding-left: 31px;
+	cursor: pointer;
+	background-position: 4px 3px;
+}
+
+.pn-node-link {
+  display: block;
+}
+
+.wicket-tree .tree-subtree {
+    margin: 0 0 0 12px;
+    padding: 0;
+}
+
+.wicket-tree .tree-branch {
+	clear: both;
+}
+
+.wicket-tree .tree-content {
+    display: block;
+    margin-left: 12px;
+}
+.root-node .tree-content {
+    margin-left: 0;
+}
+
+.wicket-tree .selectedLaunchTask span.tree-label:hover {
+	background: #FFF08E;
+}
+
+.PnWebProxyRefDialog .wicket-tree .tree-content a:hover,
+.proxyPanel .wicket-tree .tree-content a:hover {
+	background-color: #C6E4F3;
+}
+
+.wicket-tree .tree-node a.selected,
+.wicket-tree .tree-node a.selected:hover {
+    background-color: #b1d7ea;
+    color: #fff;
+}
+
+.tree-content .tree-label {
+  padding-left: 3px;
+}
+
+.tree-content a:hover .tree-label {
+  width: 100%;
+  display: block;
+  background-color: #279FD1;
+  color: #fff;
+}
+.tree-node a.selected .tree-label,
+.tree-node a.selected:hover .tree-label {
+  width: 100%;
+  display: block;
+  background-color: #1464A1;
+  color: #fff;
+}
+
+/*Styles specific to tree on user report popup*/
+.reportTree .wicket-tree {
+	overflow-y: auto;
+	width: auto;
+}
+
+.reportTree {
+	overflow-y: auto;
+}
+
+/* When no text for the report node element, the item is not properly displayed,
+  hence the specific height to display even with out text */
+.reportTreePanel .tree-folder-other, 
+.reportTreePanel .tree-folder-open {
+  height: 21px;
+}
+
+.row-relatedbo:hover .tree-label,
+.row-relatedbo.selected .tree-label {
+  opacity: 0.6;
+}
+
+.reportTreePanel .wicket-tree .tree-content .tree-folder-closed, 
+.reportTreePanel .wicket-tree .tree-content .tree-folder-open, 
+.reportTreePanel .wicket-tree .tree-content .tree-folder-other {
+  padding-left: 24px;
+  background-position: 3px 3px;
+}
+
+.reportTreePanel .icon-dimensions-2 {
+  width: 13px;
+}
+
+.reportTreePanel {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,2588 @@
+/*
+------------------------------------------------------------------------------------------------------
+	Generic Elements
+------------------------------------------------------------------------------------------------------
+*/
+/*
+ * This block is Open Sans Fonts declaration
+ * to access the open sans font use font-family and font-weight.
+ * ex: .test { font-family: 'Open Sans', font-weight: 300; } will give the Open Sans Light
+ */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/static/fonts/open-sans-light/OpenSans-Light-webfont.eot#iefix') format('embedded-opentype'), /* for IE8 */
+  		 url('/static/fonts/open-sans-light/OpenSans-Light-webfont.woff') format("woff"), /* for IE9 */
+       url('/static/fonts/open-sans-light/OpenSans-Light-webfont.svg') format("svg"); /* for firefox, chrome */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.eot#iefix') format('embedded-opentype'), /* for IE8 */
+  		 url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.woff') format("woff"), /* for IE9 */
+		   url('/static/fonts/open-sans-semibold/OpenSans-Semibold-webfont.svg') format("svg"); /* for firefox, chrome */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/static/fonts/open-sans-regular/OpenSans-Regular-webfont.eot#iefix') format('embedded-opentype'), /* for IE8 */
+  		 url('/static/fonts/open-sans-regular/OpenSans-Regular-webfont.woff') format("woff"), /* for IE9 */
+       url('/static/fonts/open-sans-regular/OpenSans-Regular-webfont.svg') format("svg"); /* for firefox, chrome */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* scrollbar styling for Chrome */
+::-webkit-scrollbar { width: 9px; height: 9px;}
+::-webkit-scrollbar-button {height:0; width:0;}
+::-webkit-scrollbar-thumb {border-radius: 5px;}
+::-webkit-scrollbar-track-piece { border-radius: 5px;}
+
+.nonGenericActionPanel::-webkit-scrollbar-button {
+	height: 2px;
+	width: 2px;
+}
+
+iframe {
+	height: 20px;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+h1,h2,h3,h4 {
+	margin: 0.2em 0
+}
+
+p {
+	margin: 0.5em 0
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+div:focus, span:focus, td:focus {
+	outline: none;
+}
+
+input[type="text"][disabled], input[type="password"][disabled] {
+  background: none;
+}
+
+/* Reset browser specific style sheet */
+input, textarea, select, a {
+  color: inherit;
+}
+
+textarea {
+ white-space: pre-wrap;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Generic styling - PlanonProductStyleGuide_v1.2.pdf chapter 4 - Typography
+------------------------------------------------------------------------------------------------------
+*/
+
+/* Reset user agent style sheet */
+input, textarea, select, button, em {
+  font: inherit;
+}
+
+/*
+ * Added two css levels to override the font applied to body by
+ * EXTjs and jquery.layout.css.
+ */
+html .pn-body, .text1 {
+  font: normal 12px Arial, Helvetica, sans-serif;
+}
+
+/* 'open sans semibold' e.g. Gadget header, TSI header, modal box/pop-up header, account name, homepage header */
+.h2 {
+  font: normal bold 16px 'Open Sans';
+}
+
+/* 'open sans Semibold' e.g. form section headers */
+.h3 {
+	font: normal bold 14px 'Open Sans';
+}
+
+/* 'open sans Regular' e.g. Form section titles, Action Panel category titles, button text */
+.h4 {
+	font: normal normal 14px 'Open Sans';
+}
+
+/* 'open sans Regular' e.g. List header, Navigation Panel sub-item, callout menu option, unselected tab */
+.h5, .text4 {
+	font: normal normal 13px 'Open Sans';
+}
+
+/* 'open sans Semibold' e.g. Selected tab */
+.h5-selected {
+	font: normal bold 13px 'Open Sans';
+}
+
+/* 'open sans Regular' e.g. Step, list button */
+.h6, .text2 {
+	font: normal normal 12px 'Open Sans';
+}
+
+/*  'open sans Semibold' e.g. Selected list button */
+.text2-selected {
+  font: normal bold 12px 'Open Sans';
+}
+
+/* 'open sans Light' e.g. Level, day in calendar */
+.text3 {
+	font: normal 300 13px 'Open Sans';
+}
+
+/* 'open sans Light' e.g. breadCrumbs */
+.text-s1 {
+  font: normal 300 11px 'Open Sans';
+}
+
+/* 'open sans Regular' e.g. Graphical plan-board tool-tips*/
+.text-s2 {
+  font: normal normal 11px "Open Sans";
+}
+/*
+------------------------------------------------------------------------------------------------------
+  --  END of	Generic styling - Typography  --
+------------------------------------------------------------------------------------------------------
+*/
+
+/*
+------------------------------------------------------------------------------------------------------
+	-- Generic buttons styling --
+------------------------------------------------------------------------------------------------------
+*/
+.btn,
+.dataViewToolbar .sm-link {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  font-family: open sans;
+  font-size: 14px;
+  height: 28px;
+  padding: 0 11px;
+  margin-right: 5px;
+  min-width: 68px;
+}
+
+.btn-small {
+  font-size: 12px;
+  height: 25px;
+  min-width: 50px;
+}
+
+.btn-secondary:hover:not([disabled]),
+.btn-secondary:focus:not([disabled]) {
+  font-weight: bold;
+}
+
+.btn-round-1,
+.btn-square-1 {
+  border-radius: 50%;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+}
+
+.btn-round-1 img {
+  opacity: 0.9;
+}
+
+.btn-round-1.disabled {
+  opacity: 0.4;
+}
+
+.btn-round-1:hover img {
+  opacity: 1;
+}
+
+.btn-square-1 {
+  border-radius: 2px;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	--  END of Generic buttons styling  --
+------------------------------------------------------------------------------------------------------
+*/
+
+.proxyList {
+    table-layout: fixed;
+    white-space: nowrap;
+    border-collapse: inherit; /* PCIS 224792.00, Web2: 2: Blue theme: Borders not visible in firefox when no records are shown */
+    width: 1px\0/IE9; /* PCIS 215482.00, Web2: Resizing columns in popup is not possible in firefox */
+}
+
+.proxyList .ui-resizable {
+    position: relative; /* Fix for column resize handle positioning issue in FireFox */
+}
+
+.proxyList .ui-resizable-e {
+    height: 15px;
+    margin-top: 2px;
+}
+
+.proxyList .headers span {
+    letter-spacing: -0.3px;
+}
+
+.proxyList tbody tr td {
+    padding: 0 5px;
+    width: auto;
+    max-width: 20px; /* Needed for PCIS 215482.00, Web2: Resizing columns in popup is not possible in firefox */
+    min-width: 20px; /* Needed for PCIS 215482.00, Web2: Resizing columns in popup is not possible in firefox */
+}
+
+.detailListFieldValueEditor th:last-child .ui-resizable {
+  margin-right: 3px; /* to have space for last resizable vertical bar in grid panel proxy header */
+}
+
+.proxyList .headers a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-right: 18px; /* To have space between sorting icon and text */
+}
+
+.proxyList .headers .wicket_orderNone a {
+  margin-right: 6px; /*  To have space between proxy header text and vertical resizable bar */
+}
+
+.MaxExceeded {
+  display: block;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.truncate-text,
+.wicket-modal .w_captionText,
+.tree-content .tree-label /*Fix : PLA-3036 : overflow-ellipsis breaks on proxy-item select or hover*/{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#wicketDebugBar { z-index: 1; /* layout component uses z-index '0' */ right: 35px !important; }
+
+/* START - CSS layout styles */
+
+.pn-layout:after { content: ""; clear: both; }
+
+.pn-center-panel { height: 99.9%; }
+
+.pn-layout .pn-right-panel { float: right; position: relative; }
+.pn-layout .pn-left-panel, .pn-layout .pn-center-panel { float: left; width: 100%; }
+
+.pn-desktop-layout[data-action-state="expanded"] .pn-right-panel { width: 215px; }
+.pn-desktop-layout[data-action-state="expanded"] .pn-center-panel { margin-right: -215px; }
+.pn-desktop-layout[data-action-state="expanded"] .pn-center-panel .pn-panel { margin-right: 227px; }
+
+.webStepPanelLayout .layoutButtonPanel { display: inline-block; }
+.pn-desktop-layout[data-action-state="expanded"] .layoutButtonPanel { width: 200px; }
+
+.pn-desktop-layout[data-action-state="collapsed"] .pn-right-panel { width: 76px; }
+.pn-desktop-layout[data-action-state="collapsed"] .pn-center-panel { margin-right: -76px; }
+.pn-desktop-layout[data-action-state="collapsed"] .pn-center-panel .pn-panel { margin-right: 88px; }
+[data-action-state="collapsed"] .layoutButtonPanel { width: 61px; }
+
+.pn-layout-r160 .pn-right-panel { width: 160px; }
+.pn-layout-r160 .pn-center-panel { margin-right: -160px; }
+.pn-layout-r160 .pn-center-panel .pn-panel { margin-right: 172px; }
+
+
+/* END - CSS layout styles */
+
+.webStepPanelLayout .pn-layout { padding-top: 12px; padding-right: 12px;}
+.switchableViewStepPanel .webStepPanelLayout .pn-layout { padding-top: 28px; }
+
+/* START - re-usable form element styles */
+.radio-panel {
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+
+.pn-radio {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* END - re-usable form element styles */
+
+
+/* START - styles related to element list table with selectable columns feature */
+.pnWebTableColumnList {
+    background: #EBEBEB;
+	border: 1px solid #C4C4C4;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+	display: none;
+	padding: 4px 3px 3px;
+	position: absolute;
+	text-align: left;
+	z-index: 20002; /* z-index of dialog container is 20001, z-index for this popup should be more than that */
+}
+
+.pnWebTableColumnList table td.first {
+	padding-right: 2px;
+}
+
+.pnWebTableColumnList table.tblColumnList td input {
+	margin: 4px 4px auto;
+}
+
+.pnWebTableColumnList label {
+	white-space: nowrap;
+	margin: 3px;
+	display: block;
+}
+/* END - styles related to element list table with selectable columns feature */
+
+table tfoot td {
+	white-space:normal;
+}
+
+hr {
+	border: 0;
+	width: 100%;
+}
+
+span.wicket-ajax-indicator {
+	position: absolute;
+	top: 26px;
+	right: 6px;
+	height: 20px;
+}
+
+span.wicket-ajax-indicator img {
+	width: 16px;
+	height: 16px;
+}
+
+div#planon-ajax-indicator {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	height: 27px;
+	width: 27px;
+	display: none;
+	z-index: 9;
+}
+
+div#planon-ajax-indicator-img {
+	height: 24px;
+	width: 24px;
+	margin: 2px;
+	z-index: 10;
+}
+
+.pn-loading {
+	background: #fff url('../img/indicator-ver-19.00.00.08.gif') center center no-repeat;
+}
+
+body.busy,
+body.busy a,
+body.busy input,
+body.busy select,
+body.busy textarea,
+body.busy #menubar .childmenutext,
+body.busy #menubar a.childmenu .childmenutext,
+body.busy #menubar li li:hover li .childmenutext,
+body.busy #menubar li li.hover li .childmenutext,
+body.busy #menubar li ul li .disabled,
+body.busy #menubar li ul li:hover .disabled,
+body.busy #menubar li ul li.hover .disabled,
+body.busy .ui-layout-resizer,
+body.busy .levelChooser.tabpanel .tab-row-levelChooser .levelTab a span,
+body.busy .levelChooser.tabpanel .tab-row-levelChooser .levelTab em span,
+body.busy .tabpanel .tab-row .gridTab a span,
+body.busy tr.odd,
+body.busy tr.rootnode-tr,
+body.busy tr.norecords-tr,
+body.busy div.wicket-tree span.junction,
+body.busy div.wicket-tree span.junction-last
+body.busy .actionButton,
+body.busy .actionList span,
+body.busy .actionButtonLabel,
+body.busy .actionGroupHeader {
+	cursor: wait !important;
+}
+
+table.proxyList td.proxyIcon {
+	width: auto;
+	max-width: 30px; /* Needed for PCIS 215482.00, Web2: Resizing columns in popup is not possible in firefox */
+	min-width: 30px; /* Needed for PCIS 215482.00, Web2: Resizing columns in popup is not possible in firefox */
+	text-overflow: clip;
+}
+
+.detailListFieldValueEditor .proxyIcon span {
+	width: auto !important;
+}
+
+.pn-wait-message-container { display: table; height: 99%; width: 100%; margin-top: -30px; }
+.pn-wait-message-text { display: table-cell; padding-top: 50px; background: url('../img/indicator-ver-19.00.00.08.gif') no-repeat center center; text-align: center; vertical-align: middle; width: 100%; }
+
+/*
+------------------------------------------------------------------------------------------------------
+	Action Panel
+------------------------------------------------------------------------------------------------------
+*/
+
+.actionList {
+	display: block;
+}
+
+.actionImage {
+	vertical-align: middle;
+}
+
+.actionButton,
+.actionList span.button-disabled {
+	display: block;
+	margin-left: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.button-disabled .actionButtonLabel {
+	cursor: default !important;
+}
+
+.rightarea .layoutButtonPanel,
+.dialogContentPanel .layoutButtonPanel {
+	height: 100%;
+}
+
+.nonGenericActionPanel {
+	min-height: 100px;
+	padding: 2px 2px 2px 0;
+	border-radius: 3px;
+}
+
+.changeWithinSelectionOnActionDialog,
+.nonGenericActionPanel {
+  line-height: 1.916;
+}
+
+.actionGroupContainer {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.layoutButtonPanel .hsplitbar {
+	cursor: default !important;
+}
+
+.actionToolbar .toolbarButtonPanel:last-child .toolbarButton {
+    margin-bottom: 0;
+}
+
+.ui-layout-container .ui-layout-east {
+	padding-top: 12px;
+}
+
+.nonGenericActionPanel .actionToolbar span .middle  img {
+    /* for IE */
+	filter: alpha(opacity=30);
+	/* CSS3 standard */
+	opacity:0.4;
+}
+
+.nonGenericActionPanel span.button-disabled,
+#actionGroupToolbarPanel .toolbarButton  span {
+    cursor: default;
+}
+
+#actionGroupToolbarPanel .toolbarButton a span {
+    cursor: pointer;
+}
+
+.nonGenericActionPanel .actionButton,
+.nonGenericActionPanel span.button-disabled,
+#actionGroupToolbarPanel .toolbarButton > span,
+#actionGroupToolbarPanel .toolbarButton a,
+.changeWithinSelectionOnActionDialog .actionButton {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: auto;
+}
+
+.actionToolbar .middle > span,
+.nonGenericActionPanel .actionButtonLabel,
+.changeWithinSelectionOnActionDialog .actionButtonLabel {
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.actionList.actionToolbar,
+.actionGroup > ul li:last-child {
+	margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.genericActionPanel,
+.actionGroup:last-child .actionGroupSeperator,
+.genericActionPanel .emptyBomsActionGroup {
+    border: 0 none;
+}
+
+.actionGroupSeperator {
+    margin: 0 12px;
+}
+
+.emptyBomsActionGroup .actionGroupSeperator,
+.genericActionPanel .actionGroupSeperator {
+    border-bottom: none;
+}
+
+.genericActionPanel .actionList {
+  display: inline-block;
+}
+
+.genericActionPanel .btn {
+  min-width: 73px;
+}
+
+.genericActionPanel .actionList:last-child .btn {
+  margin-right: 0;
+}
+
+.genericActionPanel {
+  line-height: 2;
+  margin: 10px 0;
+  min-height: inherit;
+  text-align: center;
+}
+
+.genericActionPanel .button-disabled {
+  opacity: 0.4;
+}
+
+.pn-layout-r160  .genericActionPanel .actionButton,
+.pn-layout-r160  .genericActionPanel .button-disabled {
+  min-width: 48px;
+}
+
+.genericActionPanel input.button-disabled,
+.genericActionPanel .actionImage {
+    display: none;
+}
+
+.actionGroupToolbarPanel img {
+    vertical-align: middle;
+}
+
+.currentStepLabel,
+.actionGroupHeader {
+	margin-bottom: 1px;
+	padding-top: 7px;
+	cursor: pointer;
+}
+
+.actionGroupHeaderLabel {
+	background-attachment: scroll;
+	background-position: right center;  /* 196px is dependent on width of the action panel now it is 216px */
+	background-repeat: no-repeat;
+	display: block;
+	line-height: 2.14;
+	margin-right: 12px;
+  margin-top: 2px;
+	padding: 0 12px 0 8px;
+	position: relative;
+	top: -1px;
+	z-index: 2; /* make sure text overlaps toggle image */
+}
+
+.actionGroupHeader .collapsed {
+	background-image: url('../img/collapse-down-6-ver-19.00.00.08.png');
+}
+
+.actionGroupHeader .collapsed:hover {
+	background-image: url('../img/collapse-down-6-hover-ver-19.00.00.08.png');
+}
+
+.actionGroupHeader .open {
+	background-image: url('../img/collapse-up-6-ver-19.00.00.08.png');
+}
+
+.actionGroupHeader .open:hover {
+	background-image: url('../img/collapse-up-6-hover-ver-19.00.00.08.png');
+}
+
+.PnWebChangeWithinSelectionOnActionDialog .actionsList {
+	overflow-y: auto;
+}
+/*
+------------------------------------------------------------------------------------------------------
+  PnWebAjaxTabbedPanel
+------------------------------------------------------------------------------------------------------
+*/
+
+.tabpanel {
+	height: 100%;
+}
+
+.tabpanel .tab-row {
+	zoom: 1;
+}
+
+.tabpanel .tab-row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.tabpanel .tab-row ul {
+	float: left;
+	margin: 0 1px -1px 0;
+}
+
+.tabpanel .tab-row ul .gridTab {
+	float: left;
+	margin: 0 3px 0 0;
+	outline: none;
+	max-width: 200px;
+	background-color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px 3px 0 0;
+    list-style: none;
+    text-align: center;
+    min-width: 68px;
+}
+
+.tabpanel .tab-row ul .gridTab a {
+	display: block;
+	outline: none;
+}
+
+.tabpanel .tab-row .gridTab.newQuestion a {
+	color:#B3242A;
+}
+
+.tabpanel .tab-row .gridTab.newQuestion.first a {
+	margin-left: 0;
+	color: #B3242A;
+}
+
+.tabpanel .tab-row .gridTab.newQuestion.selected {
+	color: #B3242A;
+}
+
+.tabpanel .tab-row .gridTab a span {
+	cursor: pointer;
+	padding: 0 11px;
+    display: block;
+    line-height: 1.9;
+}
+
+.tabpanel ul .gridTab.newQuestion a span
+{
+	color: #B3242A;
+}
+
+.tabpanel ul .gridTab.newQuestion:hover a span
+{
+	color: #B3242A;
+}
+
+.tabpanel .tabsheet .tab-panel {
+	height: 100%;
+}
+
+.tabpanel .tabsheet .bar {
+	letter-spacing: -0.3px;
+	padding: 13px 0 9px 0;
+}
+
+.tabpanel ul .gridTab:focus .tab-text,
+.tabpanel .gridTab.selected .tab-text {
+  font-weight: bold;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------
+PnWebOptionPanel
+-----------------------------------------------------------------------------------------------------
+*/
+span.PnWebOptionPanel div.checkboxPanel {
+	float: left;
+	margin-left: 6px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Lists
+------------------------------------------------------------------------------------------------------
+*/
+tr.headers {
+	text-align: left;
+}
+
+tr.headers th {
+	vertical-align: middle;
+	padding: 0 0 0 3px;
+	position: relative;
+	height: 30px;
+}
+
+.fieldEditor tr.headers th,
+.dialogContentPanel tr.headers th {
+	height: 22px;
+}
+
+tr.headers a {
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+}
+
+tr.headers a span.sortImage {
+  position: absolute;
+  right: 0;
+  width: 12px;
+  height: 16px;
+}
+
+tr.even,
+tr.odd {
+	overflow: hidden;
+	/*white-space: nowrap;*/
+	cursor: pointer;
+	height: 21px;
+}
+
+tr.even td ,
+tr.odd td {
+	padding: 0;
+	height: 17px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+tr.rootnode-tr,
+tr.norecords-tr {
+	overflow: hidden;
+	/*white-space: nowrap;*/
+	cursor: pointer;
+	height: 22px;
+}
+
+tr.rootnode-tr td ,
+tr.norecords-tr td {
+	padding: 0 0 0 2px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+tr.rootnode-tr td.rootnode-td {
+	padding-left: 5px;
+	padding-bottom: 9px;
+    padding-top: 4px;
+}
+
+td.norecords-td {
+	line-height: 1.5em;
+	padding: 5px;
+}
+
+td.right_align {
+	text-align: right;
+}
+
+td.proxyPanelContent {
+	vertical-align: top;
+}
+
+.proxyListPanel {
+  position: relative;
+}
+
+td.proxyPanelContent div.PnWebProxyListPanel, td.proxyPanelContent div.PnWebProxyListPanel table.proxyList {
+	overflow-x: hidden;
+}
+
+.PnWebDialogGrid .lastLargeField div.textAreaFieldValueEditor textarea {
+	height: 95px;
+}
+
+ /** for removing background color and font color for proxy panel in data grid panel */
+.detailListFieldValueEditor tr.selected,
+.detailListFieldValueEditor tr.odd:hover,
+.detailListFieldValueEditor tr.even:hover {
+    background-color: transparent;
+    color: #3f4751;
+    cursor: default;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - Modal_Content
+------------------------------------------------------------------------------------------------------
+*/
+div.w_content {
+	overflow: hidden;
+	cursor: default;
+}
+div.wicket-modal .w_content_2 div.w_content_3 {
+    border: medium none;
+	overflow: hidden;
+}
+div.wicket-modal .w_content_1 div.w_content_2 {
+	padding: 0;
+}
+div.wicket-modal .w_content_1 div.w_content,
+div.wicket-modal .w_content_1 div.w_content_2 {
+    background-color: transparent;
+}
+div#modalWindow_content {
+	margin: 0;
+	padding: 0;
+}
+
+div#modalWindow_content div#_wicket_window_ * {
+	overflow: hidden;
+}
+
+#_wicket_window_3[style],
+.wicket-modal .w_content .w_content_container {
+	overflow: hidden !important;
+}
+
+div#modalWindow_content div.ProxyNavigator {
+	height: 15px;
+	float: none;
+	margin: 0;
+}
+
+.ui-layout-resizer-dragging {   /* resizer begin 'dragging' */
+  /* transparency declarations marked as important to override inline styles (no other way) */
+  	filter: alpha(opacity=70) !important;
+  	opacity: 0.70 !important;
+	border: none !important;
+	z-index: 4 !important;
+}
+
+/* Vertical text in collapsed launch center's Expand button */
+.mainWebLayout .ui-layout-resizer-west-closed .launchCenterTitle {
+  /* Nifty trick: By making the label only 1em wide and specifying overflow-wrap: break-word,
+     we force the browser to display the characters below each other.
+	 SEE: http://sarfraznawaz.wordpress.com/2011/01/02/vertical-text-with-css  */
+  display: inline-block;
+  width: 1em;
+  letter-spacing: 0.4em;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+
+div#modalWindow_content label {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+body div.wicket-mask-dark {
+	background-image: none;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+div.wicket-modal form {
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.34);
+}
+div.wicket-modal div.w_top_1,
+div.wicket-modal div.w_bottom_1 {
+    background-color: #FFFFFF;
+}
+div.wicket-modal .w_right div.w_caption {
+	border-bottom: 1px solid #B7B7B7;
+    padding: 9px 0;
+}
+div.wicket-modal .w_caption h3.w_captionText {
+  color: #3F4751;
+  font: normal bold 16px/0.9 'Open Sans';
+  margin: 0 36px 0 12px; /* 36px of right margin is for - (space between close icon and title) + (close icon width 12px) + (close icon right margin 12px) */
+  position: static;
+  vertical-align: middle; /* Fix:UX-2298 Öffen is mispelled offnen or offen.  */
+  line-height: 1.4em;
+}
+div.wicket-modal div.w_blue .w_caption a.w_close {
+	background: url('../../images/pop-up_close-12-ver-19.00.00.08.png') no-repeat scroll 0 0 transparent;
+    height: 12px;
+    opacity: 0.5;
+    padding-right: 12px;
+    right: 0;
+    width: 12px;
+}
+div.wicket-modal div.w_blue .w_caption a.w_close:hover {
+    opacity: 1;
+}
+div.wicket-modal .w_left div.w_right_1 {
+	margin-left: 3px;
+}
+div.wicket-modal .w_right div.w_content_1 {
+	margin-right: 3px;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	Date Popup styling - non theme related styling only!
+------------------------------------------------------------------------------------------------------
+*/
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	text-align: right;
+}
+
+.ui-state-disabled .ui-icon {
+	text-align: left;
+}
+
+.ui-datepicker {
+	width: auto !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+	margin: 5px !important;
+	padding: 5px !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+	margin: 1px !important;
+	padding: 1px !important;
+	width: auto !important;
+	height: 19px !important;
+}
+
+.pnwidatepicker .ui-widget-content,
+.pnwidatepicker .ui-datepicker-calendar tbody tr a {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #3f4751;
+    font-weight: normal;
+}
+
+.pnwidatepicker .ui-datepicker-calendar tbody tr a {
+	height: 22px;
+	line-height: 1.8;
+}
+
+.pnwidatepicker .ui-datepicker th span {
+    font: normal 13px 'Open Sans';
+}
+
+.pnwidatepicker .ui-datepicker-calendar {
+    font: 12px Arial,Helvetica,sans-serif;
+}
+
+.pnwidatepicker .ui-datepicker table,
+.pnwidatepicker .ui-datepicker th,
+.pnwidatepicker .ui-widget-header,
+.pnwidatepicker .ui-widget-header a {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.pnwidatepicker .ui-datepicker select.ui-datepicker-year,
+.pnwidatepicker .ui-datepicker select.ui-datepicker-month {
+  font-family: arial;
+  margin: 0;
+  width: 33%;
+}
+
+.pnwidatepicker .ui-widget-header a:hover {
+    border-color: transparent;
+}
+
+.pnwidatepicker .ui-datepicker-header a span { margin-left: -4px; cursor: pointer; margin-top: -11px;}
+.pnwidatepicker .ui-datepicker select.ui-datepicker-month {
+	border-radius: 2px 0 0 2px;
+	border-right: none;
+}
+
+.pnwidatepicker .ui-datepicker select.ui-datepicker-year {
+	border-radius: 0 2px 2px 0;
+}
+
+.pnwidatepicker .ui-datepicker td { padding: 0 }
+
+.pnwilayout .ui-layout-west,
+.pnwilayout .ui-layout-east,
+.pnwilayout .ui-layout-center {
+	height: auto !important;
+}
+
+/*
+ * The resizer is not able calculate the height properly when we resize the browser,
+ * because of two plugins jquery layout and expandToFillBehaviour.
+ * so forceing the resizer to occupy parent container height.
+ */
+.webStepPanelLayout .ui-layout-resizer {
+  height: 100% !important;
+}
+
+/*if label's text exceeds available width, its truncated by appending ...*/
+label,
+.proxyList .ui-resizable,  /*  applied the ellipses for proxylist header of orderCostDetailPanel */
+.actionList,
+.actionButtonLabel,
+.actionGroupHeaderLabel,
+.gridTab a span,
+.changeWithinSelectionOnActionDialog .actionGroup ul li span,
+.toolbarButton span,
+.toolbarButton span a,
+ #actionGroupToolbarPanel .toolbarButton a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.toggle-proxy-toolbar {
+  display: none; /* visible only on tablet devices */
+}
+
+.proxyToolbar .webstepmethod-toolbar {
+	display: inline-block;
+}
+
+.pn-clear-cross-tsi-filter {
+	background-color: #fff;
+	border: 1px solid #d4d4d4;
+	border-bottom: 4px solid #ffc200;
+	border-radius: 2px;
+  line-height: 1.75;
+  margin: 6px 0 6px auto;
+}
+
+.pn-clear-cross-tsi-filter-text {
+	background: 9px center url('../../images/common/cross-tsi-filter-13-ver-19.00.00.08.png') no-repeat;
+	color: #3f4751;
+	padding-left: 31px;
+}
+
+.pn-clear-filter-icon {
+	padding: 0 9px;
+}
+
+.pn-clear-filter-link {
+	opacity: .7;
+}
+.pn-clear-filter-link:hover,
+.pn-clear-filter-link:active {
+	opacity: 1;
+}
+
+.proxyToolbar .toolbarButtonPanel {
+  float: left;
+}
+
+.webStepPanelLayout .proxyToolbar a,
+.webStepPanelLayout .proxyToolbar .toolbarButton > span,
+.webChartPeriodPanel .toolbarButton,
+.webChartPeriodPanel .editor-links {
+  border-radius: 2px;
+  display: inline-block;
+  margin: 6px 6px 6px 0;
+  text-align: center;
+  line-height: 0.7;
+  width: 21px;
+  height: 21px;
+  vertical-align: middle;
+}
+
+.webChartPeriodPanel .toolbarButton,
+.webChartPeriodPanel .editor-links {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.proxyToolbar .tool-bar-text {
+  display: none;
+}
+
+div.PlanonWebBaseDialog div.PnWebProxyListPanel table.proxyList th a {
+	text-align: left;
+}
+
+.titleBorder {
+	margin:5px;
+	padding:2px;
+}
+
+div.proxyNavigator  {
+	margin-top: 3px;/*PCIS: 177117.00, Web2: buttons 'all' and 'none' too close to list & tree*/
+}
+
+.modalwindow .pnwilayout {
+	clear: both;
+}
+
+.PnWebBusinessErrorDialog .pnwilayout {
+    margin: 0;
+}
+
+.PnWebBOInfoDialog .modalwindow .pnwilayout {
+    margin: 0;
+}
+
+.PnWebBOGridDialog .modalwindow .pnwilayout {
+    margin: 0;
+}
+
+.PnWebProxyDialog .modalwindow .pnwilayout {
+    margin: 0;
+}
+
+div.periodForm {
+	margin-left: 2px;
+	padding: 2px 0 2px 0;
+}
+
+div.periodForm div.checkboxPanel {
+	display: inline;
+}
+
+.PnWebPagedDrillDownListPanel,
+.PnWebDrillDownListPanel {
+	height: 100%;
+}
+
+.iconTable {
+	width: 100%;
+}
+
+.iconTable .headers > th {
+  color: #1464a1;
+}
+
+.PnWebFieldValuesDialog .checkboxPanel {
+	margin-left: 10px;
+}
+
+.PnWebFieldValuesDialog .ui-layout-pane {
+	background: none;
+}
+
+
+.borderBottom {
+	margin-bottom: 5px;
+	padding: 4px;
+}
+
+select.cadSymbolsList {
+	width: 100%;
+}
+
+.schedulerSearchPanel div.fieldValueEditor .textEditor {
+	width: 10%;
+}
+
+.schedulerSearchPanel div.fieldValueEditor{
+	display: inline;
+}
+
+.modalwindow #filterpanel {
+	clear: both;
+}
+
+div.levelChooser div.filterpanel ul li a.selected {
+ background: none !important;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab a {
+	outline: none;
+}
+
+.borderBottom .radiobutton,
+.borderBottom .planonCheckBox {
+	vertical-align: text-top;
+}
+
+.SurveyPropertyPanel div.searchBar {
+	float: none;
+}
+.SurveyPropertyProxyPanel {
+	clear: both;
+	height: 85%;
+}
+
+/* Generic rule for buttons: Use opacity to make them look disabled */
+input[type="button"][disabled],
+input.button-disabled,
+img.button-disabled {
+	/* CSS3 standard */
+	opacity:0.4;
+	cursor: default;
+}
+
+input[type="button"] { cursor: pointer; }
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - PnWebListGridRefDialog
+------------------------------------------------------------------------------------------------------
+These rules apply to two kinds of listGridAction popups: PnWebListGridActionRefDialog.
+Rules of PnWebListGridRefDialog are also included, because they are largely the same, except for the missing ActionPanel.
+
+*/
+
+div.PnWebListGridActionRefDialog div.PnWebProxyListPanel {
+	display: block;
+	margin: 0;
+	width: 100%;
+	overflow-y: auto;
+}
+
+div.PnWebListGridRefDialog div.tabpanel	{
+	margin: 0;
+	overflow: auto;
+}
+
+div.PnWebListGridRefDialog div.tabpanel	{
+	width: 100%;
+}
+
+div.PnWebListGridRefDialog span DIV.tabpanel {
+	height:100%;
+}
+
+div.PnWebListGridRefDialog span.PnWebDialogGrid {
+	width: 100%;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Modal Windows - File upload dialog
+------------------------------------------------------------------------------------------------------
+*/
+div.wicket-modal .modalwindow iframe.FileUploadDialog {
+	height: 50px;
+}
+
+div.uploadControls {
+	padding: 5px;
+}
+
+div.uploadControls input.submitButton {
+	margin: 0 5px 0 0;
+	display: inline;
+}
+
+div.targetDirectoryChooser {
+	padding: 5px;
+}
+
+div.secureDocumentUploadDialog iframe {
+	height: 100px !important;
+}
+
+.file-upload .file-upload-btn {
+/*   display: initial;*/
+   cursor: pointer;
+   overflow: initial;
+   line-height: 22px;
+   text-align: center;
+   vertical-align: middle;/*for IE.*/
+}
+
+.file-upload .pn-file-input {
+    display: none;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Navigator Panel
+------------------------------------------------------------------------------------------------------
+*/
+
+#navigatorPanel #navigatorHeader {
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box; /* W3C */
+	font-weight: bold;
+	padding: 12px 7px 11px 7px;
+	overflow: hidden;
+	white-space: no-wrap;
+	width: 100%;
+	height: 39px;
+}
+
+.labelFieldValueEditor {
+	float: left;
+}
+
+div#navigatorPanel div.navigatorTree {
+	margin-top: 1px;
+}
+
+div#navigatorPanel div.navigatorTree a {
+	outline: none;
+}
+
+.modalwindow .PnWebProxyList ,
+.modalwindow .PnWebProxyListPanelOuter {
+	height: 100%;
+	margin-right: 12px;
+}
+
+.PnWebShowAllQuestionAnswersDialog .modalwindow .PnWebProxyList ,
+.PnWebShowAllQuestionAnswersDialog .modalwindow .PnWebProxyListPanelOuter {
+	height: auto;
+}
+
+.PnWebFinancialCommitmentsProxyListPanel {
+	height: 100%;
+}
+
+.aggregateSelectorPanel {
+	padding-top: 12px;
+}
+
+/* --------- PnWebMainPage */
+
+#container {
+	height: 100%;
+}
+
+#contentPanel .mainWebLayout {
+	height: 100%;
+}
+
+#contentPanel .mainWebLayout .ui-layout-pane-center {
+	overflow-y: hidden;
+	border-width: 0;
+}
+
+.tabsheet-boGridTabPanel {
+	margin: 12px 0;
+}
+.PnWebCompositeBoPopUpProxy {
+	height: 100%;
+}
+
+.contentarea .tabsheet-boGridTabPanel, .PnWebCompositeBODialog .tabsheet-boGridTabPanel {
+    overflow-y: auto; /* Add overflow-y only for BO Grid inside layout component */
+ }
+
+.PnWebBaseDialog .tabsheet-boGridTabPanel {
+	margin-bottom: 0;
+}
+
+.BOGrid {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 6px 0 12px;
+}
+
+.BOGrid:after {
+	clear: both;
+	content: " ";
+	display: block;
+}
+
+.pn-dropdown-menu-header-text {
+  background: url('../img/dropdown-arrow-down-ver-19.00.00.08.png') no-repeat scroll right center transparent;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+/*
+  Some default heights, actual heights are calculated by PnWiExpandToFillContainerBehavior.
+*/
+#contentPanel {
+	height: 716px;
+	clear: both;
+}
+
+#contentPanel .tabsheet-levelChooser {
+	height: 681px;
+}
+
+#contentPanel .tabsheet-tabbedStepChooser {
+	height: 661px;
+}
+
+#contentPanel .tabsheet-tabbedStepChooser .leftarea .PnWebPagedTree {
+	height: 587px;
+}
+
+/* Cad viewer */
+.resetProcedureButton {
+	padding: 3px;
+	background: #94BBE8;
+	border: solid 1px #ABABA9;
+	cursor: pointer;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Popup related styling
+------------------------------------------------------------------------------------------------------
+*/
+
+.modalwindow .ui-layout-pane-north {
+	margin-bottom: 5px;
+}
+
+.PnWebFileUploadDialog img {
+  vertical-align: middle;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebStepPanel
+------------------------------------------------------------------------------------------------------
+*/
+
+.SearchAndFilterPanel {
+	margin: 7px 0 7px 0;
+	padding: 22px 0 3px; /* temporary fix, when planboard is stylied it will be removed */
+}
+
+div#maincontent {
+	float: left;
+	width: 100%;
+	top: auto;
+}
+
+div.leftarea, .leftareaILOG {
+	height: 100%;
+}
+
+div.contentarea {
+	height: 100%;
+	padding-left: 5px;
+	overflow: hidden;
+}
+
+div.rightarea {
+	height: 100%;
+}
+
+#footer {
+	clear: both;
+	height: 0;
+}
+
+.selectionLabel {
+	white-space: nowrap;
+	padding: 1px 0 0 8px;
+}
+
+.webStepPanelLayout {
+    height: 98%;
+    /*Overwrite the inline style */
+    overflow: visible!important;
+}
+
+.webStepPanelLayout .ui-layout-pane-west .PnWebPagedTree .wicket-tree {
+	height: 100%;
+	overflow: auto;
+}
+
+div.graphicalPlannerPanel iframe {
+	width: 100%;
+	height: 102%;
+	border: none;
+}
+
+.switchableStepPanel {
+	height: 100%;
+}
+
+.webStepPanelLayout .leftarea {
+  margin: 0 12px;
+  display: flex;  
+  flex-direction: column;
+}
+
+.pn-proxy-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /* To have scroll in firefox */ 
+  overflow: auto;
+  /* to calculate the postion of the selected item properly for scrolling*/
+  position: relative;
+}
+
+.pn-proxy-panel {
+  flex: 1;
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebWorkOrderSchedulingStepPanel & PnWebIlogHierarchyChartStepPanel
+------------------------------------------------------------------------------------------------------
+*/
+
+.periodChooserPanel {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.orderTypesPanel {
+	padding: 4px;
+}
+
+select.orderTypes {
+	width: 100%;
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebReferenceDatePanel
+------------------------------------------------------------------------------------------------------
+*/
+
+.PnWebReferenceDatePanel {
+	margin: 0;
+	padding: 0;
+}
+
+.PnWebReferenceDatePanel .referenceDateCheckBox {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.PnWebReferenceDatePanel .referenceDateCheckBox .checkboxPanel {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.PnWebReferenceDatePanel .referenceDateEditor {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.PnWebReferenceDatePanel .referenceDateEditor .fieldValueEditor {
+	display: inline-block;
+}
+
+.PnWebReferenceDatePanel .referenceDateEditor .fieldValueEditor .lifecycleIcon {
+	display: inline-block;
+	width: auto;
+}
+
+.PnWebReferenceDatePanel .referenceDateEditor .fieldValueEditor .editor-links {
+	display: inline-block;
+}
+
+/* Reference date panel in dialogs */
+.modalwindow .dialogContentPanel .referenceDateBar {
+	padding-top: 5px;
+}
+
+.modalwindow .dialogContentPanel .PnWebReferenceDatePanel {
+	margin-bottom: 5px;
+}
+
+.modalwindow .dialogContentPanel .PnWebReferenceDatePanel .fieldValueEditor input.textEditor {
+	padding: 0;
+	width: 80px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebProxyRefDialogWithTypeFilter related styling
+------------------------------------------------------------------------------------------------------
+*/
+
+div.PnWebProxyRefDialogWithTypeFilter .modalwindow div.checkboxPanel {
+	margin-bottom: 5px;
+	margin-top: 12px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebWizardDialog related styling
+------------------------------------------------------------------------------------------------------
+*/
+.PlanonWebBaseDialog.PnWebWizardDialog .ui-layout-center {
+	padding: 0 3px 0 6px;
+}
+
+.PlanonWebBaseDialog.PnWebWizardDialog .ui-layout-center .bar {
+	background-color: transparent;
+	font-weight: bold;
+	padding: 12px 0 4px 0;
+}
+
+.PlanonWebBaseDialog.PnWebWizardDialog div.booleanFieldValueEditor .fieldEditor {
+	width: 90%;
+}
+
+.PlanonWebBaseDialog.PnWebWizardDialog div.fieldValueEditor .textEditor {
+	width: 51%;
+}
+
+.PlanonWebBaseDialog.PnWebWizardDialog div.textAreaFieldValueEditor textarea {
+	width: 79.8%;
+}
+
+.PlanonWebBaseDialog.PnWebWizardDialog div.textAreaFieldValueEditor {
+	padding: 2px 0 0 0;
+}
+
+.PnWebWizardDialog div.booleanFieldValueEditor span.radio label {
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.PnWebWizardDialog div.booleanFieldValueEditor input[type="radio"] {
+ vertical-align: middle;
+ margin-top: 0px;
+}
+
+.PnWebWizardDialog .radiobutton {
+    margin-right: 3px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+
+
+/*
+------------------------------------------------------------------------------------------------------
+	PnWebMenuPanel related styling
+------------------------------------------------------------------------------------------------------
+*/
+
+#menubarCM, #menubarCM ul {
+	float: left;
+	width: 100%;
+	list-style: none;
+	line-height: 1;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	cursor: default;
+	z-index:10000;
+}
+
+#menubarCM a {
+	text-decoration: none;
+}
+
+#menubarCM span.childmenutextCM {
+	display: block;
+	width: auto;
+	padding: 2px;
+	cursor: default;
+}
+
+#menubarCM a.childmenuCM span.childmenutextCM, #menubarCM li li:hover li span.childmenutextCM, #menubarCM li li.myhover li span.childmenutextCM {
+	cursor: pointer;
+	padding: 2px;
+}
+
+#menubarCM li li span.menu-has-submenu {
+	background-image:url('./menu_has_submenu-ver-19.00.00.08.png');
+	background-position: 98% 50% !important;
+    background-repeat: no-repeat;
+}
+
+#menubarCM li {
+	float: left;
+	padding: 2px 4px;
+	width: auto;
+}
+
+#menubarCM li ul {
+	left: -999em;
+	height: auto;
+	width: 17.4em;
+	font-weight: normal;
+	margin: 0;
+}
+
+#menubarCM li li {
+	width: 100%;
+	padding: 2px;
+}
+
+#menubarCM li ul a {
+	width: 100%;
+}
+
+/* checkboxPanel */
+#menubarCM li ul li .checkboxPanel input {
+	float: left;
+}
+#menubarCM li ul li .checkboxPanel label {
+	display: block;
+	float: left;
+	padding: 2px;
+}
+
+#menubarCM li ul ul {
+	margin: -1.5em 0 0 17em;
+}
+
+#menubarCM li:hover ul ul, #menubarCM li:hover ul ul ul, #menubarCM li.myhover ul ul, #menubarCM li.myhover ul ul ul {
+	left: -999em;
+}
+
+#menubarCM li:hover ul, #menubarCM li li:hover ul, #menubarCM li li li:hover ul, #menubarCM li.myhover ul, #menubarCM li li.myhover ul, #menubarCM li li li.myhover ul {
+	left: auto;
+}
+
+/* Used to add a right arrow icon if there are children. If necessary, change /app to match the name of your context. */
+#menubar li li span.menu-has-submenu {
+	background-image:url('./menu_has_submenu-ver-19.00.00.08.png');
+	background-position: 98% 50% !important;
+    background-repeat: no-repeat;
+}
+
+div.contextMenu {
+	width:100px;
+	z-index:1000;
+}
+
+div.contextMenuPlacer {
+	position:absolute;
+}
+
+/* Used to show empty panel when top node or multiple nodes selected and to show message at center of the empty panel.*/
+.defaultGridContainer {
+  height: 99.5%;
+  padding: 0 36px;
+}
+.defaultGridContainer .defaultGridTable {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.defaultGridTable tr.top,
+.defaultGridTable tr.bottom {
+  height: 49.5%;
+}
+.defaultGridTable tr.top {
+  vertical-align: bottom;
+}
+.defaultGridTable tr.bottom {
+  vertical-align: top;
+}
+.defaultGridTable tr.top td {
+  padding-bottom: 12px;
+}
+
+.gridToolbarPanel .toolbarButtonPanel {
+  margin: 6px auto;
+}
+
+.emptyTabMessage {
+	margin: 0;
+}
+
+/* REPORT POPUP */
+.PnWebReportDefinitionDialog .headers th {
+  border-bottom: 1px solid #C4C4C4;
+}
+ 
+.report-available-fields-panel {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+  padding: 5px 5px 0;
+  margin-top: 0.2rem;
+}
+
+.report-available-fields-panel .PnWebProxyListPanelOuter {
+  margin-right: 0;
+}
+
+/* to make height calc properly in IE edge and firefox */
+.reportTreePanel .reportTree,
+.report-available-fields-panel  .proxyListPanel {
+     flex: 1 1 0;
+}
+
+/* to avoid flickering effect on mouse over in IE */
+.PnWebReportDefinitionDialog .proxyNavigatorButtonPanel {
+  display: flex;
+}
+
+.boFieldSelectionPanel {
+  width: 30%;
+}
+
+/* selection panel in PnWebReportExpressionEditorDialog */
+.ui-layout-center .boFieldSelectionPanel {
+  width: 100%;
+  height: 90%;
+}
+
+/* we need height property for ipad chrome and safari to calc child height properly */
+.reportContentPanel {
+  height: calc( 100% - 60px );
+}
+
+.reportPropertyLabel {
+	margin-top:	15px;
+}
+.reportColumnLabel {
+    border-bottom: 1px solid #C4C4C4;
+    margin: 5px;
+    padding-bottom: 5px;
+}
+.report-Available-fields-label{
+  margin-top: 0;
+  border-bottom: 1px solid #C5C5C5;
+  padding-bottom: 5px;
+}
+.reportBOType img {
+  vertical-align:middle;
+}
+.boLinkTextField {
+	width: 90%;
+	height:22px;
+}
+.reportTopPanel {
+	margin-bottom: 15px;
+}
+.selectedFieldsPanel {
+	width: 40%;
+	height: 100%;
+}
+
+.pn-wrapperpanel {
+ /* height property needed in ipad chrome and safri to calc height properly*/
+  height: 100%;
+  width: 70%;
+  padding-top: 37px;
+  box-sizing: border-box;
+}
+
+.reportTreePanel {
+  width: 70%;
+}
+
+.reportTreePanel,
+.reportPropertiesPanel {
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.34);
+  height: 100%;
+}
+
+ /* avoid scroll for right panel layout in IE */
+.reportRightPanel {
+  flex: 1;
+}
+
+.pn-report-dialog-arrows,
+.PnWebPalettePopupArrows {
+  height: 100%;
+  text-align: center;
+  width: 15%;
+}
+
+.PnWebPalettePopupArrows {
+  float: left;
+}
+
+.reportButtons {
+  height: 100%;
+}
+
+.reportPropertiesPanel {
+	width: 60%;
+}
+
+.reportPropertyPanel {
+	overflow-y: scroll;
+	padding-right: 25px;
+}
+
+.reportPropertyPanelLabel {
+    width: 35%;
+    background-color: #f2f2f2;
+    border-right: 1px solid #c4c4c4;
+    height: 24px;
+    padding-left: 6px;
+    padding-top: 6px;
+    box-sizing: border-box;
+}
+
+.reportPropertySortByCol {
+	display: inline-block;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+.reportPropertyPanelText {
+    box-sizing: border-box;
+    flex: 1;
+    border-width: 0 0 1px 0px;
+    text-indent: 6px;
+    
+}
+.reportPropertyPanelText[disabled='disabled'] {
+  background-color: #f2f2f2;
+}
+
+.reportPropertyPanelTemplateText {
+	width: 50%;
+}
+
+.reportPropertyPanelCheckbox {
+	width: 100%;
+	margin-left: 10px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+
+.rememberProperties {
+	margin:5px;
+}
+
+.rememberProperties .btn {
+	float:right;
+}
+
+.rememberProperties .btn + div {
+	clear:right;
+}
+
+.reportPropertyPanelEditor input[type="text"] {
+	padding: 1px;
+	vertical-align: middle;
+}
+.reportPropertyPanelEditor img {
+	vertical-align: middle;
+}
+
+.reportPropertyPanelEditor {
+    display: flex;
+    background-color: #FFFFFF;
+    margin-left:15px;
+    border: 1px solid #d7d7d7;
+    margin-top: -1px;
+}
+
+.reportPropertyPanelEditor select {
+    border: none;
+}
+.reportPropertySortColCheckbox {
+	float: left;
+	margin-right: 20px;
+}
+
+.arrow {
+ 	margin-bottom: 6px;
+}
+
+.subreportButtonPanel .arrowRight {
+	margin-top: 30px;
+}
+
+.reportPropertyFieldInfoTable {
+  margin: 0 5px
+}
+
+.reportPropertyExampleTable table.exampleTable,
+.reportPropertyFieldInfoTable table.fieldInfoTable {
+	width: 100%;
+}
+
+.reportPropertyExampleTable {
+	display: block;
+	height: 150px;
+	overflow: auto;
+	margin: 0 6px 0 12px;
+}
+
+.reportExpertFieldInfoPanel {
+	height: 25%;
+	margin-top: 5px;
+}
+
+.fontTopPanel {
+	height: 400px;
+}
+
+.fontTopPanel .fontNameList {
+	float: left;
+	width: 50%;
+}
+
+.fontTopPanel .fontNameList select{
+	height: 375px;
+}
+
+.expressionPanels > div {
+	box-shadow: 0 0 3px 0.34px #BBBBBB;
+	padding: 5px 5px 5px 5px;
+	text-align: left;
+	margin: 2px;
+}
+
+.expressionEditorPopup .ui-layout-west,
+.expressionEditorPopup .ui-layout-east {
+	border: none !important;
+}
+
+/* .expressionEditorPopup .addButtons input[type="button"],
+.expressionEditorPopup .expressionButtons input[type="button"]{
+	padding: 4px;
+} */
+
+.expressionPanels select,
+.expressionPanels textarea,
+.expressionPanels input[type="text"] {
+	width: 100%	;
+	margin-bottom: 10px;
+}
+
+.expressionPanels textarea {
+	height: 80px;
+}
+
+.expressionPanels .expressionButtons {
+	text-align: left;
+}
+
+.expressionPanels .addButtons {
+	text-align: right;
+}
+
+.fontTopPanel .stylePanel {
+	float: left;
+	width: 30%;
+}
+
+.fontTopPanel .fontSizeList {
+	float: right;
+	width: 20%;
+}
+
+.fontTopPanel .fontSizeList select{
+	height: 375px;
+	width: 100%;
+}
+
+.fontTopPanel .clear {
+	clear: both;
+}
+
+.properties-icon {
+  background-image: url('../img/GE-report-properties-sprite-ver-19.00.00.08.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 10px;
+}
+
+.icon-dimensions-2 {
+  width: 15px;
+  background-position: -66px 50%;
+}
+
+.icon-dimensions-4 {
+  width: 15px;
+  background-position: -24px 50%;
+}
+
+.icon-dimensions-8 {
+  width: 14px;
+  background-position: -9px 50%;
+}
+
+
+.icon-dimensions-10 {
+  width: 30px;
+  background-position: -51px 50%;
+}
+
+.icon-dimensions-12 {
+  width: 30px;
+  background-position: -9px 50%;
+}
+
+/* Style related to the HelpText for Export policy mode page of ConfigurationTransfer Export wizard */
+.configurationTransferExportImportPolicy {
+	margin-left: 17px;
+}
+
+
+/* auto complete field styles */
+/* use !important for z-index autocomplete, to display autocomplete in a modal dialog.
+Wicket calculates the z-index using the parent of the fieldEditor, resulting a low z-index.
+If we would not specify z-index here, it would result in rendering the autocomplete behind the modal... */
+.pnAutoCompleter {
+  background: #fff;
+  border: 1px solid #5c636c;
+  box-shadow: 0 0 3px #000;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 20002 !important; /* z-index from wicket-modal + 1 */
+  margin-top: -2px !important;
+}
+
+.pnAutoCompleter ul.pn-suggestions {
+  list-style: outside;
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+}
+
+.pnAutoCompleter li {
+  border-bottom: 1px solid #c4c4c4;
+  cursor: default;
+  display: block;
+  padding: 5px;
+}
+
+.pnAutoCompleter li:hover,
+.pnAutoCompleter li.selected {
+  background: #279fd1;
+  color: #fff;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Web Charts
+------------------------------------------------------------------------------------------------------
+*/
+
+.webChartsPeriodPanel .domainSpecificChartToolbarPanel,
+.webChartPeriodPanel .toolbarDropDown,
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor,
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor .fieldEditor {
+	display: inline-block;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor {
+	/*top: -1px;*/
+	position: relative;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor .lifecycleIcon {
+	width: inherit;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor .editor-links {
+  display: inline;
+  margin: 0 2px 0 0;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor .fieldValueEditor {
+  margin: 0;
+  display: inline-block;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor .textEditor
+{
+  display: inline;
+  font: normal 12px 'Open Sans';
+ /* margin: 2px 0 0 0;*/
+  text-align: right;
+  width: inherit;
+}
+
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor label
+{
+	display: none;
+}
+
+.webChartPeriodPanel .toolbarButton {
+	margin: 0;
+}
+
+.webChartsPeriodPanel .defaultChartToolbarPanel {
+	float: right;
+}
+
+.webChartPeriodPanel .toolbarDropDown,
+.webChartPeriodPanel .toolbarPlannerDateFieldValueEditor {
+	vertical-align: bottom;
+}
+
+.webChartPeriodPanel .toolbarPeriodSelector {
+	display: inline;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+.toolbarPlannerDateFieldValueEditor .field-editor-con {
+  display: inline-block;
+}
+
+.webChartPeriodPanel .toolbarPeriodSelector .choiceLabel {
+	margin: 0;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: 1px solid #C4C4C4;
+	border-bottom: 1px solid #C4C4C4;
+	border-right: 1px solid #C4C4C4;
+}
+
+.webChartPeriodPanel .toolbarPeriodSelector .choiceLabelFirst
+{
+	border-left: 1px solid #C4C4C4;
+}
+
+.webChartPeriodPanel .toolbarPeriodSelector .selected
+{
+	background-color: #C4C4C4;
+}
+
+.cadViewerHatchFieldValueEditor{
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.printEntry{
+	padding-bottom:5px;
+}
+
+.w50{
+	width:50px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Work flow Chart
+------------------------------------------------------------------------------------------------------
+*/
+.workflowChartDialog,
+.workflowChartPanel {
+  width: 100%;
+  height: 100%;
+}
+
+.workflowChartDialog {
+  /* not to have scroll bar for the graph */
+  overflow: hidden;
+}
+
+.workflowChartPanel {
+  min-height: 400px;
+  min-width: 600px;
+}
+
+.workflowErrorMessage {
+  color: #3f4761;
+  height: auto;
+  padding: 20px 0 0 20px;
+  width: auto;
+}
+
+/*
+ * z-index is hard coded as 999 in fusion chart and the planon-dialog as 20001, by this the tool-tip is hiding behind the dialog
+ * so changing to 20002.
+ * z-index is added as in-line in fusion chart so adding important to override.
+ */
+#fusioncharts-tooltip-element {
+  z-index: 20002 !important;
+}
+
+/*
+ * For workflow chart border radius is added as inline in fusion chart so added !important to override the default value.
+ */
+#fusioncharts-tooltip-element > span {
+  border-radius: 2px !important;
+}
+
+/*
+ * adding padding for workflow chart tooltip.
+ */
+.workflowChart-tooltip {
+  padding: 3px 3px;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	Deep copy asset Dialog
+------------------------------------------------------------------------------------------------------
+*/
+
+.deepCopyIndent {
+ margin-left :20px;
+}
+
+/* PnWebPasswordPopup  */
+.fnet-pwd {
+	width: 100%;
+}
+.fnet-pwd-label {
+	width: 30%;
+}
+.fnet-pwd-input {
+	width: 90%;
+	margin-bottom: 5px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	toggling behaviour for layout panels
+------------------------------------------------------------------------------------------------------
+*/
+
+/*
+* hiding the cad viewer buttons when data panel collapsed
+*/
+[data-grid-state="collapsed"] .dataViewToolbarPanel {
+    display: none;
+}
+
+/*
+ * overriding overflow and z-index for showing the drop down menu of action panel
+ */
+.webStepPanelLayout .ui-layout-pane.ui-layout-pane-east {
+  overflow: visible !important;
+  z-index: 3 !important;
+}
+
+.webStepPanelLayout .toggle-action-button {
+  background-color: #FFFFFF;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-width: 1px 0 1px 1px; 
+  border-style: solid;
+  border-color: #C4C4C4;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  display: inline-block;
+  height: 21px;
+  margin-top: 14px;
+  vertical-align: top;
+  width: 15px;
+  opacity: 0.8;
+  box-sizing: border-box;
+}
+
+.webStepPanelLayout .toggle-action-button:hover {
+  opacity: 1;
+}
+
+.webStepPanelLayout .toggle-grid-button {
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.webStepPanelLayout .toggle-grid-button :hover {
+  opacity: 1;  
+}
+
+.pn-desktop-layout[data-grid-state=collapsed] .toggle-grid-button,
+.pn-desktop-layout[data-action-state=collapsed] .toggle-action-button {
+  background-image: url('../../images/common/panel-expand-8-ver-19.00.00.08.png');
+}
+
+.pn-desktop-layout[data-action-state=expanded] .toggle-action-button {
+  background-image: url('../../images/common/panel-collapse-8-ver-19.00.00.08.png');
+}
+
+.pn-desktop-layout[data-grid-state=expanded] .toggle-grid-button {
+  background-image: url('../../images/common/panel-grid-collapse-10-ver-19.00.00.08.png');
+}
+
+[data-grid-state=collapsed] .contentarea .tabsheet-boGridTabPanel {
+    overflow-y: hidden;
+}
+
+/*
+ * styling for action panel
+ */
+[data-action-state=collapsed] .actionGroupHeaderLabel {
+  background-position: center center;
+  text-indent: 100%;
+  margin-right: 0;
+  padding: 0;
+}
+
+[data-action-state=collapsed] .actionList .tool-bar-text,
+[data-action-state=collapsed] .pn-dropdown-menu-header-text,
+[data-action-state=collapsed] .actionButtonLabel {
+  display: none;
+}
+
+[data-action-state=collapsed] .pn-dropdown-menu-items .actionButtonLabel {
+  display: inline;
+}
+
+[data-action-state=collapsed] .genericActionPanel .actionImage {
+  display: inline-block;
+}
+
+[data-action-state=collapsed] .genericActionPanel .actionButton.btn,
+[data-action-state=collapsed] .genericActionPanel span.btn.button-disabled {
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 60px;
+  padding: 0;
+}
+
+[data-action-state=collapsed] .actionList {
+  text-align: center;
+}
+
+[data-action-state=collapsed] .actionList .pn-dropdown-menu-items {
+  text-align: left;
+}
+
+[data-action-state=collapsed]  .pn-dropdown-menu-icon {
+  margin: 0;
+}
+
+[data-grid-state=collapsed] .genericActionPanel {
+  display: none;
+}
+
+[data-grid-state=collapsed] .nonGenericActionPanel {
+  height: 98% !important;
+}
+
+/*
+* https://planon.atlassian.net/browse/SWM-574
+* the background of the viewer is not in disable state 
+*/
+.cadintegrator-button-disabled .middle {
+  opacity: 0.5;
+}
+
+/** styles for ajax call failure error message popup */
+.pn-ajax-error-mask {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: none;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 21000;
+}
+
+.pn-ajax-error-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.pn-ajax-error {
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.34);
+  width: 375px;
+}
+
+.pn-ajax-error .w_caption {
+  padding: 9px 0;
+}
+
+.pn-ajax-error .w_captionText {
+  margin: 0 36px 0 12px;
+}
+
+.pn-ajax-error .w_content {
+  border-top: 1px solid #b7b7b7;
+  margin: 0 3px 3px;
+}
+
+.pn-ajax-error .error-container {
+  background-color: #f2f2f2;
+  padding: 12px;
+  display: table;
+}
+
+.pn-ajax-error .error-icon,
+.pn-ajax-error .ajax-error-msg {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pn-ajax-error .error-icon {
+  margin-right: 10px;
+}
+
+#WorkflowZoomIn,
+#CIViewerZoomIn {
+  background-image: url('../img/zoomin-ver-19.00.00.08.svg'); }
+
+#WorkflowZoomOut,
+#CIViewerZoomOut {
+  background-image: url('../img/zoomout-ver-19.00.00.08.svg'); }
+
+#fitToView,
+#CIViewerFitToView {
+  background-image: url('../img/zoom-fit-ver-19.00.00.08.svg'); }
+
+.flex-container,
+.PnWebReportDefinitionDialog .dialogContentPanel {
+  display: flex;
+}
+
+.flex-container.horizontal {
+  flex-flow: row wrap;
+}
+
+.flex-container.vertical {
+  flex-flow: column wrap;
+}
+
+.flex-container.vertical-nowrap,
+.PnWebReportDefinitionDialog .dialogContentPanel {
+  flex-flow: column nowrap;
+}
+
+.reportContentPanel,
+.flex-container > .flex-item.grow {
+  flex: 1 1 auto;
+}

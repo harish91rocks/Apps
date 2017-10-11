@@ -1,0 +1,205 @@
+#module-header {
+    background-color: #FEFEFE;
+    height: 18px;
+    margin: 10px 0 0;
+}
+#module-title-container .module-icon {
+	margin: 0px 12px;
+	vertical-align: middle;
+}
+#module-title {
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.webentry_stepmethod_toolbar {
+  float: right;
+}
+
+.webentry_stepmethod_toolbar .webstepmethod-toolbar {
+  margin-right: 12px;
+}
+
+.webstepmethod-toolbar a.step-search {
+  background-color: #8d9daf;
+  border-radius: 2px;
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+}
+
+.webstepmethod-toolbar a.step-search:hover {
+  background-color: #697582;
+}
+
+#drilldown {
+	height: auto;
+}
+
+.levelChooser.tabpanel {
+	clear: right;
+	margin: 0px;
+	width: 100%;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser {
+  margin-top: 12px;
+  padding: 0px 0px 0px 12px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser[data-tabs=empty] {
+  margin-top: 0;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser ul {
+	width: 100%;
+	float: left;
+	position: relative;
+	margin: 0px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab {
+	display: inline;
+	float: left;
+	/* Negative margin on right of arrow makes next arrow move left to fold into tip of this arrow. */
+	margin: 0px -25px 0px 0px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.selected {
+	/* Lift selected tab out of flow to make it float above others, for dropshadow to work */
+	position: relative;
+	/* Because of dropshadow selected tab image is wider, so adjust margin-right . */
+	margin-right: -21px;
+	margin-left: -4px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.first {
+	margin: 0px -33px 0px 0px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.last {
+	/* Negative margin not needed on last arrow. */
+	margin-right: 2px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab:focus {
+	outline: none;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab a,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab .level-disabled em {
+	display: block;
+	height: 33px;
+    width: 200px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab a span,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab a .breadCrumbs,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab em span {
+	width: 158px;
+	margin: 0 0 0 22px;
+	cursor: pointer;
+	display: block; /* required for truncating lengthy text */
+    height: 14px;
+    line-height: 0.77;
+    padding-top: 1px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab a span,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab em span {
+    padding-top: 4px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.first a span,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.first a .breadCrumbs,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.single a.selected span {
+	margin: 0 0 0 8px;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab em span {
+	cursor: default;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.single a {
+	margin-left: 5px;
+}
+
+.levelChooser.tabpanel .tabsheet-levelChooser {
+	padding: 0px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	StepChooser styling
+------------------------------------------------------------------------------------------------------
+*/
+
+.stepChooser {
+	height: 100%;
+}
+
+select.dropdownStepChooserPanel {
+	left: 10px;
+	width: 28%;
+	float: left;
+}
+
+div.dropdownStepChooserPanel {
+    clear: both;
+    padding: 3px 9px;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	Step Chooser
+------------------------------------------------------------------------------------------------------
+*/
+
+.stepChooser .tabbedStepChooser {
+	margin: 0;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser {
+    padding: 6px 12px 12px 12px;
+	zoom: 1;
+	box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2);
+	position: relative;
+    z-index: 5;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser[data-tabs=empty] {
+  padding-bottom: 6px;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser ul {
+	margin: 0;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser ul .stepTab {
+	border-radius: 2px;
+    float: left;
+    list-style: none;
+    margin: 0 3px 0 0;
+    padding: 0px 9px;
+    line-height: 1.75;
+}

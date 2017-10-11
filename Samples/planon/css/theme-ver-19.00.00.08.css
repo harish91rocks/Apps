@@ -1,0 +1,1507 @@
+/*
+------------------------------------------------------------------------------------------------------
+Theme File. Note Order is important here
+------------------------------------------------------------------------------------------------------
+*/
+
+/*PnWebMainPageWithLaunchCenter.css*/
+
+body {
+	/* scrollbar styling for IE */
+	scrollbar-base-color: #C2C2C2;
+	scrollbar-base-color: #C2C2C2;
+	scrollbar-3dlight-color: #C2C2C2;
+	scrollbar-highlight-color: #e0e0e0;
+	scrollbar-track-color: #e0e0e0;
+	scrollbar-arrow-color: #C2C2C2;
+	scrollbar-shadow-color: #C2C2C2;
+	scrollbar-dark-shadow-color: #e0e0e0;
+}
+
+/* scrollbar styling for Chrome */
+::-webkit-scrollbar-track-piece { background-color: #e0e0e0; }
+::-webkit-scrollbar-thumb { background-color: #C2C2C2; }
+::-webkit-scrollbar-corner {background-color: transparent;}
+.nonGenericActionPanel::-webkit-scrollbar-button { background-color: #FFF; }
+
+/*
+ * Added two css levels to override the font applied to body by
+ * EXTjs and jquery.layout.css.
+ */
+html .pn-body {
+	color: #3F4751;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+	-- Generic buttons theme styling --
+------------------------------------------------------------------------------------------------------
+*/
+.btn-default {
+  background-color: #c4c4c4;
+  border-color: #c4c4c4;
+}
+
+.btn-default:hover:not([disabled]),
+.btn-default:focus:not([disabled]) {
+  border-color: #B7B7B7; 
+  background-color:#B7B7B7;
+}
+
+.btn-primary {
+  background-color: #1464A1;
+  border-color: #1464A1;
+  color: #FFFFFF;
+}
+
+.btn-primary:focus:not([disabled]),
+.btn-primary:hover:not([disabled]) {
+  background-color: #105183;
+  border-color: #105183;
+}
+
+.btn-secondary,
+.expression-btn {
+  background-color: #FFFFFF;
+  border-color: #c4c4c4;
+}
+
+.btn-secondary:hover:not([disabled]),
+.btn-secondary:focus:not([disabled]) {
+  background-color: #f2f2f2;
+  border-color: #989898;
+  color: #1464a1;
+}
+
+.btn-round-1 {
+  background-color: #FFFFFF;
+  border-color: #8D9DAF;
+}
+
+.btn-round-1:hover {
+  border-color: #8393A5;
+}
+/*
+------------------------------------------------------------------------------------------------------
+	-- End of Generic buttons theme styling --
+------------------------------------------------------------------------------------------------------
+*/
+
+.ui-layout-container .ui-layout-pane {
+	background: #F2F2F2;
+	border: none;
+}
+
+.webStepPanelLayout .pn-layout {
+  background-color: #E7E7E7;
+}
+
+.mainWebLayout > .ui-layout-center {
+  background-color: #FEFEFE;
+}
+
+#navigatorPanel {
+	background: #f0f0f0;
+	color: #333;
+	border: 1px solid #676f7a;
+}
+
+#navigatorPanel .wicket-tree {
+	background: #f0f0f0;
+}
+
+#navigatorPanel div:focus {
+	outline: 2px solid #81b4d1;
+}
+
+#navigatorHeader {
+	background: #81b4d1;
+	font-weight: bold;
+}
+
+.SearchAndFilterPanel {
+	background: #E0E0E0;
+	border: 1px solid #676f7a;
+}
+
+.SearchAndFilterPanel .quickSearchPanel {
+	border-right: 1px solid #90d0f0;
+}
+
+.SearchAndFilterPanel .quickSearchPanel form {
+	padding-right: 16px;
+	border-right: 1px solid #19658c;
+}
+
+.SearchAndFilterPanel .quickSearchPanel select {
+	border-color: #676f7a;
+}
+
+.SearchAndFilterPanel :focus,
+.SearchAndFilterPanel .searchEditors .fieldValueEditor input:focus {
+	outline: 2px solid #094c71;
+	outline: none\0/IE9;
+}
+
+.SearchAndFilterPanel select:focus,
+.SearchAndFilterPanel .searchEditors .fieldValueEditor input:focus,
+.SearchAndFilterPanel a:focus img{
+	outline: 2px solid #094c71\0/IE9;
+}
+
+.temporary-onoff-filter {
+  background-color: #FFFFFF;
+  border-color: #B7B7B7;
+}
+
+.filterpanel select { border: 1px solid #279fd1; }
+.activeFilter .filterpanel select { border: 1px solid #e49600; }
+
+.leftContextMenu a:hover {
+  background-color: #279FD1;
+  color: #FFFFFF;
+}
+
+.tab-row-tabbedStepChooser {
+	background: #FEFEFE
+}
+
+.tabsheet-orderCostDetailPanel {
+    border-top: 1px solid #C4C4C4;
+}
+
+.tabpanel .tab-row-boGridTabPanel {
+	border-bottom: 1px solid #C4C4C4;
+}
+
+.nonGenericActionPanel {
+   	background: #FEFEFE;
+    border: 1px solid #C4C4C4;
+}
+
+/*common.css*/
+
+span.wicket-ajax-indicator {
+	background: #fff;
+	border: 2px solid #fff;
+}
+
+div#planon-ajax-indicator-img {
+	background: url('../../img/indicator-ver-19.00.00.08.gif');
+}
+
+/* frame ui */
+#actionGroupToolbarPanel a .middle span,
+.nonGenericActionPanel a {
+	color: #3F4751;
+}
+
+#actionGroupToolbarPanel a:hover .middle span,
+.changeWithinSelectionOnActionDialog .actionButton:hover, 
+.nonGenericActionPanel a:hover {
+	color: #FEFEFE;
+}
+
+.BomSave {
+  background-color: #1464a1;
+  border-color: #1464a1;
+  color: #FFFFFF;
+}
+
+.BomSave:hover:not(.button-disabled) {
+  background-color: #105183;
+  border-color: #105183;
+}
+
+.BomRead {
+  background-color: #C4C4C4;
+  border-color: #c4c4c4;
+}
+
+.BomRead:hover:not(.button-disabled) {
+  background-color: #B7B7B7;
+  border-color: #B7B7B7;
+}
+
+.nonGenericActionPanel .actionButton:hover,
+#actionGroupToolbarPanel .toolbarButton a:hover,
+.changeWithinSelectionOnActionDialog .actionButton:hover {
+   background: #279FD1;
+}
+
+.editor-links a:focus,
+.PlanonWebBaseDialog .quickSearchBar .searchEditor.referenceField .fieldValueEditor a:focus,
+.PlanonWebBaseDialog .quickSearchBar .searchButton.clear a:focus {
+	outline: none\0/IE9;
+}
+
+.editor-links a:focus img,
+.PlanonWebBaseDialog .quickSearchBar .searchEditor.referenceField .fieldValueEditor a:focus img,
+.PlanonWebBaseDialog .quickSearchBar .searchButton.clear a:focus img {
+	outline: 2px solid #81b4d1\0/IE9;
+}
+
+tr.headers a {
+	color: #333;
+}
+
+.wicket_orderUp .sortImage {
+    background: url('./img/sortAscending-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+
+.wicket_orderDown .sortImage {
+    background: url('./img/sortDescending-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+
+tr.odd:hover,
+tr.even:hover {
+    background-color: #279FD1;
+    color: #FFFFFF;
+}
+
+tr.selected,
+tr.selected:hover {
+	background-color: #1464A1;
+    color: #FFFFFF;
+}
+
+.tblColumnList tr.odd:hover,
+.tblColumnList tr.even:hover {
+	background: #c0dae8;
+}
+
+tr.odd:hover td.proxyIcon,
+tr.even:hover td.proxyIcon {
+  background: none #C6E4F3;
+}
+
+tr.selected td.proxyIcon,
+tr.selected:hover td.proxyIcon{
+  background: none #b1d7ea;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font: normal normal 100% Arial,sans-serif;
+}
+
+.ui-resizable-e {
+    border-right: 1px solid #1464A1;
+}
+
+/*editor.css*/
+
+.editorDisabled .fieldValueEditor select {
+	background: #ededed;
+}
+
+.editorDisabled .fieldValueEditor input,
+.editorDisabled .fieldValueEditor select,
+.editorDisabled .fieldValueEditor .radio label {
+	color: #666;
+}
+
+.editorDisabled .fieldValueEditor textarea {
+	color: #666;
+}
+
+.fieldValueEditor input {
+	vertical-align: middle;
+}
+
+.editorDisabled .iconFieldValueEditor {
+	background-color: transparent;
+	border: none /* editor */;
+}
+
+.editorDisabled .fieldValueEditor span.radio {
+	background-color: transparent;
+}
+
+.booleanRadioGroup {
+	border: 1px solid #ccc;
+	background: white;
+}
+
+.editorDisabled .booleanRadioGroup {
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.editorDisabled .booleanRadioGroup .item0 {
+	border-color: transparent;
+}
+
+label.disabled,
+.childmenu .childmenutext.disabled {
+	color: #666;
+}
+
+.fieldValueEditor input[type="text"],
+.fieldValueEditor input[type="password"],
+.fieldValueEditor input[type="button"],
+div.fieldValueEditor select,
+span.textAreaEditor input,
+span.textAreaEditor select,
+.modalwindow input[type="text"],
+.modalwindow input[type="password"],
+.modalwindow select {
+	color: #3F4751;
+}
+
+.modalwindow table.proxyList input {
+	border: none;
+	text-overflow: ellipsis;
+}
+
+.textAreaEditor span.textAreaReplacement.disabled{
+	background: transparent;
+	border: 1px solid #d7d7d7; /* editor */
+}
+
+.editorDisabled .lastLargeField span.textAreaEditor textarea {
+	background: none;
+}
+
+.tabpanel label.mandatory {
+	color: #3F4751;
+}
+
+/*PlanonWebBaseDialog.css*/
+
+input.PnWebButton {
+	background: url('./img/button_bg-ver-19.00.00.08.png?bg') repeat-x;
+	border: 1px solid #ccc;
+	color: #3f3f3f;
+	font-weight: bold;
+}
+
+input.PnWebButton:focus,
+input.PnWebButton:hover {
+	border: 1px solid #999;
+	background: url('./img/button_bg_hover-ver-19.00.00.08.png') repeat-x;
+	box-shadow: 3px 3px 5px #999;
+	outline: none;
+}
+
+input.PnWebButton.button-disabled:hover {
+	border: 1px solid #ccc;
+	background: url('./img/button_bg_hover-ver-19.00.00.08.png') repeat-x;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.baseButtonPanel {
+    border-color: #B7B7B7;
+}
+
+/* This code applies the same background image to multiple different modal window elements.
+   The modal window code expects a single image that contains all backgrounds for all mentioned
+   elements and will handle selecting the right part of the single image itself. */
+div.wicket-modal div.w_blue div.w_top,
+div.wicket-modal div.w_blue div.w_bottom,
+div.wicket-modal div.w_blue div.w_topLeft,
+div.wicket-modal div.w_blue div.w_topRight,
+div.wicket-modal div.w_blue div.w_bottomRight,
+div.wicket-modal div.w_blue div.w_bottomLeft,
+div.wicket-modal div.w_blue a.w_close {
+	background-image: none;
+	height: 3px;
+}
+
+div.wicket-modal div.w_blue div.w_left,
+div.wicket-modal div.w_blue div.w_right {
+	background-color: #FFFFFF;
+	background-image: none;
+}
+
+.PlanonWebBaseDialog .dialogContentPanel {
+	background: #F2F2F2;
+}
+
+.modalwindow .errorMessage div.messageContext,
+.PnWebSearchEmptySpacesDialog .dialogContentPanel > div > span {
+    color: #1464A1;
+}
+
+.PnWebSearchEmptySpacesDialog .searchOptionsTitle
+{
+    color: #8D9DAF;
+}
+
+.PnWebBasicReportExecutionDialog .tab-row-reportTabPanel {
+    border-bottom: 1px solid #C4C4C4;
+}
+
+/*PnWebAccessDisabledPage.css*/
+
+body.accessdisabled {
+	background: url('../../img/background_login-ver-19.00.00.08.png') #283483 repeat-x;
+}
+
+div.accessdisabled_container {
+	border: 2px solid #617283;
+	background-color: #fff;
+}
+
+div.accessdisabled {
+	border: 1px solid #bbb;
+	background-color: #e9eef2;
+}
+
+ /* Action panel */
+ .nonGenericActionPanel .actionList span.button-disabled,
+.pn-dropdown-menu-disabled .pn-dropdown-menu-header,
+.pn-dropdown-menu-disabled .pn-dropdown-menu-header:hover {
+    color: #B9B9B9;
+}
+
+/*PnWebAdvancedSearchPanel.css*/
+
+.currentStepLabel,
+.actionGroupHeader {
+	color: #1464A1;
+}
+
+.currentStepLabel:hover,
+.actionGroupHeader:hover {
+    color: #105183;
+}
+
+.actionGroupSeperator {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/*PnWebBaseSearchPanel.css*/
+.search-and-filter-panel,
+.PlanonWebBaseDialog .searchBar {
+	background-color: #b1d7ea;
+}
+
+.quickSearchBar select,
+.quickSearchBar .textAreaEditor textarea,
+.quickSearchBar .fieldValueEditor input[type="text"] {
+	border-color: #279fd1;
+}
+
+.activeSearch .pn-searchpanel select,
+.activeSearch .pn-searchpanel .textAreaEditor textarea,
+.activeSearch .searchEditors .fieldValueEditor input[type="text"] {
+	border-color: #e49600;
+}
+
+.activeSearch {
+	background-color: #FFC200;
+}
+
+div.PnWebReservationCostDetailPopup label.disabled {
+	color: #aca899;
+}
+
+div.PnWebReservationCostDetailPopup hr {
+	background-color: #ccc;
+	color: #ccc
+}
+
+div.PnWebCompositeBoPopUpError {
+	border: 1px solid #676f7a /* editor */;
+	background: #fff;
+}
+
+div.PnWebCompositeBoPopUpError div.errorTitle {
+	border-bottom: 1px solid #676f7a /* editor */;
+	border-top: 1px solid #9dbad5;
+	background: #7b93a9;
+}
+
+div.PnWebCompositeBoPopUpError div.message {
+	color: #f00
+}
+
+
+/*PnWebEntryPanel.css*/
+
+.levelChooser .tab-row-levelChooser {
+	background-color: #FEFEFE;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab .breadCrumbs {
+	color: #3F4751;
+}
+
+.tab-row-levelChooser .tab-text {
+ 	color: #1464A1;
+}
+
+.tab-row-levelChooser .selected .tab-text {
+ 	color: #FFFFFF;
+ }
+
+.tab-row-levelChooser .level-disabled .tab-text {
+ 	color: #b7b7b7;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab a {
+	background: url('./img/levelChooserRegular_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab:hover a {
+	background: url('./img/levelChooserRegularFocus_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab a.selected {
+	background: url('./img/levelChooserSelected_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab:focus a.selected {
+	background: url('./img/levelChooserSelectedFocus_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab.first a {
+	background: url('./img/levelChooserFirstRegular_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab.first:hover a {
+	background: url('./img/levelChooserFirstRegularFocus_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab.first a.selected {
+	background: url('./img/levelChooserFirstSelected_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab.first:focus a.selected {
+	background: url('./img/levelChooserFirstSelectedFocus_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser .tab-row-levelChooser .level-disabled em {
+	background: url('./img/levelChooserDisabled_bg-ver-19.00.00.08.png?bg') no-repeat;
+	color: #B7B7B7;
+}
+
+.levelChooser .tab-row-levelChooser ul .levelTab.first .level-disabled em {
+	background: url('../../img/levelChooserFirstDisabled_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.single a,
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.single a.selected {
+	background: url('./img/levelChooserFirstSelected_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+.levelChooser.tabpanel .tab-row-levelChooser .levelTab.single:focus a {
+	background: url('./img/levelChooserFirstSelectedFocus_bg-ver-19.00.00.08.png?bg') no-repeat;
+}
+
+/*PnWebFileChooser.css*/
+
+div.PnWebFileChooser div.locationRow {
+	border: 1px solid #676f7a /* editor */;
+	background: #fff;
+}
+
+div.PnWebFileChooser div.fileListPanel {
+	border: 1px solid #676f7a /* editor */;
+	background: #fff;
+}
+
+.selected .file-entry,
+.selected .file-entry:hover {
+   background-color: #1464a1;
+   color: #ffffff;
+}
+
+.file-entry:hover {
+    background-color: #279fd1;
+    color: #ffffff;
+}
+
+div.filter-dialog .filterNamePane input.textEditor {
+	border: 1px solid #676f7a /* editor */;
+}
+
+.noFilter select {
+    color: #697582;
+}
+
+.search-and-filter-panel .activeFilter,
+.SearchAndFilterPanel .activeFilter ul li select {
+	background-color: #FFC200;
+}
+
+.PnWebFrequencyDialog .ui-layout-pane-center,
+.PnWebFrequencyDialog .dateslist {
+	border: 1px solid #C4C4C4;
+}
+
+div.orderCostDetailPanel .PnWebProxyListPanel {
+	border: 1px solid #676f7a;
+}
+
+div.orderCostDetailPanel .PnWebProxyListPanel .proxyListPanel {
+	border: none;
+}
+
+div.PnWebOrderLinesPopup div.fieldValueEditor {
+	border: none;
+}
+
+.ProxyNavigator span em {
+	color: #1464A1;
+}
+
+.ProxyNavigator a {
+	color: #868F99;
+}
+
+.ProxyNavigator a:hover {
+	color: #279fd1;
+}
+
+.paginationFirst { background-image: url('./img/pagination_first-ver-19.00.00.08.png'); }
+.paginationFirst:hover { background-image: url('./img/pagination_first_hover-ver-19.00.00.08.png'); }
+.paginationNext { background-image: url('./img/pagination_next-ver-19.00.00.08.png'); }
+.paginationNext:hover { background-image: url('./img/pagination_next_hover-ver-19.00.00.08.png'); }
+.paginationPrev { background-image: url('./img/pagination_prev-ver-19.00.00.08.png'); }
+.paginationPrev:hover { background-image: url('./img/pagination_prev_hover-ver-19.00.00.08.png'); }
+.paginationLast { background-image: url('./img/pagination_last-ver-19.00.00.08.png'); }
+.paginationLast:hover { background-image: url('./img/pagination_last_hover-ver-19.00.00.08.png'); }
+
+div.PnWebReservationCostDetailDialog span.actionPanel {
+	background-color: #fff
+}
+
+div.schedulerFilter div.fieldValueEditor {
+	border: none;
+}
+
+div.tabbedStepChooser div.tab-row ul li.stepTab a {
+	color: #3F4751;
+}
+
+div.tabbedStepChooser div.tab-row ul li.stepTab:hover {
+	background-color: #ECECEC;
+}
+
+.tab-row-tabbedStepChooser .selected .tab-text {
+ 	color: #FFFFFF;
+}
+
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser ul .stepTab.selected,
+.stepChooser .tabbedStepChooser .tab-row-tabbedStepChooser ul .stepTab.selected:hover {
+    background: none repeat scroll 0 0 #1464A1;
+}
+
+.selectionLabel {
+	color: #333;
+}
+
+
+/*PnWebTree.css*/
+.row-relatedbo {
+	color: #808080;
+}
+
+/* Launch center tree styles */
+
+.wicket-tree .tree-junction-collapsed { background-image: url('./img/arrow_title_collapse-ver-19.00.00.08.png'); }
+.wicket-tree .tree-junction-expanded { background-image: url('./img/arrow_title_expand-ver-19.00.00.08.png'); }
+
+.wicket-tree .tree-junction-collapsed,
+.wicket-tree .tree-junction-expanded {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.navigatorTree .wicket-tree .tree-content .tree-folder-closed { background: url('./img/folderClosedBlue-ver-19.00.00.08.png') no-repeat; }
+.navigatorTree .wicket-tree .tree-content .tree-folder-open  { background: url('./img/folderClosedBlue-ver-19.00.00.08.png') no-repeat; }
+
+/* element list tree styles */
+
+
+
+body div.wicket-tree span.junction,
+body div.wicket-tree span.indent-line,
+body div.wicket-tree span.corner,
+body div.wicket-tree span.junction-last {
+	background: none;
+}
+
+body div.wicket-tree div.a_ {
+	padding-left: 5px;
+}
+
+body div.navigatorTree div.wicket-tree .nodeLink.navigatorIcon .icon {
+	background-image: url('./img/folderClosedBlue-ver-19.00.00.08.png') !important;
+}
+
+body div.navigatorTree div.wicket-tree div.a_ {
+	padding-left: 1px;
+}
+
+body div.wicket-tree span.plus {
+	background: url('./img/tree_collapsed-ver-19.00.00.08.png') no-repeat;
+	margin: 3px 0 0 4px;
+}
+
+body div.wicket-tree span.minus {
+	background: url('./img/tree_expanded-ver-19.00.00.08.png') no-repeat;
+	margin: 3px 0 0 3px;
+}
+
+div.wicket-tree span.junction,
+div.wicket-tree span.junction-last,
+div.wicket-tree span.plus,
+div.wicket-tree span.minus,
+div.wicket-tree span.corner,
+div.wicket-tree span.indent-line {
+	background-image: url('../../img/tree-images-ver-19.00.00.08.png')
+}
+
+div.wicket-tree-table {
+	border: none;
+}
+
+div.wicket-tree-table a {
+	color: #31a
+}
+
+div.wicket-tree-table span.junction,
+div.wicket-tree-table span.junction-last,
+div.wicket-tree-table span.plus,
+div.wicket-tree-table span.minus,
+div.wicket-tree-table span.corner,
+div.wicket-tree-table span.indent-line {
+	background-image: url('../../img/tree-images-ver-19.00.00.08.png')
+}
+
+div.wicket-tree-table div.row-selected {
+	border: 1px solid #e39696;
+	background-color: #f2e1e1;
+}
+
+div.wicket-tree-table div.row,
+div.wicket-tree-table div.row-selected {
+	background-image: url('../../img/dotted-line-ver-19.00.00.08.png')
+}
+
+div.wicket-tree-table span.b_ span.c_ {
+	border-left: 1px solid #ddd
+}
+
+div.wicket-tree-table div.header {
+	border-bottom: none;
+	background-color: #eee
+}
+
+.proxyListPanel {
+	overflow-y: auto;
+	clear: both;
+}
+
+.proxyList .headers a {
+    color: #1464A1;
+}
+
+.proxyList tbody tr td {
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.detailListFieldValueEditor tbody tr td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.proxyToolbarWrapper {
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.webStepPanelLayout .proxyToolbar a,
+.webStepPanelLayout .proxyToolbar .toolbarButton > span,
+.proxyToolbar .nottogglebutton a.selected,
+.round-button,
+.webChartPeriodPanel img {
+   background-color: #8D9DAF;
+}
+
+.webStepPanelLayout .proxyToolbar a:hover,
+.webStepPanelLayout .proxyToolbar .toolbarButton > span:hover,
+.proxyToolbar .nottogglebutton a.selected:hover,
+.round-button:hover,
+.webChartPeriodPanel img:hover {
+  background-color: #697582;
+}
+
+.proxyToolbar a.selected {
+  background-color: #ffcc2a;
+}
+
+.proxyToolbar a.selected:hover {
+  background-color: #ff9600;
+}
+
+/* styles for proxy panel ( Detail List FieldValueEditor )  in data grid panel */
+
+.detailListFieldValueEditor .headers {
+    background-color: #d7d7d7;
+}
+.detailListFieldValueEditor .headers a,
+.detailListFieldValueEditor .ui-resizable, /* color for ellipsis(...) */
+/* detail list tabel when the table header is in disabled mode */
+.detailListFieldValueEditor .headers em {
+    color: #7c7c7c;
+}
+.detailListFieldValueEditor .ui-resizable-e {
+    border-right-color: #7c7c7c;
+}
+/* END of styles for proxy panel in data grid panel */
+
+/* TODO SaWitt / RaKoni: Add popups that need a border around the proxy list here */
+.PnWebProxyWithLabelDialog .PnWebProxyListPanel,
+.PnWebPALOnSelectionDialog .ui-layout-west,
+.PnWebTicketUsageOnSelectionDialog .ui-layout-center {
+	border: 1px solid #676f7a;
+}
+
+.PnWebProxyWithLabelDialog .label {
+	margin: 6px 0 10px 0;
+}
+
+#toolBarPanel {
+	border-bottom: 1px solid #0a4d71;
+	background: url('./img/toolbar_bg-ver-19.00.00.08.png?bg') #676f7a;
+}
+
+#toolBarPanel :focus {
+	outline: 2px solid #094c71;
+}
+
+#toolBarPanel .toolbarButton a .middle span {
+	color: white;
+}
+
+/* Backgrounds for button states: Normal, Hover */
+#toolBarPanel .toolbarButton a:hover .left {
+	background: url('./img/button-hover-left-ver-19.00.00.08.png') top left no-repeat;
+}
+
+#toolBarPanel .toolbarButton a:hover .middle {
+	background: url('./img/button-hover-middle-ver-19.00.00.08.png') top left repeat-x;
+}
+
+#toolBarPanel .toolbarButton a:hover .right {
+	background: url('./img/button-hover-right-ver-19.00.00.08.png') top right no-repeat;
+}
+
+/* Backgrounds for button states: Selected */
+
+#toolBarPanel .toolbarButton a.selected .left {
+	background: url('./img/button-selected-left-ver-19.00.00.08.png') top left no-repeat;
+}
+
+#toolBarPanel .toolbarButton a.selected .middle {
+	background: url('./img/button-selected-middle-ver-19.00.00.08.png') top left repeat-x;
+}
+
+#toolBarPanel .toolbarButton a.selected .right {
+	background: url('./img/button-selected-right-ver-19.00.00.08.png') top right no-repeat;
+}
+
+
+/* Backgrounds for button states: Selected, Hover */
+
+#toolBarPanel .toolbarButton a.selected:hover .left {
+	background: url('./img/button-hover-left-ver-19.00.00.08.png') top left no-repeat;
+}
+
+#toolBarPanel .toolbarButton a.selected:hover .middle {
+	background: url('./img/button-hover-middle-ver-19.00.00.08.png') top left repeat-x;
+}
+
+#toolBarPanel .toolbarButton a.selected:hover .right {
+	background: url('./img/button-hover-right-ver-19.00.00.08.png') top right no-repeat;
+}
+
+/* Backgrounds for button states: Striking color */
+
+#toolBarPanel .toolbarButton a.strikingColor .left {
+	background: url('./img/button-striking-left-ver-19.00.00.08.png') top left no-repeat;
+}
+
+#toolBarPanel .toolbarButton a.strikingColor .middle {
+	background: url('./img/button-striking-middle-ver-19.00.00.08.png') top left repeat-x;
+}
+
+#toolBarPanel .toolbarButton a.strikingColor .right {
+	background: url('./img/button-striking-right-ver-19.00.00.08.png') top right no-repeat;
+}
+
+/* Backgrounds for button states: Striking color, Hover */
+
+#toolBarPanel .toolbarButton a.strikingColor:hover .left {
+	background: url('./img/button-striking-hover-left-ver-19.00.00.08.png') top left no-repeat;
+}
+
+#toolBarPanel .toolbarButton a.strikingColor:hover .middle {
+	background: url('./img/button-striking-hover-middle-ver-19.00.00.08.png') top left repeat-x;
+}
+
+#toolBarPanel .toolbarButton a.strikingColor:hover .right {
+	background: url('./img/button-striking-hover-right-ver-19.00.00.08.png') top right no-repeat;
+}
+
+
+/* Step method components, disabled = true. */
+
+.disabled,
+#toolBarPanel .toolbarButton .middle span,
+#toolBarPanel .toolbarButton .disabled .middle span {
+	color: #BCBEBF;
+}
+
+/* Step method components, disabled = true. for frame ui */
+#actionGroupToolbarPanel .middle span {
+    color: #B7B7B7;
+}
+
+div.buttonPanel {
+	background: #e9eef2;
+}
+
+div.buttonPanel input {
+	border: 1px solid #676f7a /* editor */;
+	background: url('./img/button_bg-ver-19.00.00.08.png?bg') repeat-x;
+	color: #202b79;
+}
+
+
+/* webclient.css */
+
+div.messagePanel span {
+	color: #333;
+}
+
+div.uploadControls input.submitButton {
+	border: 1px solid #676f7a /* editor */;
+	background: url('./img/button_bg-ver-19.00.00.08.png?bg') repeat-x;
+	color: #202b79;
+}
+
+.tabpanel ul .gridTab:hover,
+.tabpanel ul .gridTab:focus {
+	background-color: #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+.tabpanel ul .gridTab a:hover {
+	color: #3f4751;
+}
+
+.tabpanel ul .gridTab.selected {
+  background-color: #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.webStepPanelLayout .tabpanel ul .gridTab.selected {
+  background-color: #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.webStepPanelLayout .tabpanel ul .gridTab:hover,
+.webStepPanelLayout .tabpanel ul .gridTab:focus {
+  background-color: #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.tabpanel .gridTab.selected .tab-text {
+ 	color: #1464a1;
+}
+
+.bar {
+	color: #1464A1;
+}
+
+.tab .fieldValueEditor {
+	background: #f8f8f8;
+}
+
+/*PnWebContextMenu.css*/
+
+#menubarCM {
+	border-bottom: 1px solid #676f7a;
+	background-color: #e3e5e7;
+}
+
+#menubarCM ul {
+	border-bottom: 1px solid #676f7a;
+	background-color: #e3e5e7;
+}
+
+#menubarCM span.childmenutextCM {
+	color: #e3e5e7;
+}
+
+#menubarCM :hover span.childmenutextCM menu-has-submenu {
+	color: #333;
+}
+
+#menubarCM a.childmenuCM span.childmenutextCM {
+	background-color: #e3e5e7;
+	color: #333;
+}
+
+#menubarCM li li:hover li span.childmenutextCM {
+	background-color: #e3e5e7;
+	color: black;
+}
+
+#menubarCM li li span.menu-has-submenu {
+	color: #333;
+}
+
+#menubarCM li {
+	color: #e3e5e7;
+}
+
+#menubarCM li ul {
+	border: 1px solid #676f7a;
+	background: #e3e5e7;
+}
+
+#menubarCM li li {
+	background: #e3e5e7;
+}
+
+#menubarCM li ul li .checkboxPanel label {
+	color: black;
+}
+
+#menubarCM li ul li:hover .checkboxPanel label {
+	background: #ffd7ff;
+	color: white;
+}
+
+#menubarCM ul li:hover {
+	background: #ffd7ff;
+}
+
+#menubarCM li:hover {
+	background: #ffd7ff;
+}
+
+#menubarCM li span span span:hover {
+	background: #ffd7ff;
+}
+
+#menubarCM ul li:hover span {
+	color: white;
+}
+
+#menubarCM li:hover span {
+	color: white;
+}
+
+#menubarCM li span span span:hover span {
+	color: white;
+}
+
+#menubarCM li li:hover {
+	background: #e3e5e7;
+}
+
+#menubarCM li li:hover span.childmenutextCM {
+	background: #ffd7ff;
+	color: white;
+}
+
+#menubarCM li li:hover li:hover span.childmenutextCM {
+	background: #ffd7ff;
+	color: white;
+}
+
+
+/* Menu bar */
+
+#menubar {
+	background: #336c8a;
+	color: #f2f2f2;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #0a4d71;
+}
+
+#menubar :focus {
+	outline: 2px solid #094c71;
+}
+
+#menubar li.disabled div,
+#menubar li.disabled span {
+	outline: none;
+}
+
+#menubar li:hover,
+#menubar li.hover {
+	background: #279fd1;
+	color:#ffffff
+}
+
+#menubar li ul {
+	background: #f2f2f2;
+	color: #333;
+	border: 1px solid #666;
+	border-top: 1px solid #0a4d71;
+}
+
+#menubar li ul li a {
+	color: #333;
+}
+
+#menubar li ul li:hover,
+#menubar li ul li.hover{
+	background-color: #279fd1;
+}
+
+#menubar li ul li:hover .childmenutext,
+#menubar li ul li.hover .childmenutext {
+	background-color: #279fd1;
+}
+
+#menubar li ul li.myhover ul li .childmenutext {
+	background-color: transparent;
+}
+
+#menubar li ul li.hover ul li.hover .childmenutext {
+	background-color: #279fd1;
+}
+
+#menubar li ul li.hover div.childmenu,
+#menubar li ul li div.childmenu:focus {
+	background-color: #279fd1;
+}
+
+#menubar li li .menu-has-submenu {
+	background-image:url('./img/menu_has_submenu-ver-19.00.00.08.png');
+	background-position: 98% 50% !important;
+    background-repeat: no-repeat;
+}
+
+
+/* About dialog */
+
+div.PnWebAboutBox label.DevelopmentMode {
+	color: #f00;
+}
+
+
+/* Palette popup */
+
+div.PnWebPalettePopup div.chosenProxyLabel div.PnWebProxyListPanel,
+div.PnWebPalettePopup div.PnWebPalettePopupProxy div.PnWebProxyListPanel {
+	border: none;
+}
+
+div.PnWebPalettePopup div.chosenProxyLabel,
+div.PnWebPalettePopup div.PnWebPalettePopupProxy {
+	box-shadow: 0 0 3px 0.34px #BBBBBB;
+}
+
+.pn-m2n-label,
+.PnWebPalettePopup .ProxyLabel {
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.titleBorder {
+	border-bottom: 1px solid #676f7a;
+}
+
+div.wicket-tree .selectedLaunchTask .tree-label {
+	background: #fff08e;
+}
+
+/*
+------------------------------------------------------------------------------------------------------
+  LAYOUT THEME STARTS FROM HERE. NOTE: Keep this at bottom Always
+------------------------------------------------------------------------------------------------------
+*/
+.webStepPanelLayout {
+  background-color: #F2F2F2;
+}
+
+.webStepPanelLayout .ui-layout-resizer {
+  background: no-repeat scroll 2px center #e7e7e7;
+  box-shadow: -3px 0 4px -2px #b2b2b2;
+}
+
+.webStepPanelLayout .ui-layout-resizer:hover {
+  box-shadow: -3px 0 4px -2px #7c7c7c;
+}
+
+.PnWebBaseDialog .ui-layout-resizer-hover .ui-layout-toggler-hover {
+  background: url('./img/separator-ver-19.00.00.08.png') no-repeat scroll 2px center transparent;
+}
+
+.ui-layout-toggler-open-hover,
+.ui-layout-toggler-open:hover {
+  color: #666;
+  border: none; /* match pane-border */
+  background: #ebebeb;
+}
+
+.ui-layout-resizer-closed {
+  background: #ebebeb;
+}
+
+.ui-layout-resizer-closed-hover,
+.ui-layout-resizer-closed:hover {
+  background: #ebebeb;
+}
+/* LAUNCH CENTER PANE */
+
+.mainWebLayout .ui-layout-resizer-west-closed {
+  background-image: url('./img/splitter-launch-center-closed-border-ver-19.00.00.08.png'), url('./img/splitter-launch-center-closed-border-ver-19.00.00.08.png'), url('./img/splitter-launch-center-closed-ver-19.00.00.08.png');
+  background-position: top left, bottom left, center left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* for IE < 9, we use a CSS hack to feed it a separate rule, as it does not
+     support multiple background images. Note the \9 behind the rule. */
+  background: url('./img/splitter-launch-center-closed-ver-19.00.00.08.png') center left no-repeat\9;
+}
+
+.mainWebLayout .ui-layout-resizer-west-closed:hover,
+.mainWebLayout .ui-layout-resizer-west-closed-hover {
+  background-image: url('./img/splitter-launch-center-closed-border-ver-19.00.00.08.png'), url('./img/splitter-launch-center-closed-border-ver-19.00.00.08.png'), url('./img/splitter-launch-center-closed-hover-ver-19.00.00.08.png');
+  background-position: top left, bottom left, center left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* for IE < 9, we use a CSS hack to feed it a separate rule, as it does not
+     support multiple background images. Note the \9 behind the rule. */
+  background: url('./img/splitter-launch-center-closed-hover-ver-19.00.00.08.png') center left no-repeat\9;
+}
+
+.mainWebLayout .ui-layout-center .ui-layout-resizer-west-closed {
+  background: none;
+}
+
+.mainWebLayout .ui-layout-center .ui-layout-resizer-west-closed .ui-layout-toggler {
+  background: url('./img/splitter_vertical_normal-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.mainWebLayout .ui-layout-resizer-west-closed .ui-layout-toggler {
+  background-color: transparent;
+  background-position: 25px center !important;
+  height: 200px !important;
+  margin-top: -66px !important; /* (200 - 68) / 2 = 66 */
+}
+
+.mainWebLayout .ui-layout-resizer-west-closed .launchCenterTitle {
+  color: #555;
+}
+
+.mainWebLayout .ui-layout-resizer-west-closed:hover .launchCenterTitle,
+.mainWebLayout .ui-layout-resizer-west-closed-hover .launchCenterTitle {
+  color: #666;
+}
+
+.mainWebLayout .ui-layout-center .ui-layout-resizer-west-closed .ui-layout-toggler {
+  background-image: url('./img/splitter_vertical_normal-ver-19.00.00.08.png');
+  background-position: 0 center !important;
+  height: 68px !important;
+  margin-top: 0 !important;
+}
+
+.mainWebLayout .ui-layout-center .ui-layout-toggler-west-closed-hover,
+.mainWebLayout .ui-layout-center .ui-layout-toggler-west-closed:hover {
+  background: #ebebeb url('./img/splitter_west_closed_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+
+/* WEST PANE */
+.PnWebBaseDialog .ui-layout-resizer-west {
+    box-shadow: -3px 0 4px -2px #B2B2B2;
+    opacity: 0.5;
+}
+
+.PnWebBaseDialog .ui-layout-resizer-west:hover {
+    opacity: 1;
+}
+
+.PnWebBaseDialog .ui-layout-toggler-west {
+    background: url('./img/separator-ver-19.00.00.08.png') no-repeat scroll 2px center #f2f2f2;
+}
+
+.PnWebBaseDialog .ui-layout-resizer-west-dragging {
+  	background: url('./img/separator-ver-19.00.00.08.png') no-repeat scroll 2px center transparent;
+}
+
+/* EAST PANE */
+
+.ui-layout-toggler-east {
+  background: url('./img/splitter_vertical_normal-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-east-hover,
+.ui-layout-toggler-east:hover {
+  background: #ebebeb url('./img/splitter_east_open_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-east-closed-hover,
+.ui-layout-toggler-east-closed:hover {
+  background: #ebebeb url('./img/splitter_east_closed_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+
+/* NORTH PANE */
+
+.ui-layout-toggler-north {
+  background: url('./img/splitter_horizontal_normal-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-north-hover,
+.ui-layout-toggler-north:hover {
+  background: #ebebeb url('./img/splitter_north_open_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-north-closed-hover,
+.ui-layout-toggler-north-closed:hover {
+  background: #ebebeb url('./img/splitter_north_closed_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+
+/* SOUTH PANE */
+
+.ui-layout-toggler-south {
+  background: url('./img/splitter_horizontal_normal-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-south-hover,
+.ui-layout-toggler-south:hover {
+  background: #ebebeb url('./img/splitter_south_open_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+.ui-layout-toggler-south-closed-hover,
+.ui-layout-toggler-south-closed:hover {
+  background: #ebebeb url('./img/splitter_south_closed_hover-ver-19.00.00.08.png') 0 0 no-repeat;
+}
+
+/* GRAPHICAL PLANNER */
+
+.orderTypesPanel {
+	background: #81b4d1;
+	border-bottom: 1px solid #676f7a;
+}
+
+.orderTypesPanel select.orderTypes {
+	border: 1px solid #676f7a;
+}
+
+label.disabled,
+.editorDisabled .fieldValueEditor input,
+.editorDisabled .fieldValueEditor select,
+.editorDisabled .fieldValueEditor .radio label,
+.editorDisabled .fieldValueEditor textarea {
+	color: #3f4751;
+}
+
+/* REPORT POPUP */
+
+.reportPropertyFieldInfoTable {
+	border-top: 1px solid #C4C4C4;
+}
+.reportPropertyExampleTable {
+ border: 1px solid #d7d7d7;
+ border-radius: 2px;
+ padding: 1px
+}
+
+/*Css for Cad Integrator MessageBar Splitter */
+#cadViewerFooterPanel .ui-layout-resizer{
+    background-image: url('./img/separator_spaces-ver-19.00.00.08.png');
+    background-position: 0 -20px;
+    background-repeat: no-repeat;
+    cursor: e-resize !important;
+	-moz-box-shadow:none;
+  	-webkit-box-shadow:none;
+  	box-shadow:none;
+  	-ms-box-shadow:none;
+
+}
+
+/*
+-----------------------------------------------------------------------------------------------------
+data view  and grid toolbar step methods
+-----------------------------------------------------------------------------------------------------
+*/
+.dataViewToolbar .sm-link {
+  background-color: #fefefe;
+  border-color: #c4c4c4;
+}
+
+.dataViewToolbar .disabled .sm-link:hover,
+.dataViewToolbar .disabled .sm-link {
+  background-color: #e7e7e7;
+  color: #1464a1;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------
+		Date Popup styling
+-----------------------------------------------------------------------------------------------------
+*/
+.pnwidatepicker .ui-widget-content,
+.pnwidatepicker .ui-datepicker-calendar tbody tr a {
+    color: #3f4751;
+}
+
+.pnwidatepicker .ui-datepicker-calendar tbody {
+	background-color: #ddd;
+}
+
+.pnwidatepicker .ui-datepicker th span {
+    color: #8d9daf;
+}
+
+.pnwidatepicker .ui-datepicker-calendar a.ui-state-active,
+.pnwidatepicker .ui-datepicker-calendar a.ui-state-active:hover {
+	background: none repeat scroll 0 0 #1464A1;
+	color: #FFFFFF;
+}
+
+.pnwidatepicker .ui-datepicker-calendar .ui-datepicker-today a.ui-state-active {
+	background: none repeat scroll 0 0 #1464A1 !important;
+    color: #FFFFFF;
+}
+
+.pnwidatepicker .ui-datepicker-calendar .ui-datepicker-today a {
+    font-weight: bold;
+}
+
+.pnwidatepicker .ui-datepicker-calendar .ui-datepicker-other-month a {
+	color: #8d9daf;
+}
+
+.pnwidatepicker .ui-datepicker-calendar tbody tr a:hover {
+	background: none repeat scroll 0 0 #279FD1;
+	color: #FFFFFF;
+}
+
+.pnwidatepicker .ui-widget-header .ui-datepicker-next .ui-icon {
+	background: url('./img/arrow_right-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+.pnwidatepicker .ui-widget-header .ui-datepicker-next .ui-icon:hover {
+	background: url('./img/arrow_right_hover-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+.pnwidatepicker .ui-widget-header .ui-datepicker-prev .ui-icon {
+	background: url('./img/arrow_left-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+.pnwidatepicker .ui-widget-header .ui-datepicker-prev .ui-icon:hover {
+	background: url('./img/arrow_left_hover-ver-19.00.00.08.png') no-repeat scroll 0 center transparent;
+}
+
+/*
+* For Cad Drawing saveToPDF Styling
+*/
+.printTitleBorder{
+	padding-bottom:10px;
+	border-bottom-color: #C4C4C4;
+}
+
+.pn-dpvfield-editor-container .field-editor-con {
+    background-color: #F2F2F2;
+}
